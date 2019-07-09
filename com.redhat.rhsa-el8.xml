@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-06-27T10:22:45</oval:timestamp>
-    <oval:content_version>1561630965</oval:content_version>
+    <oval:timestamp>2019-07-08T09:35:54</oval:timestamp>
+    <oval:content_version>1562578554</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -4762,6 +4762,58 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20191696" version="634">
+      <metadata>
+        <title>RHSA-2019:1696: firefox security update (Critical)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:1696" ref_url="https://access.redhat.com/errata/RHSA-2019:1696" source="RHSA" />
+        <reference ref_id="CVE-2019-11707" ref_url="https://access.redhat.com/security/cve/CVE-2019-11707" source="CVE" />
+        <reference ref_id="CVE-2019-11708" ref_url="https://access.redhat.com/security/cve/CVE-2019-11708" source="CVE" />
+        <description>Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.
+
+This update upgrades Firefox to version 60.7.2 ESR.
+
+Security Fix(es):
+
+* Mozilla: Type confusion in Array.pop (CVE-2019-11707)
+
+* Mozilla: Sandbox escape using Prompt:Open (CVE-2019-11708)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Critical</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-07-08" />
+          <updated date="2019-07-08" />
+          <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-843" href="https://access.redhat.com/security/cve/CVE-2019-11707" public="20190619">CVE-2019-11707</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-270" href="https://access.redhat.com/security/cve/CVE-2019-11708" impact="important" public="20190620">CVE-2019-11708</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1722673" id="1722673">CVE-2019-11708 Mozilla: Sandbox escape using Prompt:Open</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1721789" id="1721789">CVE-2019-11707 Mozilla: Type confusion in Array.pop</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966001" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="firefox is earlier than 0:60.7.2-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191696002" />
+            <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="firefox-debugsource is earlier than 0:60.7.2-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191696004" />
+            <criterion comment="firefox-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966003" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="Red Hat Enterprise Linux 8 is installed" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -9020,6 +9072,14 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144003" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191623002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:60.7.2-3.el8_0" id="oval:com.redhat.rhsa:tst:20191696002" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191696002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.7.2-3.el8_0" id="oval:com.redhat.rhsa:tst:20191696004" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191696002" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -11052,6 +11112,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191623002" version="634">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:60.7.2-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191696002" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:60.7.2-3.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
