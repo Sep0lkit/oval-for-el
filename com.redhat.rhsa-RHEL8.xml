@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-07-08T09:35:54</oval:timestamp>
-  <oval:content_version>1562578554</oval:content_version>
+  <oval:timestamp>2019-07-10T10:39:26</oval:timestamp>
+  <oval:content_version>1562755166</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -4656,6 +4656,112 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20191714" version="632">
+   <metadata>
+    <title>RHSA-2019:1714: bind security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:1714" ref_url="https://access.redhat.com/errata/RHSA-2019:1714" source="RHSA"/>
+    <reference ref_id="CVE-2019-6471" ref_url="https://access.redhat.com/security/cve/CVE-2019-6471" source="CVE"/>
+    <description>The Berkeley Internet Name Domain (BIND) is an implementation of the Domain Name System (DNS) protocols. BIND includes a DNS server (named); a resolver library (routines for applications to use when interfacing with DNS); and tools for verifying that the DNS server is operating correctly.
+
+Security Fix(es):
+
+* bind: Race condition when discarding malformed packets can cause bind to exit with assertion failure (CVE-2019-6471)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-07-10"/>
+     <updated date="2019-07-09"/>
+     <cve cvss3="5.9/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-6471" public="20190619">CVE-2019-6471</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1721780" id="1721780">CVE-2019-6471 bind: Race condition when discarding malformed packets can cause bind to exit with assertion failure</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/o:redhat:enterprise_linux:8</cpe>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966001"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="bind is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714024"/>
+      <criterion comment="bind is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145023"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-chroot is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714014"/>
+      <criterion comment="bind-chroot is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145019"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-debugsource is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714004"/>
+      <criterion comment="bind-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145005"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-devel is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714026"/>
+      <criterion comment="bind-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145031"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-export-devel is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714002"/>
+      <criterion comment="bind-export-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145007"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-export-libs is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714036"/>
+      <criterion comment="bind-export-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145003"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-libs is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714012"/>
+      <criterion comment="bind-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145037"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-libs-lite is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714018"/>
+      <criterion comment="bind-libs-lite is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145015"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-license is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714008"/>
+      <criterion comment="bind-license is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145011"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-lite-devel is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714010"/>
+      <criterion comment="bind-lite-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145021"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-pkcs11 is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714030"/>
+      <criterion comment="bind-pkcs11 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145025"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-pkcs11-devel is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714020"/>
+      <criterion comment="bind-pkcs11-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145027"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-pkcs11-libs is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714028"/>
+      <criterion comment="bind-pkcs11-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145033"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-pkcs11-utils is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714022"/>
+      <criterion comment="bind-pkcs11-utils is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145013"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-sdb is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714034"/>
+      <criterion comment="bind-sdb is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145029"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-sdb-chroot is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714032"/>
+      <criterion comment="bind-sdb-chroot is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145017"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bind-utils is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714016"/>
+      <criterion comment="bind-utils is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145035"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="python3-bind is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714006"/>
+      <criterion comment="python3-bind is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191145009"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="Red Hat Enterprise Linux 8 is installed" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -8922,6 +9028,78 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191696002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-export-devel is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714002" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-debugsource is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714004" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="python3-bind is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714006" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-license is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714008" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-lite-devel is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714010" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-libs is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714012" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145019"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-chroot is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714014" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-utils is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714016" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145018"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-libs-lite is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714018" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-pkcs11-devel is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714020" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145014"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-pkcs11-utils is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714022" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714024" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-devel is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714026" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145016"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-pkcs11-libs is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714028" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145017"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-pkcs11 is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714030" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-sdb-chroot is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714032" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-sdb is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714034" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145015"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bind-export-libs is earlier than 32:9.11.4-17.P2.el8_0.1" id="oval:com.redhat.rhsa:tst:20191714036" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -10930,6 +11108,13 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191696002" version="634">
    <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:60.7.2-3.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191714002" version="632">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">32:9.11.4-17.P2.el8_0.1</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191714004" version="632">
+   <red-def:evr datatype="evr_string" operation="less than">32:9.11.4-17.P2.el8_0.1</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
