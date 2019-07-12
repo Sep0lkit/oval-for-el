@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-07-10T10:39:26</oval:timestamp>
-    <oval:content_version>1562755166</oval:content_version>
+    <oval:timestamp>2019-07-11T23:29:44</oval:timestamp>
+    <oval:content_version>1562887784</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -4925,6 +4925,88 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20191764" version="633">
+      <metadata>
+        <title>RHSA-2019:1764: firefox security update (Critical)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:1764" ref_url="https://access.redhat.com/errata/RHSA-2019:1764" source="RHSA" />
+        <reference ref_id="CVE-2019-9811" ref_url="https://access.redhat.com/security/cve/CVE-2019-9811" source="CVE" />
+        <reference ref_id="CVE-2019-11709" ref_url="https://access.redhat.com/security/cve/CVE-2019-11709" source="CVE" />
+        <reference ref_id="CVE-2019-11711" ref_url="https://access.redhat.com/security/cve/CVE-2019-11711" source="CVE" />
+        <reference ref_id="CVE-2019-11712" ref_url="https://access.redhat.com/security/cve/CVE-2019-11712" source="CVE" />
+        <reference ref_id="CVE-2019-11713" ref_url="https://access.redhat.com/security/cve/CVE-2019-11713" source="CVE" />
+        <reference ref_id="CVE-2019-11715" ref_url="https://access.redhat.com/security/cve/CVE-2019-11715" source="CVE" />
+        <reference ref_id="CVE-2019-11717" ref_url="https://access.redhat.com/security/cve/CVE-2019-11717" source="CVE" />
+        <reference ref_id="CVE-2019-11730" ref_url="https://access.redhat.com/security/cve/CVE-2019-11730" source="CVE" />
+        <description>Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.
+
+This update upgrades Firefox to version 60.8.0 ESR.
+
+Security Fix(es):
+
+* Mozilla: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8 (CVE-2019-11709)
+
+* Mozilla: Sandbox escape via installation of malicious language pack (CVE-2019-9811)
+
+* Mozilla: Script injection within domain through inner window reuse (CVE-2019-11711)
+
+* Mozilla: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects (CVE-2019-11712)
+
+* Mozilla: Use-after-free with HTTP/2 cached stream (CVE-2019-11713)
+
+* Mozilla: HTML parsing error can contribute to content XSS (CVE-2019-11715)
+
+* Mozilla: Caret character improperly escaped in origins (CVE-2019-11717)
+
+* Mozilla: Same-origin policy treats all files in a directory as having the same-origin (CVE-2019-11730)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Critical</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-07-11" />
+          <updated date="2019-07-11" />
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-807" href="https://access.redhat.com/security/cve/CVE-2019-9811" impact="important" public="20190710">CVE-2019-9811</cve>
+          <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11709" public="20190710">CVE-2019-11709</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-212" href="https://access.redhat.com/security/cve/CVE-2019-11711" impact="important" public="20190710">CVE-2019-11711</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11712" impact="important" public="20190710">CVE-2019-11712</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11713" impact="important" public="20190710">CVE-2019-11713</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11715" impact="moderate" public="20190710">CVE-2019-11715</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-138" href="https://access.redhat.com/security/cve/CVE-2019-11717" impact="moderate" public="20190710">CVE-2019-11717</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11730" impact="moderate" public="20190710">CVE-2019-11730</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1728439" id="1728439">CVE-2019-9811 Mozilla: Sandbox escape via installation of malicious language pack</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728438" id="1728438">CVE-2019-11730 Mozilla: Same-origin policy treats all files in a directory as having the same-origin</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728435" id="1728435">CVE-2019-11717 Mozilla: Caret character improperly escaped in origins</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728434" id="1728434">CVE-2019-11715 Mozilla: HTML parsing error can contribute to content XSS</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728433" id="1728433">CVE-2019-11713 Mozilla: Use-after-free with HTTP/2 cached stream</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728432" id="1728432">CVE-2019-11712 Mozilla: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728431" id="1728431">CVE-2019-11711 Mozilla: Script injection within domain through inner window reuse</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1728430" id="1728430">CVE-2019-11709 Mozilla: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966001" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="firefox is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191764004" />
+            <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="firefox-debugsource is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191764002" />
+            <criterion comment="firefox-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966003" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="Red Hat Enterprise Linux 8 is installed" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -9263,6 +9345,14 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191145002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191714002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.8.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20191764002" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191764002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:60.8.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20191764004" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191764002" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -11306,6 +11396,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191714004" version="632">
       <red-def:evr datatype="evr_string" operation="less than">32:9.11.4-17.P2.el8_0.1</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191764002" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:60.8.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
