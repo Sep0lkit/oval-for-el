@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-07-11T23:29:44</oval:timestamp>
-  <oval:content_version>1562887784</oval:content_version>
+  <oval:timestamp>2019-07-15T13:04:19</oval:timestamp>
+  <oval:content_version>1563195859</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -4840,6 +4840,55 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20191771" version="633">
+   <metadata>
+    <title>RHSA-2019:1771: cyrus-imapd security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:1771" ref_url="https://access.redhat.com/errata/RHSA-2019:1771" source="RHSA"/>
+    <reference ref_id="CVE-2019-11356" ref_url="https://access.redhat.com/security/cve/CVE-2019-11356" source="CVE"/>
+    <description>The cyrus-imapd packages contain a high-performance mail server with IMAP, POP3, NNTP, and SIEVE support.
+
+Security Fix(es):
+
+* cyrus-imapd: buffer overflow in CalDAV request handling triggered by a long iCalendar property name (CVE-2019-11356)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-07-15"/>
+     <updated date="2019-07-15"/>
+     <cve cvss3="5.6/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-119" href="https://access.redhat.com/security/cve/CVE-2019-11356" public="20190604">CVE-2019-11356</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1717828" id="1717828">CVE-2019-11356 cyrus-imapd: buffer overflow in CalDAV request handling triggered by a long iCalendar property name</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966001"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="cyrus-imapd is earlier than 0:3.0.7-15.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191771006"/>
+      <criterion comment="cyrus-imapd is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191771007"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="cyrus-imapd-debugsource is earlier than 0:3.0.7-15.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191771002"/>
+      <criterion comment="cyrus-imapd-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191771003"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="cyrus-imapd-utils is earlier than 0:3.0.7-15.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191771004"/>
+      <criterion comment="cyrus-imapd-utils is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191771005"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="cyrus-imapd-vzic is earlier than 0:3.0.7-15.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191771008"/>
+      <criterion comment="cyrus-imapd-vzic is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191771009"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="Red Hat Enterprise Linux 8 is installed" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -9186,6 +9235,38 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966003"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191764002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-debugsource is earlier than 0:3.0.7-15.el8_0.1" id="oval:com.redhat.rhsa:tst:20191771002" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191771002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20191771003" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-utils is earlier than 0:3.0.7-15.el8_0.1" id="oval:com.redhat.rhsa:tst:20191771004" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191771002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-utils is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20191771005" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd is earlier than 0:3.0.7-15.el8_0.1" id="oval:com.redhat.rhsa:tst:20191771006" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191771002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20191771007" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-vzic is earlier than 0:3.0.7-15.el8_0.1" id="oval:com.redhat.rhsa:tst:20191771008" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191771002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="cyrus-imapd-vzic is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20191771009" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966003"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -10511,6 +10592,18 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20191619007" version="633">
    <red-def:name>vim-enhanced</red-def:name>
   </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20191771002" version="633">
+   <red-def:name>cyrus-imapd-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20191771003" version="633">
+   <red-def:name>cyrus-imapd-utils</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20191771004" version="633">
+   <red-def:name>cyrus-imapd</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20191771005" version="633">
+   <red-def:name>cyrus-imapd-vzic</red-def:name>
+  </red-def:rpminfo_object>
  </objects>
  <states>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -11205,6 +11298,10 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191764002" version="633">
    <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:60.8.0-1.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191771002" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:3.0.7-15.el8_0.1</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
