@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-07-15T13:04:19</oval:timestamp>
-  <oval:content_version>1563195859</oval:content_version>
+  <oval:timestamp>2019-07-17T01:44:36</oval:timestamp>
+  <oval:content_version>1563327876</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -4889,6 +4889,89 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20191799" version="632">
+   <metadata>
+    <title>RHSA-2019:1799: thunderbird security and bug fix update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:1799" ref_url="https://access.redhat.com/errata/RHSA-2019:1799" source="RHSA"/>
+    <reference ref_id="CVE-2019-9811" ref_url="https://access.redhat.com/security/cve/CVE-2019-9811" source="CVE"/>
+    <reference ref_id="CVE-2019-11709" ref_url="https://access.redhat.com/security/cve/CVE-2019-11709" source="CVE"/>
+    <reference ref_id="CVE-2019-11711" ref_url="https://access.redhat.com/security/cve/CVE-2019-11711" source="CVE"/>
+    <reference ref_id="CVE-2019-11712" ref_url="https://access.redhat.com/security/cve/CVE-2019-11712" source="CVE"/>
+    <reference ref_id="CVE-2019-11713" ref_url="https://access.redhat.com/security/cve/CVE-2019-11713" source="CVE"/>
+    <reference ref_id="CVE-2019-11715" ref_url="https://access.redhat.com/security/cve/CVE-2019-11715" source="CVE"/>
+    <reference ref_id="CVE-2019-11717" ref_url="https://access.redhat.com/security/cve/CVE-2019-11717" source="CVE"/>
+    <reference ref_id="CVE-2019-11730" ref_url="https://access.redhat.com/security/cve/CVE-2019-11730" source="CVE"/>
+    <description>Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+This update upgrades Thunderbird to version 60.8.0.
+
+Security Fix(es):
+
+* Mozilla: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8 (CVE-2019-11709)
+
+* Mozilla: Sandbox escape via installation of malicious language pack (CVE-2019-9811)
+
+* Mozilla: Script injection within domain through inner window reuse (CVE-2019-11711)
+
+* Mozilla: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects (CVE-2019-11712)
+
+* Mozilla: Use-after-free with HTTP/2 cached stream (CVE-2019-11713)
+
+* Mozilla: HTML parsing error can contribute to content XSS (CVE-2019-11715)
+
+* Mozilla: Caret character improperly escaped in origins (CVE-2019-11717)
+
+* Mozilla: Same-origin policy treats all files in a directory as having the same-origin (CVE-2019-11730)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+
+Bug Fix(es):
+
+* Thunderbird fails to authenticate with gmail with ssl/tls and OAuth2 (BZ#1725919)</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-07-16"/>
+     <updated date="2019-07-16"/>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-807" href="https://access.redhat.com/security/cve/CVE-2019-9811" public="20190710">CVE-2019-9811</cve>
+     <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11709" impact="critical" public="20190710">CVE-2019-11709</cve>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-212" href="https://access.redhat.com/security/cve/CVE-2019-11711" public="20190710">CVE-2019-11711</cve>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11712" public="20190710">CVE-2019-11712</cve>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11713" public="20190710">CVE-2019-11713</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11715" impact="moderate" public="20190710">CVE-2019-11715</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-138" href="https://access.redhat.com/security/cve/CVE-2019-11717" impact="moderate" public="20190710">CVE-2019-11717</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11730" impact="moderate" public="20190710">CVE-2019-11730</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1728439" id="1728439">CVE-2019-9811 Mozilla: Sandbox escape via installation of malicious language pack</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728438" id="1728438">CVE-2019-11730 Mozilla: Same-origin policy treats all files in a directory as having the same-origin</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728435" id="1728435">CVE-2019-11717 Mozilla: Caret character improperly escaped in origins</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728434" id="1728434">CVE-2019-11715 Mozilla: HTML parsing error can contribute to content XSS</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728433" id="1728433">CVE-2019-11713 Mozilla: Use-after-free with HTTP/2 cached stream</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728432" id="1728432">CVE-2019-11712 Mozilla: Cross-origin POST requests can be made with NPAPI plugins by following 308 redirects</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728431" id="1728431">CVE-2019-11711 Mozilla: Script injection within domain through inner window reuse</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1728430" id="1728430">CVE-2019-11709 Mozilla: Memory safety bugs fixed in Firefox 68 and Firefox ESR 60.8</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1725919" id="1725919">Thunderbird fails to authenticate with gmail with ssl/tls and OAuth2</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966001"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="thunderbird is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191799004"/>
+      <criterion comment="thunderbird is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144005"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="thunderbird-debugsource is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191799002"/>
+      <criterion comment="thunderbird-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144003"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="Red Hat Enterprise Linux 8 is installed" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -9267,6 +9350,14 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191771005"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966003"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:60.8.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20191799002" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191799002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:60.8.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20191799004" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20191799002"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -11302,6 +11393,10 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191771002" version="633">
    <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:3.0.7-15.el8_0.1</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20191799002" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:60.8.0-1.el8_0</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
