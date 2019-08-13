@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-08-07T21:08:44</oval:timestamp>
-    <oval:content_version>1565212124</oval:content_version>
+    <oval:timestamp>2019-08-13T01:41:57</oval:timestamp>
+    <oval:content_version>1565660517</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6244,6 +6244,76 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192465" version="631">
+      <metadata>
+        <title>RHSA-2019:2465: ghostscript security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:2465" ref_url="https://access.redhat.com/errata/RHSA-2019:2465" source="RHSA" />
+        <reference ref_id="CVE-2019-10216" ref_url="https://access.redhat.com/security/cve/CVE-2019-10216" source="CVE" />
+        <description>The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.
+
+Security Fix(es):
+
+* ghostscript: -dSAFER escape via .buildfont1 (701394) (CVE-2019-10216)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-08-12" />
+          <updated date="2019-08-12" />
+          <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-10216" public="20190812:1300">CVE-2019-10216</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1737080" id="1737080">CVE-2019-10216 ghostscript: -dSAFER escape via .buildfont1 (701394)</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465001" />
+            <criterion comment="ghostscript-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971004" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="libgs is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465003" />
+            <criterion comment="libgs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971006" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465005" />
+            <criterion comment="ghostscript is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="libgs-devel is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465007" />
+            <criterion comment="libgs-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971012" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript-x11 is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465009" />
+            <criterion comment="ghostscript-x11 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971014" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript-tools-printing is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465011" />
+            <criterion comment="ghostscript-tools-printing is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971016" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript-tools-fonts is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465013" />
+            <criterion comment="ghostscript-tools-fonts is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971018" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript-tools-dvipdf is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465015" />
+            <criterion comment="ghostscript-tools-dvipdf is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971010" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="ghostscript-doc is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465017" />
+            <criterion comment="ghostscript-doc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971008" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -11482,6 +11552,42 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167025" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192411005" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465001" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libgs is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465003" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465005" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libgs-devel is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465007" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-x11 is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465009" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-printing is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465011" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-fonts is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465013" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-dvipdf is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465015" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-doc is earlier than 0:9.25-2.el8_0.2" id="oval:com.redhat.rhsa:tst:20192465017" version="631">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465004" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -13931,6 +14037,17 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192411005" version="632">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.7.2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192465001" version="631">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.2</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192465003" version="631">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.2</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192465004" version="631">
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.2</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
