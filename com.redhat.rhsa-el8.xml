@@ -85,13 +85,13 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
-            <criteria operator="OR">
-              <criterion comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" test_ref="oval:com.redhat.rhsa:tst:20190966001" />
-              <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-            </criteria>
+            <criterion comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" test_ref="oval:com.redhat.rhsa:tst:20190966001" />
             <criterion comment="firefox-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966002" />
           </criteria>
           <criteria operator="AND">
@@ -130,7 +130,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="edk2-ovmf is earlier than 0:20180508gitee3198e672e2-9.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20190968001" />
@@ -182,7 +185,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="ghostscript is earlier than 0:9.25-2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20190971001" />
@@ -252,7 +258,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="openwsman-debugsource is earlier than 0:2.6.5-5.el8" test_ref="oval:com.redhat.rhsa:tst:20190972001" />
@@ -321,7 +330,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="slirp4netns-debugsource is earlier than 0:0.1-2.dev.gitc4e1bc5.module+el8.0.0+2958+4e823551" test_ref="oval:com.redhat.rhsa:tst:20190975001" />
@@ -444,7 +456,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="mod_ssl is earlier than 1:2.4.37-11.module+el8.0.0+2969+90015743" test_ref="oval:com.redhat.rhsa:tst:20190980001" />
@@ -542,7 +557,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="python2-tools is earlier than 0:2.7.15-22.module+el8.0.0+2961+596d0223" test_ref="oval:com.redhat.rhsa:tst:20190981001" />
@@ -816,7 +834,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="wget is earlier than 0:1.19.5-7.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20190983001" />
@@ -865,7 +886,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="python36-devel is earlier than 0:3.6.8-2.module+el8.0.0+2975+e0f02136" test_ref="oval:com.redhat.rhsa:tst:20190984001" />
@@ -979,7 +1003,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="mod_auth_mellon-debugsource is earlier than 0:0.14.0-3.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20190985001" />
@@ -1027,7 +1054,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="systemd-pam is earlier than 0:239-13.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20190990001" />
@@ -1101,7 +1131,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="python3-libs is earlier than 0:3.6.8-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20190997001" />
@@ -1172,7 +1205,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="freeradius-utils is earlier than 0:3.0.17-4.module+el8.0.0+3108+851cb559" test_ref="oval:com.redhat.rhsa:tst:20191142001" />
@@ -1258,7 +1294,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="flatpak-debugsource is earlier than 0:1.0.6-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191143001" />
@@ -1358,7 +1397,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="thunderbird-debugsource is earlier than 0:60.6.1-1.el8" test_ref="oval:com.redhat.rhsa:tst:20191144001" />
@@ -1402,7 +1444,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="bind-export-libs is earlier than 32:9.11.4-17.P2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191145001" />
@@ -1518,7 +1563,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="java-1.8.0-openjdk-debugsource is earlier than 1:1.8.0.212.b04-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191146001" />
@@ -1588,7 +1636,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criterion comment="python3-jinja2 is earlier than 0:2.10.1-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191152001" />
         <criterion comment="python3-jinja2 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191152002" />
       </criteria>
@@ -1645,7 +1696,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-abi-whitelists is earlier than 0:4.18.0-80.1.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191167001" />
@@ -1794,7 +1848,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-rt-debug-kvm is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191174001" />
@@ -1916,7 +1973,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="virt-v2v is earlier than 1:1.38.4-10.module+el8.0.0+3075+09be6b65" test_ref="oval:com.redhat.rhsa:tst:20191175001" />
@@ -2429,7 +2489,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="java-1.8.0-ibm-plugin is earlier than 1:1.8.0.5.35-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191238001" />
@@ -2519,7 +2582,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="dotnet-host-fxr-2.1 is earlier than 0:2.1.11-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191259001" />
@@ -2581,7 +2647,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="virt-v2v is earlier than 1:1.38.4-10.module+el8.0.0+3075+09be6b65" test_ref="oval:com.redhat.rhsa:tst:20191175001" />
@@ -3113,7 +3182,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="firefox-debugsource is earlier than 0:60.7.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191269001" />
@@ -3170,7 +3242,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="pacemaker-schemas is earlier than 0:2.0.1-4.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20191279001" />
@@ -3305,7 +3380,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="thunderbird-debugsource is earlier than 0:60.7.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191308001" />
@@ -3392,7 +3470,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-tools-libs is earlier than 0:4.18.0-80.4.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191479001" />
@@ -3545,7 +3626,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-rt-debug is earlier than 0:4.18.0-80.4.2.rt9.152.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191480001" />
@@ -3627,7 +3711,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="gvfs-archive is earlier than 0:1.36.2-2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191517001" />
@@ -3714,7 +3801,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="java-11-openjdk-jmods is earlier than 1:11.0.3.7-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191518001" />
@@ -3784,7 +3874,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="golang-race is earlier than 0:1.11.5-2.module+el8.0.0+3175+261ae921" test_ref="oval:com.redhat.rhsa:tst:20191519001" />
@@ -3850,7 +3943,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criterion comment="WALinuxAgent is earlier than 0:2.2.32-1.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191527001" />
         <criterion comment="WALinuxAgent is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191527002" />
       </criteria>
@@ -3899,7 +3995,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="python3-nss is earlier than 0:1.0.1-10.module+el8.0.0+3248+9d514f3b" test_ref="oval:com.redhat.rhsa:tst:20191529001" />
@@ -4084,7 +4183,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="qemu-kvm-common is earlier than 15:2.12.0-64.module+el8.0.0.z+3418+a72cf898.2" test_ref="oval:com.redhat.rhsa:tst:20191580001" />
@@ -4591,7 +4693,10 @@ For more details about the security issue(s), including the impact, a CVSS score
           </criteria>
         </criteria>
         <criteria operator="AND">
-          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criteria operator="OR">
+            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+          </criteria>
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="vim-debugsource is earlier than 2:8.0.1763-11.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191619015" />
@@ -4677,7 +4782,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="thunderbird-debugsource is earlier than 0:60.7.2-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191623001" />
@@ -4726,7 +4834,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="firefox is earlier than 0:60.7.2-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191696001" />
@@ -4770,7 +4881,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="bind-export-devel is earlier than 32:9.11.4-17.P2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191714001" />
@@ -4913,7 +5027,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="firefox-debugsource is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191764001" />
@@ -4955,7 +5072,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="cyrus-imapd-debugsource is earlier than 0:3.0.7-15.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191771001" />
@@ -5047,7 +5167,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="thunderbird-debugsource is earlier than 0:60.8.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191799001" />
@@ -5114,7 +5237,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.222.b10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191816001" />
@@ -5214,7 +5340,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="java-11-openjdk-devel is earlier than 1:11.0.4.11-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191817001" />
@@ -5349,7 +5478,10 @@ Enhancement(s):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="nspr is earlier than 0:4.21.0-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191951001" />
@@ -5521,7 +5653,10 @@ Users of kernel are advised to upgrade to these updated packages, which fix thes
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-doc is earlier than 0:4.18.0-80.7.1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191959001" />
@@ -5678,7 +5813,10 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-rt-debug-modules-extra is earlier than 0:4.18.0-80.7.1.rt9.153.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191971001" />
@@ -5760,7 +5898,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="rubygem-psych is earlier than 0:3.0.2-104.module+el8.0.0+3250+4b7d6d43" test_ref="oval:com.redhat.rhsa:tst:20191972001" />
@@ -5943,7 +6084,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="redis-devel is earlier than 0:5.0.3-2.module+el8.0.0.z+3657+acb471dc" test_ref="oval:com.redhat.rhsa:tst:20192002001" />
@@ -6003,7 +6147,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="icedtea-web is earlier than 0:1.7.1-17.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192004001" />
@@ -6050,7 +6197,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-rt-modules-extra is earlier than 0:4.18.0-80.7.2.rt9.154.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192405001" />
@@ -6139,7 +6289,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="kernel-abi-whitelists is earlier than 0:4.18.0-80.7.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192411001" />
@@ -6273,7 +6426,10 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="AND">
-        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
         <criteria operator="OR">
           <criteria operator="AND">
             <criterion comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20192465001" />
@@ -13140,7 +13296,7 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:evr datatype="evr_string" operation="less than">0:60.6.1-1.el8</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966002" version="635">
-      <red-def:signature_keyid operation="equals">199e2f91fd431d51</red-def:signature_keyid>
+      <red-def:signature_keyid operation="pattern match">199e2f91fd431d51|24c6a8a7f4a80eb5|0946fca2c105b9de</red-def:signature_keyid>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966003" version="635">
       <red-def:version operation="pattern match">^8[^\d]</red-def:version>
