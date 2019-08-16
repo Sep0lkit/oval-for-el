@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-08-13T01:41:57</oval:timestamp>
-  <oval:content_version>1565660517</oval:content_version>
+  <oval:timestamp>2019-08-15T20:50:07</oval:timestamp>
+  <oval:content_version>1565902207</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6247,6 +6247,502 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192511" version="633">
+   <metadata>
+    <title>RHSA-2019:2511: mysql:8.0 security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2511" ref_url="https://access.redhat.com/errata/RHSA-2019:2511" source="RHSA"/>
+    <reference ref_id="CVE-2019-2420" ref_url="https://access.redhat.com/security/cve/CVE-2019-2420" source="CVE"/>
+    <reference ref_id="CVE-2019-2434" ref_url="https://access.redhat.com/security/cve/CVE-2019-2434" source="CVE"/>
+    <reference ref_id="CVE-2019-2436" ref_url="https://access.redhat.com/security/cve/CVE-2019-2436" source="CVE"/>
+    <reference ref_id="CVE-2019-2455" ref_url="https://access.redhat.com/security/cve/CVE-2019-2455" source="CVE"/>
+    <reference ref_id="CVE-2019-2481" ref_url="https://access.redhat.com/security/cve/CVE-2019-2481" source="CVE"/>
+    <reference ref_id="CVE-2019-2482" ref_url="https://access.redhat.com/security/cve/CVE-2019-2482" source="CVE"/>
+    <reference ref_id="CVE-2019-2486" ref_url="https://access.redhat.com/security/cve/CVE-2019-2486" source="CVE"/>
+    <reference ref_id="CVE-2019-2494" ref_url="https://access.redhat.com/security/cve/CVE-2019-2494" source="CVE"/>
+    <reference ref_id="CVE-2019-2495" ref_url="https://access.redhat.com/security/cve/CVE-2019-2495" source="CVE"/>
+    <reference ref_id="CVE-2019-2502" ref_url="https://access.redhat.com/security/cve/CVE-2019-2502" source="CVE"/>
+    <reference ref_id="CVE-2019-2503" ref_url="https://access.redhat.com/security/cve/CVE-2019-2503" source="CVE"/>
+    <reference ref_id="CVE-2019-2507" ref_url="https://access.redhat.com/security/cve/CVE-2019-2507" source="CVE"/>
+    <reference ref_id="CVE-2019-2510" ref_url="https://access.redhat.com/security/cve/CVE-2019-2510" source="CVE"/>
+    <reference ref_id="CVE-2019-2528" ref_url="https://access.redhat.com/security/cve/CVE-2019-2528" source="CVE"/>
+    <reference ref_id="CVE-2019-2529" ref_url="https://access.redhat.com/security/cve/CVE-2019-2529" source="CVE"/>
+    <reference ref_id="CVE-2019-2530" ref_url="https://access.redhat.com/security/cve/CVE-2019-2530" source="CVE"/>
+    <reference ref_id="CVE-2019-2531" ref_url="https://access.redhat.com/security/cve/CVE-2019-2531" source="CVE"/>
+    <reference ref_id="CVE-2019-2532" ref_url="https://access.redhat.com/security/cve/CVE-2019-2532" source="CVE"/>
+    <reference ref_id="CVE-2019-2533" ref_url="https://access.redhat.com/security/cve/CVE-2019-2533" source="CVE"/>
+    <reference ref_id="CVE-2019-2534" ref_url="https://access.redhat.com/security/cve/CVE-2019-2534" source="CVE"/>
+    <reference ref_id="CVE-2019-2535" ref_url="https://access.redhat.com/security/cve/CVE-2019-2535" source="CVE"/>
+    <reference ref_id="CVE-2019-2536" ref_url="https://access.redhat.com/security/cve/CVE-2019-2536" source="CVE"/>
+    <reference ref_id="CVE-2019-2537" ref_url="https://access.redhat.com/security/cve/CVE-2019-2537" source="CVE"/>
+    <reference ref_id="CVE-2019-2539" ref_url="https://access.redhat.com/security/cve/CVE-2019-2539" source="CVE"/>
+    <reference ref_id="CVE-2019-2580" ref_url="https://access.redhat.com/security/cve/CVE-2019-2580" source="CVE"/>
+    <reference ref_id="CVE-2019-2581" ref_url="https://access.redhat.com/security/cve/CVE-2019-2581" source="CVE"/>
+    <reference ref_id="CVE-2019-2584" ref_url="https://access.redhat.com/security/cve/CVE-2019-2584" source="CVE"/>
+    <reference ref_id="CVE-2019-2585" ref_url="https://access.redhat.com/security/cve/CVE-2019-2585" source="CVE"/>
+    <reference ref_id="CVE-2019-2587" ref_url="https://access.redhat.com/security/cve/CVE-2019-2587" source="CVE"/>
+    <reference ref_id="CVE-2019-2589" ref_url="https://access.redhat.com/security/cve/CVE-2019-2589" source="CVE"/>
+    <reference ref_id="CVE-2019-2592" ref_url="https://access.redhat.com/security/cve/CVE-2019-2592" source="CVE"/>
+    <reference ref_id="CVE-2019-2593" ref_url="https://access.redhat.com/security/cve/CVE-2019-2593" source="CVE"/>
+    <reference ref_id="CVE-2019-2596" ref_url="https://access.redhat.com/security/cve/CVE-2019-2596" source="CVE"/>
+    <reference ref_id="CVE-2019-2606" ref_url="https://access.redhat.com/security/cve/CVE-2019-2606" source="CVE"/>
+    <reference ref_id="CVE-2019-2607" ref_url="https://access.redhat.com/security/cve/CVE-2019-2607" source="CVE"/>
+    <reference ref_id="CVE-2019-2614" ref_url="https://access.redhat.com/security/cve/CVE-2019-2614" source="CVE"/>
+    <reference ref_id="CVE-2019-2617" ref_url="https://access.redhat.com/security/cve/CVE-2019-2617" source="CVE"/>
+    <reference ref_id="CVE-2019-2620" ref_url="https://access.redhat.com/security/cve/CVE-2019-2620" source="CVE"/>
+    <reference ref_id="CVE-2019-2623" ref_url="https://access.redhat.com/security/cve/CVE-2019-2623" source="CVE"/>
+    <reference ref_id="CVE-2019-2624" ref_url="https://access.redhat.com/security/cve/CVE-2019-2624" source="CVE"/>
+    <reference ref_id="CVE-2019-2625" ref_url="https://access.redhat.com/security/cve/CVE-2019-2625" source="CVE"/>
+    <reference ref_id="CVE-2019-2626" ref_url="https://access.redhat.com/security/cve/CVE-2019-2626" source="CVE"/>
+    <reference ref_id="CVE-2019-2627" ref_url="https://access.redhat.com/security/cve/CVE-2019-2627" source="CVE"/>
+    <reference ref_id="CVE-2019-2628" ref_url="https://access.redhat.com/security/cve/CVE-2019-2628" source="CVE"/>
+    <reference ref_id="CVE-2019-2630" ref_url="https://access.redhat.com/security/cve/CVE-2019-2630" source="CVE"/>
+    <reference ref_id="CVE-2019-2631" ref_url="https://access.redhat.com/security/cve/CVE-2019-2631" source="CVE"/>
+    <reference ref_id="CVE-2019-2634" ref_url="https://access.redhat.com/security/cve/CVE-2019-2634" source="CVE"/>
+    <reference ref_id="CVE-2019-2635" ref_url="https://access.redhat.com/security/cve/CVE-2019-2635" source="CVE"/>
+    <reference ref_id="CVE-2019-2636" ref_url="https://access.redhat.com/security/cve/CVE-2019-2636" source="CVE"/>
+    <reference ref_id="CVE-2019-2644" ref_url="https://access.redhat.com/security/cve/CVE-2019-2644" source="CVE"/>
+    <reference ref_id="CVE-2019-2681" ref_url="https://access.redhat.com/security/cve/CVE-2019-2681" source="CVE"/>
+    <reference ref_id="CVE-2019-2683" ref_url="https://access.redhat.com/security/cve/CVE-2019-2683" source="CVE"/>
+    <reference ref_id="CVE-2019-2685" ref_url="https://access.redhat.com/security/cve/CVE-2019-2685" source="CVE"/>
+    <reference ref_id="CVE-2019-2686" ref_url="https://access.redhat.com/security/cve/CVE-2019-2686" source="CVE"/>
+    <reference ref_id="CVE-2019-2687" ref_url="https://access.redhat.com/security/cve/CVE-2019-2687" source="CVE"/>
+    <reference ref_id="CVE-2019-2688" ref_url="https://access.redhat.com/security/cve/CVE-2019-2688" source="CVE"/>
+    <reference ref_id="CVE-2019-2689" ref_url="https://access.redhat.com/security/cve/CVE-2019-2689" source="CVE"/>
+    <reference ref_id="CVE-2019-2691" ref_url="https://access.redhat.com/security/cve/CVE-2019-2691" source="CVE"/>
+    <reference ref_id="CVE-2019-2693" ref_url="https://access.redhat.com/security/cve/CVE-2019-2693" source="CVE"/>
+    <reference ref_id="CVE-2019-2694" ref_url="https://access.redhat.com/security/cve/CVE-2019-2694" source="CVE"/>
+    <reference ref_id="CVE-2019-2695" ref_url="https://access.redhat.com/security/cve/CVE-2019-2695" source="CVE"/>
+    <reference ref_id="CVE-2019-2737" ref_url="https://access.redhat.com/security/cve/CVE-2019-2737" source="CVE"/>
+    <reference ref_id="CVE-2019-2738" ref_url="https://access.redhat.com/security/cve/CVE-2019-2738" source="CVE"/>
+    <reference ref_id="CVE-2019-2739" ref_url="https://access.redhat.com/security/cve/CVE-2019-2739" source="CVE"/>
+    <reference ref_id="CVE-2019-2740" ref_url="https://access.redhat.com/security/cve/CVE-2019-2740" source="CVE"/>
+    <reference ref_id="CVE-2019-2752" ref_url="https://access.redhat.com/security/cve/CVE-2019-2752" source="CVE"/>
+    <reference ref_id="CVE-2019-2755" ref_url="https://access.redhat.com/security/cve/CVE-2019-2755" source="CVE"/>
+    <reference ref_id="CVE-2019-2757" ref_url="https://access.redhat.com/security/cve/CVE-2019-2757" source="CVE"/>
+    <reference ref_id="CVE-2019-2758" ref_url="https://access.redhat.com/security/cve/CVE-2019-2758" source="CVE"/>
+    <reference ref_id="CVE-2019-2774" ref_url="https://access.redhat.com/security/cve/CVE-2019-2774" source="CVE"/>
+    <reference ref_id="CVE-2019-2778" ref_url="https://access.redhat.com/security/cve/CVE-2019-2778" source="CVE"/>
+    <reference ref_id="CVE-2019-2780" ref_url="https://access.redhat.com/security/cve/CVE-2019-2780" source="CVE"/>
+    <reference ref_id="CVE-2019-2784" ref_url="https://access.redhat.com/security/cve/CVE-2019-2784" source="CVE"/>
+    <reference ref_id="CVE-2019-2785" ref_url="https://access.redhat.com/security/cve/CVE-2019-2785" source="CVE"/>
+    <reference ref_id="CVE-2019-2789" ref_url="https://access.redhat.com/security/cve/CVE-2019-2789" source="CVE"/>
+    <reference ref_id="CVE-2019-2795" ref_url="https://access.redhat.com/security/cve/CVE-2019-2795" source="CVE"/>
+    <reference ref_id="CVE-2019-2796" ref_url="https://access.redhat.com/security/cve/CVE-2019-2796" source="CVE"/>
+    <reference ref_id="CVE-2019-2797" ref_url="https://access.redhat.com/security/cve/CVE-2019-2797" source="CVE"/>
+    <reference ref_id="CVE-2019-2798" ref_url="https://access.redhat.com/security/cve/CVE-2019-2798" source="CVE"/>
+    <reference ref_id="CVE-2019-2800" ref_url="https://access.redhat.com/security/cve/CVE-2019-2800" source="CVE"/>
+    <reference ref_id="CVE-2019-2801" ref_url="https://access.redhat.com/security/cve/CVE-2019-2801" source="CVE"/>
+    <reference ref_id="CVE-2019-2802" ref_url="https://access.redhat.com/security/cve/CVE-2019-2802" source="CVE"/>
+    <reference ref_id="CVE-2019-2803" ref_url="https://access.redhat.com/security/cve/CVE-2019-2803" source="CVE"/>
+    <reference ref_id="CVE-2019-2805" ref_url="https://access.redhat.com/security/cve/CVE-2019-2805" source="CVE"/>
+    <reference ref_id="CVE-2019-2808" ref_url="https://access.redhat.com/security/cve/CVE-2019-2808" source="CVE"/>
+    <reference ref_id="CVE-2019-2810" ref_url="https://access.redhat.com/security/cve/CVE-2019-2810" source="CVE"/>
+    <reference ref_id="CVE-2019-2811" ref_url="https://access.redhat.com/security/cve/CVE-2019-2811" source="CVE"/>
+    <reference ref_id="CVE-2019-2812" ref_url="https://access.redhat.com/security/cve/CVE-2019-2812" source="CVE"/>
+    <reference ref_id="CVE-2019-2814" ref_url="https://access.redhat.com/security/cve/CVE-2019-2814" source="CVE"/>
+    <reference ref_id="CVE-2019-2815" ref_url="https://access.redhat.com/security/cve/CVE-2019-2815" source="CVE"/>
+    <reference ref_id="CVE-2019-2819" ref_url="https://access.redhat.com/security/cve/CVE-2019-2819" source="CVE"/>
+    <reference ref_id="CVE-2019-2826" ref_url="https://access.redhat.com/security/cve/CVE-2019-2826" source="CVE"/>
+    <reference ref_id="CVE-2019-2830" ref_url="https://access.redhat.com/security/cve/CVE-2019-2830" source="CVE"/>
+    <reference ref_id="CVE-2019-2834" ref_url="https://access.redhat.com/security/cve/CVE-2019-2834" source="CVE"/>
+    <reference ref_id="CVE-2019-2879" ref_url="https://access.redhat.com/security/cve/CVE-2019-2879" source="CVE"/>
+    <description>MySQL is a multi-user, multi-threaded SQL database server. It consists of the MySQL server daemon, mysqld, and many client programs.
+
+The following packages have been upgraded to a later upstream version: mysql (8.0.17).
+
+Security Fix(es):
+
+* mysql: Server: Replication multiple unspecified vulnerabilities (CVE-2019-2800, CVE-2019-2436, CVE-2019-2531, CVE-2019-2534, CVE-2019-2614, CVE-2019-2617, CVE-2019-2630, CVE-2019-2634, CVE-2019-2635, CVE-2019-2755)
+
+* mysql: Server: Optimizer multiple unspecified vulnerabilities (CVE-2019-2420, CVE-2019-2481, CVE-2019-2507, CVE-2019-2529, CVE-2019-2530, CVE-2019-2581, CVE-2019-2596, CVE-2019-2607, CVE-2019-2625, CVE-2019-2681, CVE-2019-2685, CVE-2019-2686, CVE-2019-2687, CVE-2019-2688, CVE-2019-2689, CVE-2019-2693, CVE-2019-2694, CVE-2019-2695, CVE-2019-2757, CVE-2019-2774, CVE-2019-2796, CVE-2019-2802, CVE-2019-2803, CVE-2019-2808, CVE-2019-2810, CVE-2019-2812, CVE-2019-2815, CVE-2019-2830, CVE-2019-2834)
+
+* mysql: Server: Parser multiple unspecified vulnerabilities (CVE-2019-2434, CVE-2019-2455, CVE-2019-2805)
+
+* mysql: Server: PS multiple unspecified vulnerabilities (CVE-2019-2482, CVE-2019-2592)
+
+* mysql: Server: Security: Privileges multiple unspecified vulnerabilities (CVE-2019-2486, CVE-2019-2532, CVE-2019-2533, CVE-2019-2584, CVE-2019-2589, CVE-2019-2606, CVE-2019-2620, CVE-2019-2627, CVE-2019-2739, CVE-2019-2778, CVE-2019-2811, CVE-2019-2789)
+
+* mysql: Server: DDL multiple unspecified vulnerabilities (CVE-2019-2494, CVE-2019-2495, CVE-2019-2537, CVE-2019-2626, CVE-2019-2644)
+
+* mysql: InnoDB multiple unspecified vulnerabilities (CVE-2019-2502, CVE-2019-2510, CVE-2019-2580, CVE-2019-2585, CVE-2019-2593, CVE-2019-2624, CVE-2019-2628, CVE-2019-2758, CVE-2019-2785, CVE-2019-2798, CVE-2019-2879, CVE-2019-2814)
+
+* mysql: Server: Connection Handling unspecified vulnerability (CVE-2019-2503)
+
+* mysql: Server: Partition multiple unspecified vulnerabilities (CVE-2019-2528, CVE-2019-2587)
+
+* mysql: Server: Options multiple unspecified vulnerabilities (CVE-2019-2535, CVE-2019-2623, CVE-2019-2683, CVE-2019-2752)
+
+* mysql: Server: Packaging unspecified vulnerability (CVE-2019-2536)
+
+* mysql: Server: Connection unspecified vulnerability (CVE-2019-2539)
+
+* mysql: Server: Information Schema unspecified vulnerability (CVE-2019-2631)
+
+* mysql: Server: Group Replication Plugin unspecified vulnerability (CVE-2019-2636)
+
+* mysql: Server: Security: Roles multiple unspecified vulnerabilities (CVE-2019-2691, CVE-2019-2826)
+
+* mysql: Server: Pluggable Auth unspecified vulnerability (CVE-2019-2737)
+
+* mysql: Server: XML unspecified vulnerability (CVE-2019-2740)
+
+* mysql: Server: Components / Services unspecified vulnerability (CVE-2019-2780)
+
+* mysql: Server: DML unspecified vulnerability (CVE-2019-2784)
+
+* mysql: Server: Charsets unspecified vulnerability (CVE-2019-2795)
+
+* mysql: Client programs unspecified vulnerability (CVE-2019-2797)
+
+* mysql: Server: FTS unspecified vulnerability (CVE-2019-2801)
+
+* mysql: Server: Security: Audit unspecified vulnerability (CVE-2019-2819)
+
+* mysql: Server: Compiling unspecified vulnerability (CVE-2019-2738)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-08-15"/>
+     <updated date="2019-08-15"/>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2420" impact="moderate" public="20190115">CVE-2019-2420</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2434" impact="moderate" public="20190115">CVE-2019-2434</cve>
+     <cve cvss3="5.5/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2436" impact="moderate" public="20190115">CVE-2019-2436</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2455" impact="moderate" public="20190115">CVE-2019-2455</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2481" impact="moderate" public="20190115">CVE-2019-2481</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2482" impact="moderate" public="20190115">CVE-2019-2482</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2486" impact="moderate" public="20190115">CVE-2019-2486</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2494" impact="moderate" public="20190115">CVE-2019-2494</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2495" impact="moderate" public="20190115">CVE-2019-2495</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2502" impact="moderate" public="20190115">CVE-2019-2502</cve>
+     <cve cvss3="6.4/CVSS:3.0/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2503" impact="moderate" public="20190115">CVE-2019-2503</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2507" impact="moderate" public="20190115">CVE-2019-2507</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2510" impact="moderate" public="20190115">CVE-2019-2510</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2528" impact="moderate" public="20190115">CVE-2019-2528</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2529" impact="moderate" public="20190115">CVE-2019-2529</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2530" impact="moderate" public="20190115">CVE-2019-2530</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2531" impact="moderate" public="20190115">CVE-2019-2531</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2532" impact="moderate" public="20190115">CVE-2019-2532</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2533" impact="moderate" public="20190115">CVE-2019-2533</cve>
+     <cve cvss3="7.1/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2534" impact="moderate" public="20190115">CVE-2019-2534</cve>
+     <cve cvss3="4.1/CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2535" impact="moderate" public="20190115">CVE-2019-2535</cve>
+     <cve cvss3="5.0/CVSS:3.0/AV:L/AC:H/PR:H/UI:R/S:C/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2536" impact="moderate" public="20190115">CVE-2019-2536</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2537" impact="moderate" public="20190115">CVE-2019-2537</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2539" impact="moderate" public="20190115">CVE-2019-2539</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2580" impact="moderate" public="20190416">CVE-2019-2580</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2581" impact="moderate" public="20190416">CVE-2019-2581</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2584" impact="moderate" public="20190416">CVE-2019-2584</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2585" impact="moderate" public="20190416">CVE-2019-2585</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2587" impact="moderate" public="20190416">CVE-2019-2587</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2589" impact="moderate" public="20190416">CVE-2019-2589</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2592" impact="moderate" public="20190416">CVE-2019-2592</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2593" impact="moderate" public="20190416">CVE-2019-2593</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2596" impact="moderate" public="20190416">CVE-2019-2596</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2606" impact="moderate" public="20190416">CVE-2019-2606</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2607" impact="moderate" public="20190416">CVE-2019-2607</cve>
+     <cve cvss3="4.4/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2614" impact="moderate" public="20190416">CVE-2019-2614</cve>
+     <cve cvss3="4.4/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2617" impact="moderate" public="20190416">CVE-2019-2617</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2620" impact="moderate" public="20190416">CVE-2019-2620</cve>
+     <cve cvss3="5.3/CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2623" impact="moderate" public="20190416">CVE-2019-2623</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2624" impact="moderate" public="20190416">CVE-2019-2624</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2625" impact="moderate" public="20190416">CVE-2019-2625</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2626" impact="moderate" public="20190416">CVE-2019-2626</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2627" impact="moderate" public="20190416">CVE-2019-2627</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2628" impact="moderate" public="20190416">CVE-2019-2628</cve>
+     <cve cvss3="4.4/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2630" impact="moderate" public="20190416">CVE-2019-2630</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2631" impact="moderate" public="20190416">CVE-2019-2631</cve>
+     <cve cvss3="5.1/CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2634" impact="moderate" public="20190416">CVE-2019-2634</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2635" impact="moderate" public="20190416">CVE-2019-2635</cve>
+     <cve cvss3="4.4/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2636" impact="moderate" public="20190416">CVE-2019-2636</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2644" impact="moderate" public="20190416">CVE-2019-2644</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2681" impact="moderate" public="20190416">CVE-2019-2681</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2683" impact="moderate" public="20190416">CVE-2019-2683</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2685" impact="moderate" public="20190416">CVE-2019-2685</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2686" impact="moderate" public="20190416">CVE-2019-2686</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2687" impact="moderate" public="20190416">CVE-2019-2687</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2688" impact="moderate" public="20190416">CVE-2019-2688</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2689" impact="moderate" public="20190416">CVE-2019-2689</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2691" impact="moderate" public="20190416">CVE-2019-2691</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2693" impact="moderate" public="20190416">CVE-2019-2693</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2694" impact="moderate" public="20190416">CVE-2019-2694</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2695" impact="moderate" public="20190416">CVE-2019-2695</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2737" impact="moderate" public="20190716">CVE-2019-2737</cve>
+     <cve cvss3="3.1/CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2738" impact="low" public="20190716">CVE-2019-2738</cve>
+     <cve cvss3="5.1/CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2739" impact="moderate" public="20190716">CVE-2019-2739</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2740" impact="moderate" public="20190716">CVE-2019-2740</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2752" impact="moderate" public="20190716">CVE-2019-2752</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2755" impact="moderate" public="20190716">CVE-2019-2755</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2757" impact="moderate" public="20190716">CVE-2019-2757</cve>
+     <cve cvss3="5.5/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2758" impact="moderate" public="20190716">CVE-2019-2758</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2774" impact="moderate" public="20190716">CVE-2019-2774</cve>
+     <cve cvss3="5.4/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2778" impact="moderate" public="20190716">CVE-2019-2778</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2780" impact="moderate" public="20190716">CVE-2019-2780</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2784" impact="moderate" public="20190716">CVE-2019-2784</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2785" impact="moderate" public="20190716">CVE-2019-2785</cve>
+     <cve cvss3="2.7/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2789" impact="low" public="20190716">CVE-2019-2789</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2795" impact="moderate" public="20190716">CVE-2019-2795</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2796" impact="moderate" public="20190716">CVE-2019-2796</cve>
+     <cve cvss3="4.2/CVSS:3.0/AV:A/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2797" impact="moderate" public="20190716">CVE-2019-2797</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2798" impact="moderate" public="20190716">CVE-2019-2798</cve>
+     <cve cvss3="7.1/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2800" public="20190716">CVE-2019-2800</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2801" impact="moderate" public="20190716">CVE-2019-2801</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2802" impact="moderate" public="20190716">CVE-2019-2802</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2803" impact="moderate" public="20190716">CVE-2019-2803</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2805" impact="moderate" public="20190716">CVE-2019-2805</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2808" impact="moderate" public="20190716">CVE-2019-2808</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2810" impact="moderate" public="20190716">CVE-2019-2810</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2811" impact="moderate" public="20190716">CVE-2019-2811</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2812" impact="moderate" public="20190716">CVE-2019-2812</cve>
+     <cve cvss3="2.2/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2814" impact="low" public="20190716">CVE-2019-2814</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2815" impact="moderate" public="20190716">CVE-2019-2815</cve>
+     <cve cvss3="5.5/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2819" impact="moderate" public="20190716">CVE-2019-2819</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2826" impact="moderate" public="20190716">CVE-2019-2826</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2830" impact="moderate" public="20190716">CVE-2019-2830</cve>
+     <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2834" impact="moderate" public="20190716">CVE-2019-2834</cve>
+     <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2879" impact="moderate" public="20190716">CVE-2019-2879</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1666738" id="1666738">CVE-2019-2420 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666740" id="1666740">CVE-2019-2434 mysql: Server: Parser unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666741" id="1666741">CVE-2019-2436 mysql: Server: Replication unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666742" id="1666742">CVE-2019-2455 mysql: Server: Parser unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666743" id="1666743">CVE-2019-2481 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666744" id="1666744">CVE-2019-2482 mysql: Server: PS unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666745" id="1666745">CVE-2019-2486 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666746" id="1666746">CVE-2019-2494 mysql: Server: DDL unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666747" id="1666747">CVE-2019-2495 mysql: Server: DDL unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666748" id="1666748">CVE-2019-2502 mysql: InnoDB unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666749" id="1666749">CVE-2019-2503 mysql: Server: Connection Handling unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666750" id="1666750">CVE-2019-2507 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666751" id="1666751">CVE-2019-2510 mysql: InnoDB unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666753" id="1666753">CVE-2019-2528 mysql: Server: Partition unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666755" id="1666755">CVE-2019-2529 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666756" id="1666756">CVE-2019-2530 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666757" id="1666757">CVE-2019-2531 mysql: Server: Replication unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666758" id="1666758">CVE-2019-2532 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666759" id="1666759">CVE-2019-2533 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666760" id="1666760">CVE-2019-2534 mysql: Server: Replication unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666761" id="1666761">CVE-2019-2535 mysql: Server: Options unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666762" id="1666762">CVE-2019-2536 mysql: Server: Packaging unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666763" id="1666763">CVE-2019-2537 mysql: Server: DDL unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1666764" id="1666764">CVE-2019-2539 mysql: Server: Connection unspecified vulnerability (CPU Jan 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702958" id="1702958">CVE-2019-2580 mysql: InnoDB unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702959" id="1702959">CVE-2019-2581 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702960" id="1702960">CVE-2019-2584 mysql: Server: Security: Privileges unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702961" id="1702961">CVE-2019-2585 mysql: InnoDB unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702962" id="1702962">CVE-2019-2587 mysql: Server: Partition unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702963" id="1702963">CVE-2019-2589 mysql: Server: Security: Privileges unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702964" id="1702964">CVE-2019-2592 mysql: Server: PS unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702965" id="1702965">CVE-2019-2593 mysql: InnoDB unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702966" id="1702966">CVE-2019-2596 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702967" id="1702967">CVE-2019-2606 mysql: Server: Security: Privileges unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702968" id="1702968">CVE-2019-2607 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702969" id="1702969">CVE-2019-2614 mysql: Server: Replication unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702970" id="1702970">CVE-2019-2617 mysql: Server: Replication unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702971" id="1702971">CVE-2019-2620 mysql: Server: Security: Privileges unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702972" id="1702972">CVE-2019-2623 mysql: Server: Options unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702973" id="1702973">CVE-2019-2624 mysql: InnoDB unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702974" id="1702974">CVE-2019-2625 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702975" id="1702975">CVE-2019-2626 mysql: Server: DDL unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702976" id="1702976">CVE-2019-2627 mysql: Server: Security: Privileges unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702977" id="1702977">CVE-2019-2628 mysql: InnoDB unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702978" id="1702978">CVE-2019-2630 mysql: Server: Replication unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702979" id="1702979">CVE-2019-2631 mysql: Server: Information Schema unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702981" id="1702981">CVE-2019-2635 mysql: Server: Replication unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702982" id="1702982">CVE-2019-2636 mysql: Server: Group Replication Plugin unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702983" id="1702983">CVE-2019-2644 mysql: Server: DDL unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702984" id="1702984">CVE-2019-2681 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702985" id="1702985">CVE-2019-2683 mysql: Server: Options unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702986" id="1702986">CVE-2019-2685 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702987" id="1702987">CVE-2019-2686 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702989" id="1702989">CVE-2019-2687 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702990" id="1702990">CVE-2019-2688 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702991" id="1702991">CVE-2019-2689 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702992" id="1702992">CVE-2019-2691 mysql: Server: Security: Roles unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702993" id="1702993">CVE-2019-2693 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702994" id="1702994">CVE-2019-2694 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702995" id="1702995">CVE-2019-2695 mysql: Server: Optimizer unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1702997" id="1702997">CVE-2019-2634 mysql: Server: Replication unspecified vulnerability (CPU Apr 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1731997" id="1731997">CVE-2019-2737 mysql: Server: Pluggable Auth unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1731998" id="1731998">CVE-2019-2738 mysql: Server: Compiling unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1731999" id="1731999">CVE-2019-2739 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732000" id="1732000">CVE-2019-2740 mysql: Server: XML unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732005" id="1732005">CVE-2019-2752 mysql: Server: Options unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732006" id="1732006">CVE-2019-2755 mysql: Server: Replication unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732007" id="1732007">CVE-2019-2757 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732008" id="1732008">CVE-2019-2758 mysql: InnoDB unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732009" id="1732009">CVE-2019-2774 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732010" id="1732010">CVE-2019-2778 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732011" id="1732011">CVE-2019-2780 mysql: Server: Components / Services unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732012" id="1732012">CVE-2019-2784 mysql: Server: DML unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732013" id="1732013">CVE-2019-2785 mysql: InnoDB unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732015" id="1732015">CVE-2019-2789 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732017" id="1732017">CVE-2019-2795 mysql: Server: Charsets unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732018" id="1732018">CVE-2019-2796 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732019" id="1732019">CVE-2019-2797 mysql: Client programs unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732020" id="1732020">CVE-2019-2798 mysql: InnoDB unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732021" id="1732021">CVE-2019-2800 mysql: Server: Replication unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732022" id="1732022">CVE-2019-2801 mysql: Server: FTS unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732023" id="1732023">CVE-2019-2802 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732024" id="1732024">CVE-2019-2803 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732025" id="1732025">CVE-2019-2805 mysql: Server: Parser unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732026" id="1732026">CVE-2019-2808 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732027" id="1732027">CVE-2019-2810 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732028" id="1732028">CVE-2019-2811 mysql: Server: Security: Privileges unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732029" id="1732029">CVE-2019-2812 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732030" id="1732030">CVE-2019-2814 mysql: InnoDB unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732031" id="1732031">CVE-2019-2815 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732032" id="1732032">CVE-2019-2819 mysql: Server: Security: Audit unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732034" id="1732034">CVE-2019-2826 mysql: Server: Security: Roles unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732035" id="1732035">CVE-2019-2830 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732036" id="1732036">CVE-2019-2834 mysql: Server: Optimizer unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1732037" id="1732037">CVE-2019-2879 mysql: InnoDB unspecified vulnerability (CPU Jul 2019)</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="mysql-test is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511001"/>
+      <criterion comment="mysql-test is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-server is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511003"/>
+      <criterion comment="mysql-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-libs is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511005"/>
+      <criterion comment="mysql-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-errmsg is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511007"/>
+      <criterion comment="mysql-errmsg is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-devel is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511009"/>
+      <criterion comment="mysql-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-debugsource is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511011"/>
+      <criterion comment="mysql-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql-common is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511013"/>
+      <criterion comment="mysql-common is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mysql is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511015"/>
+      <criterion comment="mysql is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mecab-ipadic-EUCJP is earlier than 0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511017"/>
+      <criterion comment="mecab-ipadic-EUCJP is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mecab-ipadic is earlier than 0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de" test_ref="oval:com.redhat.rhsa:tst:20192511019"/>
+      <criterion comment="mecab-ipadic is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511020"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mecab-debugsource is earlier than 0:0.996-1.module+el8.0.0+3898+e09bb8de.9" test_ref="oval:com.redhat.rhsa:tst:20192511021"/>
+      <criterion comment="mecab-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511022"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mecab is earlier than 0:0.996-1.module+el8.0.0+3898+e09bb8de.9" test_ref="oval:com.redhat.rhsa:tst:20192511023"/>
+      <criterion comment="mecab is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192511024"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192512" version="633">
+   <metadata>
+    <title>RHSA-2019:2512: subversion:1.10 security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2512" ref_url="https://access.redhat.com/errata/RHSA-2019:2512" source="RHSA"/>
+    <reference ref_id="CVE-2019-0203" ref_url="https://access.redhat.com/security/cve/CVE-2019-0203" source="CVE"/>
+    <description>Subversion (SVN) is a concurrent version control system which enables one or more users to collaborate in developing and maintaining a hierarchy of files and directories while keeping a history of all changes.
+
+Security Fix(es):
+
+* subversion: NULL pointer dereference in svnserve leading to an unauthenticated remote DoS (CVE-2019-0203)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-08-15"/>
+     <updated date="2019-08-15"/>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-476" href="https://access.redhat.com/security/cve/CVE-2019-0203" public="20190731:1200">CVE-2019-0203</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1733073" id="1733073">CVE-2019-0203 subversion: NULL pointer dereference in svnserve leading to an unauthenticated remote DoS</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="utf8proc-debugsource is earlier than 0:2.1.1-5.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512001"/>
+      <criterion comment="utf8proc-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="utf8proc is earlier than 0:2.1.1-5.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512003"/>
+      <criterion comment="utf8proc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-tools is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512005"/>
+      <criterion comment="subversion-tools is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-perl is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512007"/>
+      <criterion comment="subversion-perl is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-libs is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512009"/>
+      <criterion comment="subversion-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-gnome is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512011"/>
+      <criterion comment="subversion-gnome is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-devel is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512013"/>
+      <criterion comment="subversion-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-debugsource is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512015"/>
+      <criterion comment="subversion-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512017"/>
+      <criterion comment="subversion is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="mod_dav_svn is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512019"/>
+      <criterion comment="mod_dav_svn is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512020"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="libserf-debugsource is earlier than 0:1.3.9-9.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512021"/>
+      <criterion comment="libserf-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512022"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="libserf is earlier than 0:1.3.9-9.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512023"/>
+      <criterion comment="libserf is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512024"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="subversion-javahl is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" test_ref="oval:com.redhat.rhsa:tst:20192512025"/>
+      <criterion comment="subversion-javahl is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192512026"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -11521,6 +12017,206 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971004"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192465004"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-test is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511001" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-test is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511002" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-server is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511003" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-server is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511004" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-libs is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511005" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-libs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511006" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-errmsg is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511007" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-errmsg is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511008" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-devel is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511009" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511010" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-debugsource is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511011" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511012" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-common is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511013" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql-common is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511014" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql is earlier than 0:8.0.17-3.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511015" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mysql is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511016" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-ipadic-EUCJP is earlier than 0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511017" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-ipadic-EUCJP is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511018" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-ipadic is earlier than 0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de" id="oval:com.redhat.rhsa:tst:20192511019" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-ipadic is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511020" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-debugsource is earlier than 0:0.996-1.module+el8.0.0+3898+e09bb8de.9" id="oval:com.redhat.rhsa:tst:20192511021" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511022" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab is earlier than 0:0.996-1.module+el8.0.0+3898+e09bb8de.9" id="oval:com.redhat.rhsa:tst:20192511023" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192511004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mecab is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192511024" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192511012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="utf8proc-debugsource is earlier than 0:2.1.1-5.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512001" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="utf8proc-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512002" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="utf8proc is earlier than 0:2.1.1-5.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512003" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="utf8proc is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512004" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-tools is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512005" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-tools is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512006" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-perl is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512007" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-perl is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512008" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-libs is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512009" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-libs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512010" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-gnome is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512011" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-gnome is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512012" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-devel is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512013" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512014" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-debugsource is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512015" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512016" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512017" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512018" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mod_dav_svn is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512019" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="mod_dav_svn is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512020" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libserf-debugsource is earlier than 0:1.3.9-9.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512021" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libserf-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512022" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libserf is earlier than 0:1.3.9-9.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512023" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libserf is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512024" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-javahl is earlier than 0:1.10.2-2.module+el8.0.0+3900+919b6753" id="oval:com.redhat.rhsa:tst:20192512025" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192512005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="subversion-javahl is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192512026" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -13038,6 +13734,81 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192004002" version="634">
    <red-def:name>icedtea-web-javadoc</red-def:name>
   </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511001" version="633">
+   <red-def:name>mysql-test</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511002" version="633">
+   <red-def:name>mysql-server</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511003" version="633">
+   <red-def:name>mysql-libs</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511004" version="633">
+   <red-def:name>mysql-errmsg</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511005" version="633">
+   <red-def:name>mysql-devel</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511006" version="633">
+   <red-def:name>mysql-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511007" version="633">
+   <red-def:name>mysql-common</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511008" version="633">
+   <red-def:name>mysql</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511009" version="633">
+   <red-def:name>mecab-ipadic-EUCJP</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511010" version="633">
+   <red-def:name>mecab-ipadic</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511011" version="633">
+   <red-def:name>mecab-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192511012" version="633">
+   <red-def:name>mecab</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512001" version="633">
+   <red-def:name>utf8proc-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512002" version="633">
+   <red-def:name>utf8proc</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512003" version="633">
+   <red-def:name>subversion-tools</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512004" version="633">
+   <red-def:name>subversion-perl</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512005" version="633">
+   <red-def:name>subversion-libs</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512006" version="633">
+   <red-def:name>subversion-gnome</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512007" version="633">
+   <red-def:name>subversion-devel</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512008" version="633">
+   <red-def:name>subversion-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512009" version="633">
+   <red-def:name>subversion</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512010" version="633">
+   <red-def:name>mod_dav_svn</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512011" version="633">
+   <red-def:name>libserf-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512012" version="633">
+   <red-def:name>libserf</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512013" version="633">
+   <red-def:name>subversion-javahl</red-def:name>
+  </red-def:rpminfo_object>
  </objects>
  <states>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -13953,6 +14724,33 @@ For more details about the security issue(s), including the impact, a CVSS score
   </red-def:rpminfo_state>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192465004" version="631">
    <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.2</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192511001" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:8.0.17-3.module+el8.0.0+3898+e09bb8de</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192511003" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:2.7.0.20070801-16.module+el8.0.0+3898+e09bb8de</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192511004" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:0.996-1.module+el8.0.0+3898+e09bb8de.9</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192512001" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:2.1.1-5.module+el8.0.0+3900+919b6753</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192512003" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:1.10.2-2.module+el8.0.0+3900+919b6753</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192512004" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:1.3.9-9.module+el8.0.0+3900+919b6753</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192512005" version="633">
+   <red-def:evr datatype="evr_string" operation="less than">0:1.10.2-2.module+el8.0.0+3900+919b6753</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
