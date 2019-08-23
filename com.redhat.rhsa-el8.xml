@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-08-16T21:33:44</oval:timestamp>
-    <oval:content_version>1565991224</oval:content_version>
+    <oval:timestamp>2019-08-22T21:12:57</oval:timestamp>
+    <oval:content_version>1566508377</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6515,7 +6515,6 @@ For more details about the security issue(s), including the impact, a CVSS score
         <reference ref_id="CVE-2019-2693" ref_url="https://access.redhat.com/security/cve/CVE-2019-2693" source="CVE" />
         <reference ref_id="CVE-2019-2695" ref_url="https://access.redhat.com/security/cve/CVE-2019-2695" source="CVE" />
         <reference ref_id="CVE-2019-2634" ref_url="https://access.redhat.com/security/cve/CVE-2019-2634" source="CVE" />
-        <reference ref_id="CVE-2019-2737" ref_url="https://access.redhat.com/security/cve/CVE-2019-2737" source="CVE" />
         <reference ref_id="CVE-2019-2738" ref_url="https://access.redhat.com/security/cve/CVE-2019-2738" source="CVE" />
         <reference ref_id="CVE-2019-2755" ref_url="https://access.redhat.com/security/cve/CVE-2019-2755" source="CVE" />
         <reference ref_id="CVE-2019-2757" ref_url="https://access.redhat.com/security/cve/CVE-2019-2757" source="CVE" />
@@ -6539,16 +6538,13 @@ For more details about the security issue(s), including the impact, a CVSS score
         <reference ref_id="CVE-2019-2879" ref_url="https://access.redhat.com/security/cve/CVE-2019-2879" source="CVE" />
         <reference ref_id="CVE-2019-2529" ref_url="https://access.redhat.com/security/cve/CVE-2019-2529" source="CVE" />
         <reference ref_id="CVE-2019-2739" ref_url="https://access.redhat.com/security/cve/CVE-2019-2739" source="CVE" />
-        <reference ref_id="CVE-2019-2535" ref_url="https://access.redhat.com/security/cve/CVE-2019-2535" source="CVE" />
         <reference ref_id="CVE-2019-2539" ref_url="https://access.redhat.com/security/cve/CVE-2019-2539" source="CVE" />
-        <reference ref_id="CVE-2019-2455" ref_url="https://access.redhat.com/security/cve/CVE-2019-2455" source="CVE" />
         <reference ref_id="CVE-2019-2481" ref_url="https://access.redhat.com/security/cve/CVE-2019-2481" source="CVE" />
         <reference ref_id="CVE-2019-2494" ref_url="https://access.redhat.com/security/cve/CVE-2019-2494" source="CVE" />
         <reference ref_id="CVE-2019-2503" ref_url="https://access.redhat.com/security/cve/CVE-2019-2503" source="CVE" />
         <reference ref_id="CVE-2019-2510" ref_url="https://access.redhat.com/security/cve/CVE-2019-2510" source="CVE" />
         <reference ref_id="CVE-2019-2530" ref_url="https://access.redhat.com/security/cve/CVE-2019-2530" source="CVE" />
         <reference ref_id="CVE-2019-2533" ref_url="https://access.redhat.com/security/cve/CVE-2019-2533" source="CVE" />
-        <reference ref_id="CVE-2019-2581" ref_url="https://access.redhat.com/security/cve/CVE-2019-2581" source="CVE" />
         <reference ref_id="CVE-2019-2587" ref_url="https://access.redhat.com/security/cve/CVE-2019-2587" source="CVE" />
         <reference ref_id="CVE-2019-2593" ref_url="https://access.redhat.com/security/cve/CVE-2019-2593" source="CVE" />
         <reference ref_id="CVE-2019-2606" ref_url="https://access.redhat.com/security/cve/CVE-2019-2606" source="CVE" />
@@ -6563,9 +6559,7 @@ For more details about the security issue(s), including the impact, a CVSS score
         <reference ref_id="CVE-2019-2691" ref_url="https://access.redhat.com/security/cve/CVE-2019-2691" source="CVE" />
         <reference ref_id="CVE-2019-2694" ref_url="https://access.redhat.com/security/cve/CVE-2019-2694" source="CVE" />
         <reference ref_id="CVE-2019-2758" ref_url="https://access.redhat.com/security/cve/CVE-2019-2758" source="CVE" />
-        <reference ref_id="CVE-2019-2740" ref_url="https://access.redhat.com/security/cve/CVE-2019-2740" source="CVE" />
         <reference ref_id="CVE-2019-2752" ref_url="https://access.redhat.com/security/cve/CVE-2019-2752" source="CVE" />
-        <reference ref_id="CVE-2019-2780" ref_url="https://access.redhat.com/security/cve/CVE-2019-2780" source="CVE" />
         <reference ref_id="CVE-2019-2785" ref_url="https://access.redhat.com/security/cve/CVE-2019-2785" source="CVE" />
         <reference ref_id="CVE-2019-2795" ref_url="https://access.redhat.com/security/cve/CVE-2019-2795" source="CVE" />
         <reference ref_id="CVE-2019-2798" ref_url="https://access.redhat.com/security/cve/CVE-2019-2798" source="CVE" />
@@ -6573,6 +6567,12 @@ For more details about the security issue(s), including the impact, a CVSS score
         <reference ref_id="CVE-2019-2805" ref_url="https://access.redhat.com/security/cve/CVE-2019-2805" source="CVE" />
         <reference ref_id="CVE-2019-2811" ref_url="https://access.redhat.com/security/cve/CVE-2019-2811" source="CVE" />
         <reference ref_id="CVE-2019-2834" ref_url="https://access.redhat.com/security/cve/CVE-2019-2834" source="CVE" />
+        <reference ref_id="CVE-2019-2455" ref_url="https://access.redhat.com/security/cve/CVE-2019-2455" source="CVE" />
+        <reference ref_id="CVE-2019-2535" ref_url="https://access.redhat.com/security/cve/CVE-2019-2535" source="CVE" />
+        <reference ref_id="CVE-2019-2581" ref_url="https://access.redhat.com/security/cve/CVE-2019-2581" source="CVE" />
+        <reference ref_id="CVE-2019-2737" ref_url="https://access.redhat.com/security/cve/CVE-2019-2737" source="CVE" />
+        <reference ref_id="CVE-2019-2740" ref_url="https://access.redhat.com/security/cve/CVE-2019-2740" source="CVE" />
+        <reference ref_id="CVE-2019-2780" ref_url="https://access.redhat.com/security/cve/CVE-2019-2780" source="CVE" />
         <description>MySQL is a multi-user, multi-threaded SQL database server. It consists of the MySQL server daemon, mysqld, and many client programs.
 
 The following packages have been upgraded to a later upstream version: mysql (8.0.17).
@@ -6670,7 +6670,6 @@ For more details about the security issue(s), including the impact, a CVSS score
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2693" impact="moderate" public="20190416">CVE-2019-2693</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2695" impact="moderate" public="20190416">CVE-2019-2695</cve>
           <cve cvss3="5.1/CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2634" impact="moderate" public="20190416">CVE-2019-2634</cve>
-          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2737" impact="moderate" public="20190716">CVE-2019-2737</cve>
           <cve cvss3="3.1/CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2738" impact="low" public="20190716">CVE-2019-2738</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2755" impact="moderate" public="20190716">CVE-2019-2755</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2757" impact="moderate" public="20190716">CVE-2019-2757</cve>
@@ -6694,16 +6693,13 @@ For more details about the security issue(s), including the impact, a CVSS score
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2879" impact="moderate" public="20190716">CVE-2019-2879</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2529" impact="moderate" public="20190115">CVE-2019-2529</cve>
           <cve cvss3="5.1/CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2739" impact="moderate" public="20190716">CVE-2019-2739</cve>
-          <cve cvss3="4.1/CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2535" impact="moderate" public="20190115">CVE-2019-2535</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2539" impact="moderate" public="20190115">CVE-2019-2539</cve>
-          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2455" impact="moderate" public="20190115">CVE-2019-2455</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2481" impact="moderate" public="20190115">CVE-2019-2481</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2494" impact="moderate" public="20190115">CVE-2019-2494</cve>
           <cve cvss3="6.4/CVSS:3.0/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2503" impact="moderate" public="20190115">CVE-2019-2503</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2510" impact="moderate" public="20190115">CVE-2019-2510</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2530" impact="moderate" public="20190115">CVE-2019-2530</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2533" impact="moderate" public="20190115">CVE-2019-2533</cve>
-          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2581" impact="moderate" public="20190416">CVE-2019-2581</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2587" impact="moderate" public="20190416">CVE-2019-2587</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2593" impact="moderate" public="20190416">CVE-2019-2593</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2606" impact="moderate" public="20190416">CVE-2019-2606</cve>
@@ -6718,9 +6714,7 @@ For more details about the security issue(s), including the impact, a CVSS score
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2691" impact="moderate" public="20190416">CVE-2019-2691</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2694" impact="moderate" public="20190416">CVE-2019-2694</cve>
           <cve cvss3="5.5/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2758" impact="moderate" public="20190716">CVE-2019-2758</cve>
-          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2740" impact="moderate" public="20190716">CVE-2019-2740</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2752" impact="moderate" public="20190716">CVE-2019-2752</cve>
-          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2780" impact="moderate" public="20190716">CVE-2019-2780</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2785" impact="moderate" public="20190716">CVE-2019-2785</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2795" impact="moderate" public="20190716">CVE-2019-2795</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2798" impact="moderate" public="20190716">CVE-2019-2798</cve>
@@ -6728,6 +6722,12 @@ For more details about the security issue(s), including the impact, a CVSS score
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2805" impact="moderate" public="20190716">CVE-2019-2805</cve>
           <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2811" impact="moderate" public="20190716">CVE-2019-2811</cve>
           <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2834" impact="moderate" public="20190716">CVE-2019-2834</cve>
+          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2455" impact="moderate" public="20190115">CVE-2019-2455</cve>
+          <cve cvss3="4.1/CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2535" impact="moderate" public="20190115">CVE-2019-2535</cve>
+          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2581" impact="moderate" public="20190416">CVE-2019-2581</cve>
+          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2737" impact="moderate" public="20190716">CVE-2019-2737</cve>
+          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2740" impact="moderate" public="20190716">CVE-2019-2740</cve>
+          <cve cvss3="4.9/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2019-2780" impact="moderate" public="20190716">CVE-2019-2780</cve>
           <bugzilla href="https://bugzilla.redhat.com/1666738" id="1666738">CVE-2019-2420 mysql: Server: Optimizer unspecified vulnerability (CPU Jan 2019)</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1666740" id="1666740">CVE-2019-2434 mysql: Server: Parser unspecified vulnerability (CPU Jan 2019)</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1666741" id="1666741">CVE-2019-2436 mysql: Server: Replication unspecified vulnerability (CPU Jan 2019)</bugzilla>
