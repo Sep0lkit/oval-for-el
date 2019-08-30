@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-08-22T21:12:57</oval:timestamp>
-    <oval:content_version>1566508377</oval:content_version>
+    <oval:timestamp>2019-08-29T08:11:56</oval:timestamp>
+    <oval:content_version>1567066316</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6974,6 +6974,55 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192582" version="634">
+      <metadata>
+        <title>RHSA-2019:2582: pango security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:2582" ref_url="https://access.redhat.com/errata/RHSA-2019:2582" source="RHSA" />
+        <reference ref_id="CVE-2019-1010238" ref_url="https://access.redhat.com/security/cve/CVE-2019-1010238" source="CVE" />
+        <description>Pango is a library for laying out and rendering of text, with an emphasis on internationalization. Pango forms the core of text and font handling for the GTK+ widget toolkit.
+
+Security Fix(es):
+
+* pango: pango_log2vis_get_embedding_levels() heap-based buffer overflow (CVE-2019-1010238)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-08-29" />
+          <updated date="2019-08-29" />
+          <cve cvss3="9.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-119" href="https://access.redhat.com/security/cve/CVE-2019-1010238" public="20190806">CVE-2019-1010238</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1737785" id="1737785">CVE-2019-1010238 pango: pango_log2vis_get_embedding_levels() heap-based buffer overflow</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="pango-debugsource is earlier than 0:1.42.4-5.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192582001" />
+            <criterion comment="pango-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192582002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="pango-devel is earlier than 0:1.42.4-5.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192582003" />
+            <criterion comment="pango-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192582004" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="pango is earlier than 0:1.42.4-5.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192582005" />
+            <criterion comment="pango is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192582006" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -12448,6 +12497,30 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192512013" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango-debugsource is earlier than 0:1.42.4-5.el8_0" id="oval:com.redhat.rhsa:tst:20192582001" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192582001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192582002" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango-devel is earlier than 0:1.42.4-5.el8_0" id="oval:com.redhat.rhsa:tst:20192582003" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192582001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192582004" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango is earlier than 0:1.42.4-5.el8_0" id="oval:com.redhat.rhsa:tst:20192582005" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192582001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="pango is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192582006" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -14056,6 +14129,15 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192512013" version="633">
       <red-def:name>subversion-javahl</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192582001" version="634">
+      <red-def:name>pango-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192582002" version="634">
+      <red-def:name>pango-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192582003" version="634">
+      <red-def:name>pango</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630004" version="101">
       <red-def:name>centos-release</red-def:name>
     </red-def:rpminfo_object>
@@ -15010,6 +15092,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192512005" version="633">
       <red-def:evr datatype="evr_string" operation="less than">0:1.10.2-2.module+el8.0.0+3900+919b6753</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192582001" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.42.4-5.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
