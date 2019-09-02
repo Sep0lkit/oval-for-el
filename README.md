@@ -91,7 +91,23 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
 ## Details on ovals above
 
+### Redhat:
 
+	- split by severity
+
+### CentOS:
+
+ - convert from redhat oval
+
+ - cpe and criterions for centos
+
+   ![cpe_and_criterion](_static/imgs/1567438374921.png)
+
+ - rpm signature key check for centos
+
+   ![signature_key](_static/imgs/1567438175262.png)
+
+	- split by severity
 
 
 
