@@ -24,13 +24,13 @@
 
 ## Files Tree:
 
-```
+```bash
 ├── centos										
-│   ├── com.redhat.rhsa-EL7-Critical.xml		#oval severity is critical
-│   ├── com.redhat.rhsa-EL7-Important.xml		#oval severity is important
-│   ├── com.redhat.rhsa-EL7-Low.xml				#oval severity is low
-│   ├── com.redhat.rhsa-EL7-Moderate.xml		#oval severity is moderate
-│   ├── com.redhat.rhsa-EL7.xml					#all severity oval on centos7
+│   ├── com.redhat.rhsa-EL7-Critical.xml        #oval severity is critical
+│   ├── com.redhat.rhsa-EL7-Important.xml       #oval severity is important
+│   ├── com.redhat.rhsa-EL7-Low.xml             #oval severity is low
+│   ├── com.redhat.rhsa-EL7-Moderate.xml        #oval severity is moderate
+│   ├── com.redhat.rhsa-EL7.xml                 #all severity oval on centos7
 │   ├── ...
 └── redhat										
     ├── com.redhat.rhsa-RHEL7-Critical.xml		
@@ -61,25 +61,25 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
 - **Run oscap oval**
 
-  check all vulnerabilities defined for centos7
+  - check all vulnerabilities defined for centos7
 
-  ```bash
-  oscap oval eval com.redhat.rhsa-EL7.xml
-  ```
+    ```bash
+    oscap oval eval com.redhat.rhsa-EL7.xml
+    ```
 
-  only check one vulnerabilitiy, Ex: shellchock(CVE-2014-6271).
+  - only check one vulnerabilitiy
 
-  this vulnerabilitiy defined with id oval:com.redhat.rhsa:def:20141293 in com.redhat.rhsa-EL7.xml
+    Ex: shellchock(CVE-2014-6271). this vulnerabilitiy defined with id oval:com.redhat.rhsa:def:20141293 in com.redhat.rhsa-EL7.xml
 
-  ```bash
-  oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
-  ```
+    ```bash
+    oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
+    ```
 
-  also you can  export html report with options --report
+  - export html report with options --report
 
-  ```bash
-  oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
-  ```
+    ```bash
+    oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
+    ```
 
   **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
 
