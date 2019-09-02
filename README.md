@@ -59,7 +59,7 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
   sudo yum install openscap openscap-scnner
   ```
 
-- **Run oscap oval **
+- **Run oscap oval**
 
   check all vulnerabilities defined for centos7
 
