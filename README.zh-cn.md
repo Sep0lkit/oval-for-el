@@ -76,13 +76,10 @@
     ```
 
   - 扫描并生成HTML报表 
-  
-    ```bash
-  oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
+ 	```
+    oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
-  
     
-  
   ------
   
   **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
