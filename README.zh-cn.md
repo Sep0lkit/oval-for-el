@@ -1,17 +1,15 @@
 # OVAL-For-EL (Improved oval for enterprise linux)
-## Features
+[中文 (Chinese version)](README.zh-cn.md)    [English (English  version)](README.md)
 
-- split oval by severity
+## 特性
 
-- convert redhat oval for centos
+- 根据漏洞级别分割成不同oval文件
+- 转换redhat oval适配centos系统
+- 修改debian oval, title字段添加系统平台和漏洞级别
+- 自动化同步官方oval
+- 支持多数常用的企业linux
 
-- add severity and platform on title for debian oval
-
-- automatic update and revise with official security 
-
-- support most enterprise Linux
-
-**Supports:**
+**系统支持**
 
 | OS     | Release       | Upstream                                   | Status  |
 | ------ | ------------- | ------------------------------------------ | ------- |
@@ -22,7 +20,7 @@
 
 
 
-## Files Tree:
+## 文件结构:
 
 ```bash
 ├── centos										
@@ -43,46 +41,48 @@
 
 
 
-## Quick Start
+## 快速入门
 
-Identify software vulnerabilities on centos 7 with oscap which is a best scap scanner provided by openscap.
+使用oscap识别centos 7 上的软件漏洞，oscap是由openscap提供的scap扫描器
 
-- **Download oval-for-el**
+- **下载 oval-for-el**
 
   ```
   git clone https://github.com/Sep0lkit/oval-for-el.git
   ```
 
-- **Install oscap**
+- **安装扫描器 oscap**
 
   ```bash
   sudo yum install openscap openscap-scnner
   ```
 
-- **Run oscap oval**
+- **使用oscap 执行oval扫描**
 
   - check all vulnerabilities defined for centos7
 
+  - 扫描oval文件中所有定义的漏洞(centos 7)
+  
     ```bash
-    oscap oval eval com.redhat.rhsa-EL7.xml
+  oscap oval eval com.redhat.rhsa-EL7.xml
     ```
 
-  - only check one vulnerabilitiy
+  - 扫描特点的漏洞
 
-    Ex: shellchock(CVE-2014-6271). this vulnerabilitiy defined with id oval:com.redhat.rhsa:def:20141293 in com.redhat.rhsa-EL7.xml
-
+    示例: 破壳漏洞(CVE-2014-6271). 破壳漏洞id: oval:com.redhat.rhsa:def:20141293
+  
     ```bash
-    oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
+  oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
     ```
 
-  - export html report with options --report
-
+  - 扫描并生成HTML报表 
+  
     ```bash
-    oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
+  oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
 
   **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
-
+  
   **HTML report:**
   
   ![html report](_static/imgs/1567437131266.png)
@@ -93,7 +93,7 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
 ### Redhat:
 
-	- split by severity
+- split by severity
 
 ### CentOS:
 
@@ -107,7 +107,7 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
    ![signature_key](_static/imgs/1567438175262.png)
 
-	- split by severity
+- split by severity
 
 
 

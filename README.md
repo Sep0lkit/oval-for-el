@@ -1,5 +1,5 @@
 # OVAL-For-EL (Improved oval for enterprise linux)
-[中文 (Chinese version)](README.md)    [English (English  version)](README.en-us.md)
+[中文 (Chinese version)](README.zh-cn.md)    [English (English  version)](README.md)
 
 ## Features
 
@@ -112,6 +112,4 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 - split by severity
 
 ## Getting Help
-
-​	![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/sep0lkit?label=%40sep0lkit)
 
