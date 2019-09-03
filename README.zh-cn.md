@@ -63,16 +63,16 @@
 
   - 扫描oval文件中所有定义的漏洞(centos 7)
   
-    ```bash
-  oscap oval eval com.redhat.rhsa-EL7.xml
+    ```
+    oscap oval eval com.redhat.rhsa-EL7.xml
     ```
 
   - 扫描特点的漏洞
 
     示例: 破壳漏洞(CVE-2014-6271). 破壳漏洞id: oval:com.redhat.rhsa:def:20141293
   
-    ```bash
-  oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
+    ```
+    oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
     ```
 
   - 扫描并生成HTML报表 
