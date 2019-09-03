@@ -69,7 +69,7 @@
 
   - 扫描特点的漏洞
 
-    示例: 破壳漏洞(CVE-2014-6271). 破壳漏洞id: oval:com.redhat.rhsa:def:20141293
+    示例: 破壳漏洞(CVE-2014-6271). 破壳漏洞id oval:com.redhat.rhsa:def:20141293
   
     ```
     oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
@@ -77,11 +77,13 @@
 
   - 扫描并生成HTML报表 
   
-    ```
+    ```bash
   oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
   
     
+  
+  ------
   
   **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
   
