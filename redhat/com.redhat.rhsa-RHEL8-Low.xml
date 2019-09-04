@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-08-29T08:11:56</oval:timestamp>
-    <oval:content_version>1567066316</oval:content_version>
+    <oval:timestamp>2019-09-03T09:27:43</oval:timestamp>
+    <oval:content_version>1567502863</oval:content_version>
   </generator>
   <definitions>
   </definitions>
@@ -5506,6 +5506,74 @@
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582003" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-webstart is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-src is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-plugin is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-jdbc is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-headless is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590009" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-devel is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590011" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-demo is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590013" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590015" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libgs is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libgs-devel is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-x11 is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-printing is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-fonts is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-dvipdf is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-doc is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591004" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -8053,6 +8121,25 @@
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192582001" version="634">
       <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.42.4-5.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192590001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.5.40-3.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192590003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.5.40-3.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591003" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591004" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>

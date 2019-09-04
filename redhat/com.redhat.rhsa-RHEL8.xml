@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-08-29T08:11:56</oval:timestamp>
-  <oval:content_version>1567066316</oval:content_version>
+  <oval:timestamp>2019-09-03T09:27:43</oval:timestamp>
+  <oval:content_version>1567502863</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6788,6 +6788,187 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192590" version="632">
+   <metadata>
+    <title>RHSA-2019:2590: java-1.8.0-ibm security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2590" ref_url="https://access.redhat.com/errata/RHSA-2019:2590" source="RHSA"/>
+    <reference ref_id="CVE-2019-11772" ref_url="https://access.redhat.com/security/cve/CVE-2019-11772" source="CVE"/>
+    <reference ref_id="CVE-2019-11775" ref_url="https://access.redhat.com/security/cve/CVE-2019-11775" source="CVE"/>
+    <reference ref_id="CVE-2019-2762" ref_url="https://access.redhat.com/security/cve/CVE-2019-2762" source="CVE"/>
+    <reference ref_id="CVE-2019-2769" ref_url="https://access.redhat.com/security/cve/CVE-2019-2769" source="CVE"/>
+    <reference ref_id="CVE-2019-2786" ref_url="https://access.redhat.com/security/cve/CVE-2019-2786" source="CVE"/>
+    <reference ref_id="CVE-2019-2816" ref_url="https://access.redhat.com/security/cve/CVE-2019-2816" source="CVE"/>
+    <reference ref_id="CVE-2019-7317" ref_url="https://access.redhat.com/security/cve/CVE-2019-7317" source="CVE"/>
+    <description>IBM Java SE version 8 includes the IBM Java Runtime Environment and the IBM Java Software Development Kit.
+
+This update upgrades IBM Java SE 8 to version 8 SR5-FP40.
+
+Security Fix(es):
+
+* IBM JDK: Out-of-bounds access in the String.getBytes method (CVE-2019-11772)
+
+* IBM JDK: Failure to privatize a value pulled out of the loop by versioning (CVE-2019-11775)
+
+* OpenJDK: Insufficient checks of suppressed exceptions in deserialization (Utilities, 8212328) (CVE-2019-2762)
+
+* OpenJDK: Unbounded memory allocation during deserialization in Collections (Utilities, 8213432) (CVE-2019-2769)
+
+* OpenJDK: Missing URL format validation (Networking, 8221518) (CVE-2019-2816)
+
+* OpenJDK: Insufficient restriction of privileges in AccessController (Security, 8216381) (CVE-2019-2786)
+
+* libpng: use-after-free in png_image_free in png.c (CVE-2019-7317)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-09-02"/>
+     <updated date="2019-09-02"/>
+     <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-119" href="https://access.redhat.com/security/cve/CVE-2019-11772" public="20190801">CVE-2019-11772</cve>
+     <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-119" href="https://access.redhat.com/security/cve/CVE-2019-11775" public="20190801">CVE-2019-11775</cve>
+     <cve cvss3="5.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2762" impact="moderate" public="20190716">CVE-2019-2762</cve>
+     <cve cvss3="5.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2019-2769" impact="moderate" public="20190716">CVE-2019-2769</cve>
+     <cve cvss3="3.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N" href="https://access.redhat.com/security/cve/CVE-2019-2786" impact="low" public="20190716">CVE-2019-2786</cve>
+     <cve cvss3="4.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2019-2816" impact="moderate" public="20190716">CVE-2019-2816</cve>
+     <cve cvss3="3.3/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-7317" impact="low" public="20190125">CVE-2019-7317</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1672409" id="1672409">CVE-2019-7317 libpng: use-after-free in png_image_free in png.c</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1730056" id="1730056">CVE-2019-2769 OpenJDK: Unbounded memory allocation during deserialization in Collections (Utilities, 8213432)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1730099" id="1730099">CVE-2019-2816 OpenJDK: Missing URL format validation (Networking, 8221518)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1730255" id="1730255">CVE-2019-2786 OpenJDK: Insufficient restriction of privileges in AccessController (Security, 8216381)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1730415" id="1730415">CVE-2019-2762 OpenJDK: Insufficient checks of suppressed exceptions in deserialization (Utilities, 8212328)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1738547" id="1738547">CVE-2019-11772 IBM JDK: Out-of-bounds access in the String.getBytes method</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1738549" id="1738549">CVE-2019-11775 IBM JDK: Failure to privatize a value pulled out of the loop by versioning</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-webstart is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590001"/>
+      <criterion comment="java-1.8.0-ibm-webstart is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-src is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590003"/>
+      <criterion comment="java-1.8.0-ibm-src is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-plugin is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590005"/>
+      <criterion comment="java-1.8.0-ibm-plugin is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-jdbc is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590007"/>
+      <criterion comment="java-1.8.0-ibm-jdbc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-headless is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590009"/>
+      <criterion comment="java-1.8.0-ibm-headless is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-devel is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590011"/>
+      <criterion comment="java-1.8.0-ibm-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm-demo is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590013"/>
+      <criterion comment="java-1.8.0-ibm-demo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-ibm is earlier than 1:1.8.0.5.40-3.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192590015"/>
+      <criterion comment="java-1.8.0-ibm is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191238004"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192591" version="633">
+   <metadata>
+    <title>RHSA-2019:2591: ghostscript security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2591" ref_url="https://access.redhat.com/errata/RHSA-2019:2591" source="RHSA"/>
+    <reference ref_id="CVE-2019-14811" ref_url="https://access.redhat.com/security/cve/CVE-2019-14811" source="CVE"/>
+    <reference ref_id="CVE-2019-14812" ref_url="https://access.redhat.com/security/cve/CVE-2019-14812" source="CVE"/>
+    <reference ref_id="CVE-2019-14813" ref_url="https://access.redhat.com/security/cve/CVE-2019-14813" source="CVE"/>
+    <reference ref_id="CVE-2019-14817" ref_url="https://access.redhat.com/security/cve/CVE-2019-14817" source="CVE"/>
+    <description>The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.
+
+Security Fix(es):
+
+* ghostscript: Safer mode bypass by .forceput exposure in .pdf_hook_DSC_Creator (701445) (CVE-2019-14811)
+
+* ghostscript: Safer mode bypass by .forceput exposure in setuserparams (701444) (CVE-2019-14812)
+
+* ghostscript: Safer mode bypass by .forceput exposure in setsystemparams (701443) (CVE-2019-14813)
+
+* ghostscript: Safer mode bypass by .forceput exposure in .pdfexectoken and other procedures (701450) (CVE-2019-14817)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-09-02"/>
+     <updated date="2019-09-02"/>
+     <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-14811" public="20190828:1200">CVE-2019-14811</cve>
+     <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-14812" public="20190828:1200">CVE-2019-14812</cve>
+     <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-14813" public="20190828:1200">CVE-2019-14813</cve>
+     <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-14817" public="20190828:1200">CVE-2019-14817</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1743737" id="1743737">CVE-2019-14813 ghostscript: Safer mode bypass by .forceput exposure in setsystemparams (701443)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1743754" id="1743754">CVE-2019-14812 ghostscript: Safer mode bypass by .forceput exposure in setuserparams (701444)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1743757" id="1743757">CVE-2019-14811 ghostscript: Safer mode bypass by .forceput exposure in .pdf_hook_DSC_Creator (701445)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1744042" id="1744042">CVE-2019-14817 ghostscript: Safer mode bypass by .forceput exposure in .pdfexectoken and other procedures (701450)</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591001"/>
+      <criterion comment="ghostscript-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="libgs is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591003"/>
+      <criterion comment="libgs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591005"/>
+      <criterion comment="ghostscript is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="libgs-devel is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591007"/>
+      <criterion comment="libgs-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript-x11 is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591009"/>
+      <criterion comment="ghostscript-x11 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript-tools-printing is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591011"/>
+      <criterion comment="ghostscript-tools-printing is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript-tools-fonts is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591013"/>
+      <criterion comment="ghostscript-tools-fonts is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript-tools-dvipdf is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591015"/>
+      <criterion comment="ghostscript-tools-dvipdf is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="ghostscript-doc is earlier than 0:9.25-2.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20192591017"/>
+      <criterion comment="ghostscript-doc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971008"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -12286,6 +12467,74 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192582003"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-webstart is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590001" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-src is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590003" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-plugin is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590005" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-jdbc is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590007" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-headless is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590009" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-devel is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590011" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm-demo is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590013" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-ibm is earlier than 1:1.8.0.5.40-3.el8_0" id="oval:com.redhat.rhsa:tst:20192590015" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191238002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192590003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591001" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libgs is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591003" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591005" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libgs-devel is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591007" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-x11 is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591009" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-printing is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591011" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-fonts is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591013" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-tools-dvipdf is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591015" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-doc is earlier than 0:9.25-2.el8_0.3" id="oval:com.redhat.rhsa:tst:20192591017" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591004"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -14833,6 +15082,25 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192582001" version="634">
    <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:1.42.4-5.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192590001" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.5.40-3.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192590003" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.5.40-3.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591001" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591003" version="633">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591004" version="633">
+   <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
