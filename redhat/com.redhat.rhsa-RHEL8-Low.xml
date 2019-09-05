@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-09-03T09:27:43</oval:timestamp>
-    <oval:content_version>1567502863</oval:content_version>
+    <oval:timestamp>2019-09-04T22:43:39</oval:timestamp>
+    <oval:content_version>1567637019</oval:content_version>
   </generator>
   <definitions>
   </definitions>
@@ -5574,6 +5574,54 @@
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971004" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192591004" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="squid-debugsource is earlier than 7:4.4-5.module+el8.0.0+4045+70edde92" id="oval:com.redhat.rhsa:tst:20192593001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192593001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="squid-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192593002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="squid is earlier than 7:4.4-5.module+el8.0.0+4045+70edde92" id="oval:com.redhat.rhsa:tst:20192593003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192593001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="squid is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192593004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap-devel is earlier than 0:1.0.1-2.module+el8.0.0+4045+70edde92" id="oval:com.redhat.rhsa:tst:20192593005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192593003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192593006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap-debugsource is earlier than 0:1.0.1-2.module+el8.0.0+4045+70edde92" id="oval:com.redhat.rhsa:tst:20192593007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192593003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192593008" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap is earlier than 0:1.0.1-2.module+el8.0.0+4045+70edde92" id="oval:com.redhat.rhsa:tst:20192593009" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192593003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libecap is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192593010" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -7175,6 +7223,21 @@
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192582003" version="634">
       <red-def:name>pango</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192593001" version="632">
+      <red-def:name>squid-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192593002" version="632">
+      <red-def:name>squid</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192593003" version="632">
+      <red-def:name>libecap-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192593004" version="632">
+      <red-def:name>libecap-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192593005" version="632">
+      <red-def:name>libecap</red-def:name>
+    </red-def:rpminfo_object>
   </objects>
   <states>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -8140,6 +8203,18 @@
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192591004" version="633">
       <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.3</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192593001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">7:4.4-5.module+el8.0.0+4045+70edde92</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192593003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.0.1-2.module+el8.0.0+4045+70edde92</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192663001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.1.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>
