@@ -70,7 +70,7 @@
     ```
 
   - 扫描并生成HTML报表 
-		 	```
+    ```
     oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
     
