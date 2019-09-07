@@ -1,17 +1,11 @@
-# OVAL-For-EL (Improved oval for enterprise linux)
+# OVAL-For-EL
 [中文 (Chinese version)](README.zh-cn.md)    [English (English  version)](README.md)
 
 ## Features
 
-- split oval by severity
-
-- convert redhat oval for centos
-
-- add severity and platform on title for debian oval
-
-- automatic update and revise with official security 
-
-- support most enterprise Linux
+- CentOS OVAL
+- Split oval by severity
+- Automatic update and revise with official security 
 
 **Supports**
 
@@ -19,10 +13,6 @@
 | ------ | ------------- | ------------------------------------------ | ------- |
 | redhat | RHEL5 - RHEL8 | https://www.redhat.com/security/data/oval/ | syncing |
 | centos | EL5 - EL8     | https://www.redhat.com/security/data/oval/ | syncing |
-| ubuntu |               |                                            | todo    |
-| debian |               |                                            | todo    |
-
-
 
 ## Files Tree:
 
@@ -83,8 +73,10 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
     oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
 
-  **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
+  ------
 
+  **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
+  
   **HTML report:**
   
   ![html report](_static/imgs/1567437131266.png)
@@ -111,5 +103,16 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
 - split by severity
 
+## Resource
+
+**Linux OVAL**
+
+- [Redhat](https://www.redhat.com/security/data/oval/)
+- [Ubuntu](https://people.canonical.com/~ubuntu-security/oval/)
+- [Debian](https://www.debian.org/security/oval/)
+- [Oracle Linux](https://linux.oracle.com/security/oval/)
+- [SUSE](http://ftp.suse.com/pub/projects/security/oval/)
+
 ## Getting Help
 
+Twitter: [@sep0lkit](https://twitter.com/sep0lkit)

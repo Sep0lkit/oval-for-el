@@ -1,13 +1,11 @@
-# OVAL-For-EL (Improved oval for enterprise linux)
+# OVAL-For-EL
 [中文 (Chinese version)](README.zh-cn.md)    [English (English  version)](README.md)
 
 ## 特性
 
+- CentOS OVAL
 - 根据漏洞级别分割成不同oval文件
-- 转换redhat oval适配centos系统
-- 修改debian oval, title字段添加系统平台和漏洞级别
 - 自动化同步官方oval
-- 支持多数常用的企业linux
 
 **系统支持**
 
@@ -15,10 +13,6 @@
 | ------ | ------------- | ------------------------------------------ | ------- |
 | redhat | RHEL5 - RHEL8 | https://www.redhat.com/security/data/oval/ | syncing |
 | centos | EL5 - EL8     | https://www.redhat.com/security/data/oval/ | syncing |
-| ubuntu |               |                                            | todo    |
-| debian |               |                                            | todo    |
-
-
 
 ## 文件结构:
 
@@ -76,7 +70,7 @@
     ```
 
   - 扫描并生成HTML报表 
- 	```
+		 	```
     oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
     ```
     
@@ -110,6 +104,17 @@
 
 - split by severity
 
+## Resource
 
+**Linux OVAL**
 
-## Getting Help
+- [Redhat](https://www.redhat.com/security/data/oval/)
+- [Ubuntu](https://people.canonical.com/~ubuntu-security/oval/)
+- [Debian](https://www.debian.org/security/oval/)
+- [Oracle Linux](https://linux.oracle.com/security/oval/)
+- [SUSE](http://ftp.suse.com/pub/projects/security/oval/)
+
+## Contact
+
+Twitter: [@sep0lkit](https://twitter.com/sep0lkit)
+
