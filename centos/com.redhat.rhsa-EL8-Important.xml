@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-09-14T10:19:34</oval:timestamp>
-    <oval:content_version>1568456374</oval:content_version>
+    <oval:timestamp>2019-09-16T17:35:18</oval:timestamp>
+    <oval:content_version>1568655318</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190968" version="634">
@@ -6620,6 +6620,83 @@ Bug Fix(es):
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192774" version="632">
+      <metadata>
+        <title>RHSA-2019:2774: thunderbird security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:2774" ref_url="https://access.redhat.com/errata/RHSA-2019:2774" source="RHSA" />
+        <reference ref_id="CVE-2019-11739" ref_url="https://access.redhat.com/security/cve/CVE-2019-11739" source="CVE" />
+        <reference ref_id="CVE-2019-11740" ref_url="https://access.redhat.com/security/cve/CVE-2019-11740" source="CVE" />
+        <reference ref_id="CVE-2019-11742" ref_url="https://access.redhat.com/security/cve/CVE-2019-11742" source="CVE" />
+        <reference ref_id="CVE-2019-11743" ref_url="https://access.redhat.com/security/cve/CVE-2019-11743" source="CVE" />
+        <reference ref_id="CVE-2019-11744" ref_url="https://access.redhat.com/security/cve/CVE-2019-11744" source="CVE" />
+        <reference ref_id="CVE-2019-11746" ref_url="https://access.redhat.com/security/cve/CVE-2019-11746" source="CVE" />
+        <reference ref_id="CVE-2019-11752" ref_url="https://access.redhat.com/security/cve/CVE-2019-11752" source="CVE" />
+        <description>Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+This update upgrades Thunderbird to version 60.9.0.
+
+Security Fix(es):
+
+* Mozilla: Covert Content Attack on S/MIME encryption using a crafted multipart/alternative message (CVE-2019-11739)
+
+* Mozilla: Memory safety bugs fixed in Firefox 69, Firefox ESR 68.1, and Firefox ESR 60.9 (CVE-2019-11740)
+
+* Mozilla: Same-origin policy violation with SVG filters and canvas to steal cross-origin images (CVE-2019-11742)
+
+* Mozilla: XSS by breaking out of title and textarea elements using innerHTML (CVE-2019-11744)
+
+* Mozilla: Use-after-free while manipulating video (CVE-2019-11746)
+
+* Mozilla: Use-after-free while extracting a key value in IndexedDB (CVE-2019-11752)
+
+* Mozilla: Cross-origin access to unload event attributes (CVE-2019-11743)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-09-16" />
+          <updated date="2019-09-16" />
+          <cve cvss3="5.3/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N" cwe="CWE-356" href="https://access.redhat.com/security/cve/CVE-2019-11739" public="20190915">CVE-2019-11739</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11740" public="20190903">CVE-2019-11740</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11742" public="20190903">CVE-2019-11742</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11743" impact="moderate" public="20190903">CVE-2019-11743</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11744" public="20190903">CVE-2019-11744</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11746" public="20190903">CVE-2019-11746</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11752" public="20190903">CVE-2019-11752</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1748652" id="1748652">CVE-2019-11740 Mozilla: Memory safety bugs fixed in Firefox 69, Firefox ESR 68.1, Firefox ESR 60.9, Thunderbird 68.1, and Thunderbird 60.9</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1748653" id="1748653">CVE-2019-11742 Mozilla: Same-origin policy violation with SVG filters and canvas to steal cross-origin images</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1748654" id="1748654">CVE-2019-11743 Mozilla: Cross-origin access to unload event attributes</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1748655" id="1748655">CVE-2019-11744 Mozilla: XSS by breaking out of title and textarea elements using innerHTML</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1748656" id="1748656">CVE-2019-11746 Mozilla: Use-after-free while manipulating video</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1748657" id="1748657">CVE-2019-11752 Mozilla: Use-after-free while extracting a key value in IndexedDB</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1752307" id="1752307">CVE-2019-11739 Mozilla: Covert Content Attack on S/MIME encryption using a crafted multipart/alternative message</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="thunderbird-debugsource is earlier than 0:60.9.0-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192774001" />
+            <criterion comment="thunderbird-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="thunderbird is earlier than 0:60.9.0-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192774003" />
+            <criterion comment="thunderbird is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144004" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -12722,6 +12799,14 @@ Bug Fix(es):
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174001" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192741001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:60.9.0-2.el8_0" id="oval:com.redhat.rhsa:tst:20192774001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192774001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:60.9.0-2.el8_0" id="oval:com.redhat.rhsa:tst:20192774003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192774001" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -15532,6 +15617,10 @@ Bug Fix(es):
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192741001" version="635">
       <red-def:arch datatype="string" operation="equals">x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.1.rt9.156.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192774001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:60.9.0-2.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
