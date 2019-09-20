@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-09-16T17:35:18</oval:timestamp>
-    <oval:content_version>1568655318</oval:content_version>
+    <oval:timestamp>2019-09-19T12:58:19</oval:timestamp>
+    <oval:content_version>1568897899</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -8339,6 +8339,140 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192798" version="633">
+      <metadata>
+        <title>RHSA-2019:2798: patch security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:2798" ref_url="https://access.redhat.com/errata/RHSA-2019:2798" source="RHSA" />
+        <reference ref_id="CVE-2018-20969" ref_url="https://access.redhat.com/security/cve/CVE-2018-20969" source="CVE" />
+        <reference ref_id="CVE-2019-13638" ref_url="https://access.redhat.com/security/cve/CVE-2019-13638" source="CVE" />
+        <description>The patch program applies diff files to originals. The diff command is used to compare an original to a changed file. Diff lists the changes made to the file. A person who has the original file can then use the patch command with the diff file to add the changes to their original file (patching the file).
+
+Security Fix(es):
+
+* patch: do_ed_script in pch.c does not block strings beginning with a ! character (CVE-2018-20969)
+
+* patch: OS shell command injection when processing crafted patch files (CVE-2019-13638)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-09-19" />
+          <updated date="2019-09-17" />
+          <cve cvss3="7.8/CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-863" href="https://access.redhat.com/security/cve/CVE-2018-20969" public="20190816">CVE-2018-20969</cve>
+          <cve cvss3="7.8/CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-78" href="https://access.redhat.com/security/cve/CVE-2019-13638" public="20190729">CVE-2019-13638</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1733916" id="1733916">CVE-2019-13638 patch: OS shell command injection when processing crafted patch files</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1746672" id="1746672">CVE-2018-20969 patch: do_ed_script in pch.c does not block strings beginning with a ! character</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/o:redhat:enterprise_linux:8</cpe>
+            <cpe>cpe:/o:centos:centos:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="patch-debugsource is earlier than 0:2.7.6-9.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192798001" />
+            <criterion comment="patch-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192798002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="patch is earlier than 0:2.7.6-9.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192798003" />
+            <criterion comment="patch is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192798004" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192799" version="633">
+      <metadata>
+        <title>RHSA-2019:2799: nginx:1.14 security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+          <platform>Community Enterprise Operating System 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:2799" ref_url="https://access.redhat.com/errata/RHSA-2019:2799" source="RHSA" />
+        <reference ref_id="CVE-2019-9511" ref_url="https://access.redhat.com/security/cve/CVE-2019-9511" source="CVE" />
+        <reference ref_id="CVE-2019-9513" ref_url="https://access.redhat.com/security/cve/CVE-2019-9513" source="CVE" />
+        <reference ref_id="CVE-2019-9516" ref_url="https://access.redhat.com/security/cve/CVE-2019-9516" source="CVE" />
+        <description>Nginx is a web server and a reverse proxy server for HTTP, SMTP, POP3 (Post Office Protocol 3) and IMAP protocols, with a focus on high concurrency, performance and low memory usage. 
+
+Security Fix(es):
+
+* HTTP/2: large amount of data request leads to denial of service (CVE-2019-9511)
+
+* HTTP/2: flood using PRIORITY frames resulting in excessive resource consumption (CVE-2019-9513)
+
+* HTTP/2: 0-length headers leads to denial of service (CVE-2019-9516)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-09-19" />
+          <updated date="2019-09-17" />
+          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9511" public="20190813">CVE-2019-9511</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9513" public="20190813:1700">CVE-2019-9513</cve>
+          <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9516" public="20190813">CVE-2019-9516</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1735741" id="1735741">CVE-2019-9513 HTTP/2: flood using PRIORITY frames resulting in excessive resource consumption</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1741860" id="1741860">CVE-2019-9511 HTTP/2: large amount of data requests leads to denial of service</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1741864" id="1741864">CVE-2019-9516 HTTP/2: 0-length headers lead to denial of service</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criteria operator="OR">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+        </criteria>
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="nginx-mod-stream is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799001" />
+            <criterion comment="nginx-mod-stream is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-mod-mail is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799003" />
+            <criterion comment="nginx-mod-mail is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799004" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-mod-http-xslt-filter is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799005" />
+            <criterion comment="nginx-mod-http-xslt-filter is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799006" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-mod-http-perl is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799007" />
+            <criterion comment="nginx-mod-http-perl is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799008" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-mod-http-image-filter is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799009" />
+            <criterion comment="nginx-mod-http-image-filter is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799010" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-debugsource is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799011" />
+            <criterion comment="nginx-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799012" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799013" />
+            <criterion comment="nginx is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799014" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-filesystem is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799015" />
+            <criterion comment="nginx-filesystem is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799016" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="nginx-all-modules is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" test_ref="oval:com.redhat.rhsa:tst:20192799017" />
+            <criterion comment="nginx-all-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192799018" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -14449,6 +14583,94 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192774001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="patch-debugsource is earlier than 0:2.7.6-9.el8_0" id="oval:com.redhat.rhsa:tst:20192798001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192798001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192798001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="patch-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192798002" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192798001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="patch is earlier than 0:2.7.6-9.el8_0" id="oval:com.redhat.rhsa:tst:20192798003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192798002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192798001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="patch is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192798004" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192798002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-stream is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-stream is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799002" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-mail is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-mail is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799004" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-xslt-filter is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-xslt-filter is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799006" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-perl is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-perl is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799008" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-image-filter is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-mod-http-image-filter is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799010" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-debugsource is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799012" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799014" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-filesystem is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-filesystem is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799016" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-all-modules is earlier than 1:1.14.1-9.module+el8.0.0+4108+af250afe" id="oval:com.redhat.rhsa:tst:20192799017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192799003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nginx-all-modules is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192799018" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -16135,6 +16357,39 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192722004" version="634">
       <red-def:name>libwmf-devel</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192798001" version="633">
+      <red-def:name>patch-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192798002" version="633">
+      <red-def:name>patch</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799001" version="633">
+      <red-def:name>nginx-mod-stream</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799002" version="633">
+      <red-def:name>nginx-mod-mail</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799003" version="633">
+      <red-def:name>nginx-mod-http-xslt-filter</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799004" version="633">
+      <red-def:name>nginx-mod-http-perl</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799005" version="633">
+      <red-def:name>nginx-mod-http-image-filter</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799006" version="633">
+      <red-def:name>nginx-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799007" version="633">
+      <red-def:name>nginx</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799008" version="633">
+      <red-def:name>nginx-filesystem</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799009" version="633">
+      <red-def:name>nginx-all-modules</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630004" version="101">
       <red-def:name>centos-release</red-def:name>
     </red-def:rpminfo_object>
@@ -17263,6 +17518,17 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192774001" version="632">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:60.9.0-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192798001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.7.6-9.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192799001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:1.14.1-9.module+el8.0.0+4108+af250afe</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192799003" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">1:1.14.1-9.module+el8.0.0+4108+af250afe</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
