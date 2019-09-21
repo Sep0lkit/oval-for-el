@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-09-19T12:58:19</oval:timestamp>
-  <oval:content_version>1568897899</oval:content_version>
+  <oval:timestamp>2019-09-20T07:16:26</oval:timestamp>
+  <oval:content_version>1568963786</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -8175,6 +8175,270 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192822" version="634">
+   <metadata>
+    <title>RHSA-2019:2822: dovecot security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2822" ref_url="https://access.redhat.com/errata/RHSA-2019:2822" source="RHSA"/>
+    <reference ref_id="CVE-2019-11500" ref_url="https://access.redhat.com/security/cve/CVE-2019-11500" source="CVE"/>
+    <description>Dovecot is an IMAP server for Linux and other UNIX-like systems, written primarily with security in mind. It also contains a small POP3 server, and supports e-mail in either the maildir or mbox format. The SQL drivers and authentication plug-ins are provided as subpackages. 
+
+Security Fix(es):
+
+* dovecot: improper NULL byte handling in IMAP and ManageSieve protocol parsers leads to out of bounds writes (CVE-2019-11500)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-09-20"/>
+     <updated date="2019-09-20"/>
+     <cve cvss3="8.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2019-11500" public="20190828:1200">CVE-2019-11500</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1741141" id="1741141">CVE-2019-11500 dovecot: improper NULL byte handling in IMAP and ManageSieve protocol parsers leads to out of bounds writes</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="dovecot-debugsource is earlier than 1:2.2.36-5.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20192822001"/>
+      <criterion comment="dovecot-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192822002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="dovecot-pgsql is earlier than 1:2.2.36-5.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20192822003"/>
+      <criterion comment="dovecot-pgsql is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192822004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="dovecot-mysql is earlier than 1:2.2.36-5.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20192822005"/>
+      <criterion comment="dovecot-mysql is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192822006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="dovecot is earlier than 1:2.2.36-5.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20192822007"/>
+      <criterion comment="dovecot is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192822008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="dovecot-devel is earlier than 1:2.2.36-5.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20192822009"/>
+      <criterion comment="dovecot-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20192822010"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192827" version="632">
+   <metadata>
+    <title>RHSA-2019:2827: kernel security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2827" ref_url="https://access.redhat.com/errata/RHSA-2019:2827" source="RHSA"/>
+    <reference ref_id="CVE-2019-14835" ref_url="https://access.redhat.com/security/cve/CVE-2019-14835" source="CVE"/>
+    <description>The kernel packages contain the Linux kernel, the core of any Linux operating system.
+
+Security Fix(es):
+
+* A buffer overflow flaw was found in the way Linux kernel's vhost functionality that translates virtqueue buffers to IOVs, logged the buffer descriptors during migration. A privileged guest user able to pass descriptors with invalid length to the host when migration is underway, could use this flaw to increase their privileges on the host. (CVE-2019-14835)</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-09-20"/>
+     <updated date="2019-09-20"/>
+     <cve cvss3="7.2/CVSS:3.0/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-14835" public="20190917">CVE-2019-14835</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1750727" id="1750727">CVE-2019-14835 kernel: vhost-net: guest to host kernel escape during migration</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/o:redhat:enterprise_linux:8</cpe>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="kernel-doc is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827001"/>
+      <criterion comment="kernel-doc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-abi-whitelists is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827003"/>
+      <criterion comment="kernel-abi-whitelists is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="python3-perf is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827005"/>
+      <criterion comment="python3-perf is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167024"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="perf is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827007"/>
+      <criterion comment="perf is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167034"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-tools-libs is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827009"/>
+      <criterion comment="kernel-tools-libs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167048"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-tools is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827011"/>
+      <criterion comment="kernel-tools is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167030"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827013"/>
+      <criterion comment="kernel-modules-extra is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-modules is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827015"/>
+      <criterion comment="kernel-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167044"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-headers is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827017"/>
+      <criterion comment="kernel-headers is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167032"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-devel is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827019"/>
+      <criterion comment="kernel-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-debug-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827021"/>
+      <criterion comment="kernel-debug-modules-extra is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-debug-modules is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827023"/>
+      <criterion comment="kernel-debug-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-debug-devel is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827025"/>
+      <criterion comment="kernel-debug-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167042"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-debug-core is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827027"/>
+      <criterion comment="kernel-debug-core is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167026"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-debug is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827029"/>
+      <criterion comment="kernel-debug is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167022"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-cross-headers is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827031"/>
+      <criterion comment="kernel-cross-headers is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167046"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-core is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827033"/>
+      <criterion comment="kernel-core is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167036"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827035"/>
+      <criterion comment="kernel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167040"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="bpftool is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827037"/>
+      <criterion comment="bpftool is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167028"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-zfcpdump-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827039"/>
+      <criterion comment="kernel-zfcpdump-modules-extra is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-zfcpdump-modules is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827041"/>
+      <criterion comment="kernel-zfcpdump-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167020"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-zfcpdump-devel is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827043"/>
+      <criterion comment="kernel-zfcpdump-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167038"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-zfcpdump-core is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827045"/>
+      <criterion comment="kernel-zfcpdump-core is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-zfcpdump is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827047"/>
+      <criterion comment="kernel-zfcpdump is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-tools-libs-devel is earlier than 0:4.18.0-80.11.2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192827049"/>
+      <criterion comment="kernel-tools-libs-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191167050"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20192828" version="633">
+   <metadata>
+    <title>RHSA-2019:2828: kernel-rt security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:2828" ref_url="https://access.redhat.com/errata/RHSA-2019:2828" source="RHSA"/>
+    <reference ref_id="CVE-2019-14835" ref_url="https://access.redhat.com/security/cve/CVE-2019-14835" source="CVE"/>
+    <description>The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.
+
+Security Fix(es):
+
+* A buffer overflow flaw was found in the way Linux kernel's vhost functionality that translates virtqueue buffers to IOVs, logged the buffer descriptors during migration. A privileged guest user able to pass descriptors with invalid length to the host when migration is underway, could use this flaw to increase their privileges on the host. (CVE-2019-14835)</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-09-20"/>
+     <updated date="2019-09-20"/>
+     <cve cvss3="7.2/CVSS:3.0/AV:L/AC:H/PR:H/UI:R/S:C/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-14835" public="20190917">CVE-2019-14835</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1750727" id="1750727">CVE-2019-14835 kernel: vhost-net: guest to host kernel escape during migration</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-modules-extra is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828001"/>
+      <criterion comment="kernel-rt-modules-extra is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-modules is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828003"/>
+      <criterion comment="kernel-rt-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174020"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-devel is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828005"/>
+      <criterion comment="kernel-rt-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174024"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug-modules-extra is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828007"/>
+      <criterion comment="kernel-rt-debug-modules-extra is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug-modules is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828009"/>
+      <criterion comment="kernel-rt-debug-modules is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug-devel is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828011"/>
+      <criterion comment="kernel-rt-debug-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug-core is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828013"/>
+      <criterion comment="kernel-rt-debug-core is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174022"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828015"/>
+      <criterion comment="kernel-rt-debug is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-core is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828017"/>
+      <criterion comment="kernel-rt-core is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828019"/>
+      <criterion comment="kernel-rt is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-kvm is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828021"/>
+      <criterion comment="kernel-rt-kvm is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="kernel-rt-debug-kvm is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192828023"/>
+      <criterion comment="kernel-rt-debug-kvm is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191174002"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -14373,6 +14637,194 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192799009"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-debugsource is earlier than 1:2.2.36-5.el8_0.1" id="oval:com.redhat.rhsa:tst:20192822001" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192822001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192822002" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-pgsql is earlier than 1:2.2.36-5.el8_0.1" id="oval:com.redhat.rhsa:tst:20192822003" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192822003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-pgsql is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192822004" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-mysql is earlier than 1:2.2.36-5.el8_0.1" id="oval:com.redhat.rhsa:tst:20192822005" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192822003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-mysql is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192822006" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot is earlier than 1:2.2.36-5.el8_0.1" id="oval:com.redhat.rhsa:tst:20192822007" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192822001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192822008" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-devel is earlier than 1:2.2.36-5.el8_0.1" id="oval:com.redhat.rhsa:tst:20192822009" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192822001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="dovecot-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192822010" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192822005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-doc is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827001" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-abi-whitelists is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827003" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="python3-perf is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827005" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="perf is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827007" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167017"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-tools-libs is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827009" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167024"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-tools is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827011" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167015"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827013" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-modules is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827015" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167022"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-headers is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827017" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167016"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-devel is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827019" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-debug-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827021" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-debug-modules is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827023" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-debug-devel is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827025" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167021"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-debug-core is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827027" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-debug is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827029" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-cross-headers is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827031" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167023"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-core is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827033" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167018"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827035" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167020"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="bpftool is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827037" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167014"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-modules-extra is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827039" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-modules is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827041" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-devel is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827043" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167019"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-core is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827045" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827047" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-tools-libs-devel is earlier than 0:4.18.0-80.11.2.el8_0" id="oval:com.redhat.rhsa:tst:20192827049" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167025"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192827004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-modules-extra is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828001" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-modules is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828003" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-devel is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828005" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug-modules-extra is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828007" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug-modules is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828009" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug-devel is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828011" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug-core is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828013" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828015" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-core is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828017" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828019" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-kvm is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828021" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="kernel-rt-debug-kvm is earlier than 0:4.18.0-80.11.2.rt9.157.el8_0" id="oval:com.redhat.rhsa:tst:20192828023" version="633">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -16076,6 +16528,21 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192799009" version="633">
    <red-def:name>nginx-all-modules</red-def:name>
   </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822001" version="634">
+   <red-def:name>dovecot-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822002" version="634">
+   <red-def:name>dovecot-pgsql</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822003" version="634">
+   <red-def:name>dovecot-mysql</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822004" version="634">
+   <red-def:name>dovecot</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822005" version="634">
+   <red-def:name>dovecot-devel</red-def:name>
+  </red-def:rpminfo_object>
  </objects>
  <states>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -17203,6 +17670,33 @@ For more details about the security issue(s), including the impact, a CVSS score
   </red-def:rpminfo_state>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192799003" version="633">
    <red-def:evr datatype="evr_string" operation="less than">1:1.14.1-9.module+el8.0.0+4108+af250afe</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192822001" version="634">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|i686|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:2.2.36-5.el8_0.1</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192822003" version="634">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:2.2.36-5.el8_0.1</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192827001" version="632">
+   <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192827003" version="632">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192827004" version="632">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192827005" version="632">
+   <red-def:arch datatype="string" operation="equals">s390x</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192828001" version="633">
+   <red-def:arch datatype="string" operation="equals">x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.rt9.157.el8_0</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
