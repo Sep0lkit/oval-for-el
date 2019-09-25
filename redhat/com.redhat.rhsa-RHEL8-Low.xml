@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-09-20T07:16:26</oval:timestamp>
-    <oval:content_version>1568963786</oval:content_version>
+    <oval:timestamp>2019-09-24T15:50:57</oval:timestamp>
+    <oval:content_version>1569340257</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20192722" version="634">
@@ -6443,6 +6443,58 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191174001" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192828001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_ssl is earlier than 1:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_session is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_proxy_html is earlier than 1:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_md is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_ldap is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_http2-debugsource is earlier than 0:1.11.3-3.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="mod_http2 is earlier than 0:1.11.3-3.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd-tools is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd-devel is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd-debugsource is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893019" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893021" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980011" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd-manual is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893023" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980012" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="httpd-filesystem is earlier than 0:2.4.37-12.module+el8.0.0+4096+eb40e6da" id="oval:com.redhat.rhsa:tst:20192893025" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893005" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -9315,6 +9367,21 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192828001" version="633">
       <red-def:arch datatype="string" operation="equals">x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.11.2.rt9.157.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192893001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:2.4.37-12.module+el8.0.0+4096+eb40e6da</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192893003" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.4.37-12.module+el8.0.0+4096+eb40e6da</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192893004" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.11.3-3.module+el8.0.0+4096+eb40e6da</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192893005" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">0:2.4.37-12.module+el8.0.0+4096+eb40e6da</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>
