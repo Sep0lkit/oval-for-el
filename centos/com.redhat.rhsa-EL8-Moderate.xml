@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-09-24T15:50:57</oval:timestamp>
-    <oval:content_version>1569340257</oval:content_version>
+    <oval:timestamp>2019-10-01T17:05:02</oval:timestamp>
+    <oval:content_version>1569949502</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190984" version="633">
@@ -7478,6 +7478,62 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190980013" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192893005" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="npm is earlier than 1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda" id="oval:com.redhat.rhsa:tst:20192925001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="npm is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925002" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-devel is earlier than 1:10.16.3-2.module+el8.0.0+4214+49953fda" id="oval:com.redhat.rhsa:tst:20192925003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925004" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-debugsource is earlier than 1:10.16.3-2.module+el8.0.0+4214+49953fda" id="oval:com.redhat.rhsa:tst:20192925005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925006" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs is earlier than 1:10.16.3-2.module+el8.0.0+4214+49953fda" id="oval:com.redhat.rhsa:tst:20192925007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925008" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-packaging is earlier than 0:17-3.module+el8+2873+aa7dfd9a" id="oval:com.redhat.rhsa:tst:20192925009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-packaging is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925010" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-nodemon is earlier than 0:1.18.3-1.module+el8+2632+6c5111ed" id="oval:com.redhat.rhsa:tst:20192925011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-nodemon is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925012" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-docs is earlier than 1:10.16.3-2.module+el8.0.0+4214+49953fda" id="oval:com.redhat.rhsa:tst:20192925013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192925006" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nodejs-docs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20192925014" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
@@ -9212,6 +9268,27 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192822005" version="634">
       <red-def:name>dovecot-devel</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925001" version="633">
+      <red-def:name>npm</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925002" version="633">
+      <red-def:name>nodejs-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925003" version="633">
+      <red-def:name>nodejs-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925004" version="633">
+      <red-def:name>nodejs</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925005" version="633">
+      <red-def:name>nodejs-packaging</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925006" version="633">
+      <red-def:name>nodejs-nodemon</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20192925007" version="633">
+      <red-def:name>nodejs-docs</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630004" version="101">
       <red-def:name>centos-release</red-def:name>
     </red-def:rpminfo_object>
@@ -10393,6 +10470,23 @@ For more details about the security issue(s), including the impact, a CVSS score
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192893005" version="633">
       <red-def:evr datatype="evr_string" operation="less than">0:2.4.37-12.module+el8.0.0+4096+eb40e6da</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925003" version="633">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:10.16.3-2.module+el8.0.0+4214+49953fda</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925004" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">0:17-3.module+el8+2873+aa7dfd9a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925005" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">0:1.18.3-1.module+el8+2632+6c5111ed</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925006" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">1:10.16.3-2.module+el8.0.0+4214+49953fda</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
       <red-def:version operation="pattern match">^8</red-def:version>
