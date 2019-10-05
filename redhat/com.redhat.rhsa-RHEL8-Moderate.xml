@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-01T17:05:02</oval:timestamp>
-    <oval:content_version>1569949502</oval:content_version>
+    <oval:timestamp>2019-10-05T00:31:32</oval:timestamp>
+    <oval:content_version>1570235492</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190984" version="633">
@@ -6601,11 +6601,11 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593005" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663001" version="633">
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663001" version="634">
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
     </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663003" version="633">
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663003" version="634">
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
     </red-def:rpminfo_test>
@@ -10202,7 +10202,7 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.0.1-2.module+el8.0.0+4045+70edde92</red-def:evr>
     </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192663001" version="633">
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192663001" version="634">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:68.1.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>

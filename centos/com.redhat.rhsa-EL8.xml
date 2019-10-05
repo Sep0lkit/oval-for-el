@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-01T17:05:02</oval:timestamp>
-    <oval:content_version>1569949502</oval:content_version>
+    <oval:timestamp>2019-10-05T00:31:32</oval:timestamp>
+    <oval:content_version>1570235492</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -7269,9 +7269,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
-    <definition class="patch" id="oval:com.redhat.rhsa:def:20192663" version="633">
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20192663" version="634">
       <metadata>
-        <title>RHSA-2019:2663: firefox security update (Critical)</title>
+        <title>RHSA-2019:2663: firefox security update (Important)</title>
         <affected family="unix">
           <platform>Red Hat Enterprise Linux 8</platform>
           <platform>Community Enterprise Operating System 8</platform>
@@ -7324,24 +7324,24 @@ Security Fix(es):
 
 For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
         <advisory from="secalert@redhat.com">
-          <severity>Critical</severity>
+          <severity>Important</severity>
           <rights>Copyright 2019 Red Hat, Inc.</rights>
           <issued date="2019-09-04" />
           <updated date="2019-09-04" />
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11735" impact="important" public="20190903">CVE-2019-11735</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11735" public="20190903">CVE-2019-11735</cve>
           <cve cvss3="5.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:L" cwe="CWE-358" href="https://access.redhat.com/security/cve/CVE-2019-11738" impact="low" public="20190903">CVE-2019-11738</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11740" impact="important" public="20190903">CVE-2019-11740</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11742" impact="important" public="20190903">CVE-2019-11742</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11740" public="20190903">CVE-2019-11740</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11742" public="20190903">CVE-2019-11742</cve>
           <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11743" impact="moderate" public="20190903">CVE-2019-11743</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11744" impact="important" public="20190903">CVE-2019-11744</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11746" impact="important" public="20190903">CVE-2019-11746</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11744" public="20190903">CVE-2019-11744</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11746" public="20190903">CVE-2019-11746</cve>
           <cve cvss3="3.4/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N" cwe="CWE-358" href="https://access.redhat.com/security/cve/CVE-2019-11747" impact="low" public="20190903">CVE-2019-11747</cve>
           <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-732" href="https://access.redhat.com/security/cve/CVE-2019-11748" impact="moderate" public="20190903">CVE-2019-11748</cve>
           <cve cvss3="4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N" cwe="CWE-200" href="https://access.redhat.com/security/cve/CVE-2019-11749" impact="moderate" public="20190903">CVE-2019-11749</cve>
           <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-843" href="https://access.redhat.com/security/cve/CVE-2019-11750" impact="moderate" public="20190903">CVE-2019-11750</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11752" impact="important" public="20190903">CVE-2019-11752</cve>
-          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-250" href="https://access.redhat.com/security/cve/CVE-2019-9812" impact="important" public="20190903">CVE-2019-9812</cve>
-          <bugzilla href="https://bugzilla.redhat.com/1748652" id="1748652">CVE-2019-11740 Mozilla: Memory safety bugs fixed in Firefox 69, Firefox ESR 68.1, and Firefox ESR 60.9</bugzilla>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11752" public="20190903">CVE-2019-11752</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-250" href="https://access.redhat.com/security/cve/CVE-2019-9812" public="20190903">CVE-2019-9812</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1748652" id="1748652">CVE-2019-11740 Mozilla: Memory safety bugs fixed in Firefox 69, Firefox ESR 68.1, Firefox ESR 60.9, Thunderbird 68.1, and Thunderbird 60.9</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1748653" id="1748653">CVE-2019-11742 Mozilla: Same-origin policy violation with SVG filters and canvas to steal cross-origin images</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1748654" id="1748654">CVE-2019-11743 Mozilla: Cross-origin access to unload event attributes</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1748655" id="1748655">CVE-2019-11744 Mozilla: XSS by breaking out of title and textarea elements using innerHTML</bugzilla>
@@ -14547,11 +14547,11 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192593005" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663001" version="633">
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663001" version="634">
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
     </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663003" version="633">
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.1.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20192663003" version="634">
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20192663001" />
     </red-def:rpminfo_test>
@@ -18176,7 +18176,7 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.0.1-2.module+el8.0.0+4045+70edde92</red-def:evr>
     </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192663001" version="633">
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192663001" version="634">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:68.1.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>
