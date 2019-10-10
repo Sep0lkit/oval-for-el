@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-05T00:31:32</oval:timestamp>
-    <oval:content_version>1570235492</oval:content_version>
+    <oval:timestamp>2019-10-09T20:52:00</oval:timestamp>
+    <oval:content_version>1570654320</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
