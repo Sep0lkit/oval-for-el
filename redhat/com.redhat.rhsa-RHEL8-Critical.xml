@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-09T20:52:00</oval:timestamp>
-    <oval:content_version>1570654320</oval:content_version>
+    <oval:timestamp>2019-10-17T13:13:48</oval:timestamp>
+    <oval:content_version>1571318028</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -6932,6 +6932,78 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925007" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134001" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134003" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-debugsource is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134005" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-src is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134007" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-headless is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134009" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-devel is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134011" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-demo is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134013" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-accessibility is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134015" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134017" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-debugsource is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135001" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-src is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135003" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-jmods is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135005" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc-zip is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135007" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135009" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-headless is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135011" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-devel is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135013" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-demo is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135015" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135017" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -9857,6 +9929,17 @@ For more details about the security issue(s), including the impact, a CVSS score
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925006" version="633">
       <red-def:evr datatype="evr_string" operation="less than">1:10.16.3-2.module+el8.0.0+4214+49953fda</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193134001" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.232.b09-0.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193134003" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.232.b09-0.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193135001" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:11.0.5.10-0.el8_0</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>

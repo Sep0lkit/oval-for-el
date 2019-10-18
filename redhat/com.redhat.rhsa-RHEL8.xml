@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-10-09T20:52:00</oval:timestamp>
-  <oval:content_version>1570654320</oval:content_version>
+  <oval:timestamp>2019-10-17T13:13:48</oval:timestamp>
+  <oval:content_version>1571318028</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -8622,6 +8622,279 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20193134" version="634">
+   <metadata>
+    <title>RHSA-2019:3134: java-1.8.0-openjdk security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:3134" ref_url="https://access.redhat.com/errata/RHSA-2019:3134" source="RHSA"/>
+    <reference ref_id="CVE-2019-2945" ref_url="https://access.redhat.com/security/cve/CVE-2019-2945" source="CVE"/>
+    <reference ref_id="CVE-2019-2949" ref_url="https://access.redhat.com/security/cve/CVE-2019-2949" source="CVE"/>
+    <reference ref_id="CVE-2019-2962" ref_url="https://access.redhat.com/security/cve/CVE-2019-2962" source="CVE"/>
+    <reference ref_id="CVE-2019-2964" ref_url="https://access.redhat.com/security/cve/CVE-2019-2964" source="CVE"/>
+    <reference ref_id="CVE-2019-2973" ref_url="https://access.redhat.com/security/cve/CVE-2019-2973" source="CVE"/>
+    <reference ref_id="CVE-2019-2975" ref_url="https://access.redhat.com/security/cve/CVE-2019-2975" source="CVE"/>
+    <reference ref_id="CVE-2019-2978" ref_url="https://access.redhat.com/security/cve/CVE-2019-2978" source="CVE"/>
+    <reference ref_id="CVE-2019-2981" ref_url="https://access.redhat.com/security/cve/CVE-2019-2981" source="CVE"/>
+    <reference ref_id="CVE-2019-2983" ref_url="https://access.redhat.com/security/cve/CVE-2019-2983" source="CVE"/>
+    <reference ref_id="CVE-2019-2987" ref_url="https://access.redhat.com/security/cve/CVE-2019-2987" source="CVE"/>
+    <reference ref_id="CVE-2019-2988" ref_url="https://access.redhat.com/security/cve/CVE-2019-2988" source="CVE"/>
+    <reference ref_id="CVE-2019-2989" ref_url="https://access.redhat.com/security/cve/CVE-2019-2989" source="CVE"/>
+    <reference ref_id="CVE-2019-2992" ref_url="https://access.redhat.com/security/cve/CVE-2019-2992" source="CVE"/>
+    <reference ref_id="CVE-2019-2999" ref_url="https://access.redhat.com/security/cve/CVE-2019-2999" source="CVE"/>
+    <description>The java-1.8.0-openjdk packages provide the OpenJDK 8 Java Runtime Environment and the OpenJDK 8 Java Software Development Kit.
+
+Security Fix(es):
+
+* OpenJDK: Improper handling of Kerberos proxy credentials (Kerberos, 8220302) (CVE-2019-2949)
+
+* OpenJDK: Unexpected exception thrown during regular expression processing in Nashorn (Scripting, 8223518) (CVE-2019-2975)
+
+* OpenJDK: Incorrect handling of nested jar: URLs in Jar URL handler (Networking, 8223892) (CVE-2019-2978)
+
+* OpenJDK: Incorrect handling of HTTP proxy responses in HttpURLConnection (Networking, 8225298) (CVE-2019-2989)
+
+* OpenJDK: Missing restrictions on use of custom SocketImpl (Networking, 8218573) (CVE-2019-2945)
+
+* OpenJDK: NULL pointer dereference in DrawGlyphList (2D, 8222690) (CVE-2019-2962)
+
+* OpenJDK: Unexpected exception thrown by Pattern processing crafted regular expression (Concurrency, 8222684) (CVE-2019-2964)
+
+* OpenJDK: Unexpected exception thrown by XPathParser processing crafted XPath expression (JAXP, 8223505) (CVE-2019-2973)
+
+* OpenJDK: Unexpected exception thrown by XPath processing crafted XPath expression (JAXP, 8224532) (CVE-2019-2981)
+
+* OpenJDK: Unexpected exception thrown during Font object deserialization (Serialization, 8224915) (CVE-2019-2983)
+
+* OpenJDK: Missing glyph bitmap image dimension check in FreetypeFontScaler (2D, 8225286) (CVE-2019-2987)
+
+* OpenJDK: Integer overflow in bounds check in SunGraphics2D (2D, 8225292) (CVE-2019-2988)
+
+* OpenJDK: Excessive memory allocation in CMap when reading TrueType font (2D, 8225597) (CVE-2019-2992)
+
+* OpenJDK: Insufficient filtering of HTML event attributes in Javadoc (Javadoc, 8226765) (CVE-2019-2999)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-10-17"/>
+     <updated date="2019-10-17"/>
+     <cve cvss3="3.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2945" impact="low" public="20191015">CVE-2019-2945</cve>
+     <cve cvss3="6.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N" cwe="CWE-522" href="https://access.redhat.com/security/cve/CVE-2019-2949" public="20191015">CVE-2019-2949</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-476" href="https://access.redhat.com/security/cve/CVE-2019-2962" impact="low" public="20191015">CVE-2019-2962</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2964" impact="low" public="20191015">CVE-2019-2964</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2973" impact="low" public="20191015">CVE-2019-2973</cve>
+     <cve cvss3="4.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2975" impact="moderate" public="20191015">CVE-2019-2975</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2978" impact="moderate" public="20191015">CVE-2019-2978</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2981" impact="low" public="20191015">CVE-2019-2981</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2983" impact="low" public="20191015">CVE-2019-2983</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2019-2987" impact="low" public="20191015">CVE-2019-2987</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-190" href="https://access.redhat.com/security/cve/CVE-2019-2988" impact="low" public="20191015">CVE-2019-2988</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-2989" impact="moderate" public="20191015">CVE-2019-2989</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2019-2992" impact="low" public="20191015">CVE-2019-2992</cve>
+     <cve cvss3="4.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-2999" impact="low" public="20191015">CVE-2019-2999</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1760963" id="1760963">CVE-2019-2964 OpenJDK: Unexpected exception thrown by Pattern processing crafted regular expression (Concurrency, 8222684)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760969" id="1760969">CVE-2019-2975 OpenJDK: Unexpected exception thrown during regular expression processing in Nashorn (Scripting, 8223518)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760978" id="1760978">CVE-2019-2973 OpenJDK: Unexpected exception thrown by XPathParser processing crafted XPath expression (JAXP, 8223505)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760980" id="1760980">CVE-2019-2981 OpenJDK: Unexpected exception thrown by XPath processing crafted XPath expression (JAXP, 8224532)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760992" id="1760992">CVE-2019-2999 OpenJDK: Insufficient filtering of HTML event attributes in Javadoc (Javadoc, 8226765)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760999" id="1760999">CVE-2019-2988 OpenJDK: Integer overflow in bounds check in SunGraphics2D (2D, 8225292)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761006" id="1761006">CVE-2019-2978 OpenJDK: Incorrect handling of nested jar: URLs in Jar URL handler (Networking, 8223892)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761146" id="1761146">CVE-2019-2992 OpenJDK: Excessive memory allocation in CMap when reading TrueType font (2D, 8225597)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761149" id="1761149">CVE-2019-2987 OpenJDK: Missing glyph bitmap image dimension check in FreetypeFontScaler (2D, 8225286)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761262" id="1761262">CVE-2019-2983 OpenJDK: Unexpected exception thrown during Font object deserialization (Serialization, 8224915)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761266" id="1761266">CVE-2019-2962 OpenJDK: NULL pointer dereference in DrawGlyphList (2D, 8222690)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761594" id="1761594">CVE-2019-2949 OpenJDK: Improper handling of Kerberos proxy credentials (Kerberos, 8220302)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761596" id="1761596">CVE-2019-2945 OpenJDK: Missing restrictions on use of custom SocketImpl (Networking, 8218573)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761601" id="1761601">CVE-2019-2989 OpenJDK: Incorrect handling of HTTP proxy responses in HttpURLConnection (Networking, 8225298)</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134001"/>
+      <criterion comment="java-1.8.0-openjdk-javadoc-zip is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-javadoc is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134003"/>
+      <criterion comment="java-1.8.0-openjdk-javadoc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-debugsource is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134005"/>
+      <criterion comment="java-1.8.0-openjdk-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-src is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134007"/>
+      <criterion comment="java-1.8.0-openjdk-src is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-headless is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134009"/>
+      <criterion comment="java-1.8.0-openjdk-headless is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146006"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-devel is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134011"/>
+      <criterion comment="java-1.8.0-openjdk-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-demo is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134013"/>
+      <criterion comment="java-1.8.0-openjdk-demo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk-accessibility is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134015"/>
+      <criterion comment="java-1.8.0-openjdk-accessibility is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-1.8.0-openjdk is earlier than 1:1.8.0.232.b09-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193134017"/>
+      <criterion comment="java-1.8.0-openjdk is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191146012"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20193135" version="634">
+   <metadata>
+    <title>RHSA-2019:3135: java-11-openjdk security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2019:3135" ref_url="https://access.redhat.com/errata/RHSA-2019:3135" source="RHSA"/>
+    <reference ref_id="CVE-2019-2945" ref_url="https://access.redhat.com/security/cve/CVE-2019-2945" source="CVE"/>
+    <reference ref_id="CVE-2019-2949" ref_url="https://access.redhat.com/security/cve/CVE-2019-2949" source="CVE"/>
+    <reference ref_id="CVE-2019-2962" ref_url="https://access.redhat.com/security/cve/CVE-2019-2962" source="CVE"/>
+    <reference ref_id="CVE-2019-2964" ref_url="https://access.redhat.com/security/cve/CVE-2019-2964" source="CVE"/>
+    <reference ref_id="CVE-2019-2973" ref_url="https://access.redhat.com/security/cve/CVE-2019-2973" source="CVE"/>
+    <reference ref_id="CVE-2019-2975" ref_url="https://access.redhat.com/security/cve/CVE-2019-2975" source="CVE"/>
+    <reference ref_id="CVE-2019-2977" ref_url="https://access.redhat.com/security/cve/CVE-2019-2977" source="CVE"/>
+    <reference ref_id="CVE-2019-2978" ref_url="https://access.redhat.com/security/cve/CVE-2019-2978" source="CVE"/>
+    <reference ref_id="CVE-2019-2981" ref_url="https://access.redhat.com/security/cve/CVE-2019-2981" source="CVE"/>
+    <reference ref_id="CVE-2019-2983" ref_url="https://access.redhat.com/security/cve/CVE-2019-2983" source="CVE"/>
+    <reference ref_id="CVE-2019-2987" ref_url="https://access.redhat.com/security/cve/CVE-2019-2987" source="CVE"/>
+    <reference ref_id="CVE-2019-2988" ref_url="https://access.redhat.com/security/cve/CVE-2019-2988" source="CVE"/>
+    <reference ref_id="CVE-2019-2989" ref_url="https://access.redhat.com/security/cve/CVE-2019-2989" source="CVE"/>
+    <reference ref_id="CVE-2019-2992" ref_url="https://access.redhat.com/security/cve/CVE-2019-2992" source="CVE"/>
+    <reference ref_id="CVE-2019-2999" ref_url="https://access.redhat.com/security/cve/CVE-2019-2999" source="CVE"/>
+    <description>The java-11-openjdk packages provide the OpenJDK 11 Java Runtime Environment and the OpenJDK 11 Java Software Development Kit.
+
+Security Fix(es):
+
+* OpenJDK: Improper handling of Kerberos proxy credentials (Kerberos, 8220302) (CVE-2019-2949)
+
+* OpenJDK: Unexpected exception thrown during regular expression processing in Nashorn (Scripting, 8223518) (CVE-2019-2975)
+
+* OpenJDK: Out of bounds access in optimized String indexof implementation (Hotspot, 8224062) (CVE-2019-2977)
+
+* OpenJDK: Incorrect handling of nested jar: URLs in Jar URL handler (Networking, 8223892) (CVE-2019-2978)
+
+* OpenJDK: Incorrect handling of HTTP proxy responses in HttpURLConnection (Networking, 8225298) (CVE-2019-2989)
+
+* OpenJDK: Missing restrictions on use of custom SocketImpl (Networking, 8218573) (CVE-2019-2945)
+
+* OpenJDK: NULL pointer dereference in DrawGlyphList (2D, 8222690) (CVE-2019-2962)
+
+* OpenJDK: Unexpected exception thrown by Pattern processing crafted regular expression (Concurrency, 8222684) (CVE-2019-2964)
+
+* OpenJDK: Unexpected exception thrown by XPathParser processing crafted XPath expression (JAXP, 8223505) (CVE-2019-2973)
+
+* OpenJDK: Unexpected exception thrown by XPath processing crafted XPath expression (JAXP, 8224532) (CVE-2019-2981)
+
+* OpenJDK: Unexpected exception thrown during Font object deserialization (Serialization, 8224915) (CVE-2019-2983)
+
+* OpenJDK: Missing glyph bitmap image dimension check in FreetypeFontScaler (2D, 8225286) (CVE-2019-2987)
+
+* OpenJDK: Integer overflow in bounds check in SunGraphics2D (2D, 8225292) (CVE-2019-2988)
+
+* OpenJDK: Excessive memory allocation in CMap when reading TrueType font (2D, 8225597) (CVE-2019-2992)
+
+* OpenJDK: Insufficient filtering of HTML event attributes in Javadoc (Javadoc, 8226765) (CVE-2019-2999)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2019 Red Hat, Inc.</rights>
+     <issued date="2019-10-17"/>
+     <updated date="2019-10-17"/>
+     <cve cvss3="3.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2945" impact="low" public="20191015">CVE-2019-2945</cve>
+     <cve cvss3="6.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N" cwe="CWE-522" href="https://access.redhat.com/security/cve/CVE-2019-2949" public="20191015">CVE-2019-2949</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-476" href="https://access.redhat.com/security/cve/CVE-2019-2962" impact="low" public="20191015">CVE-2019-2962</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2964" impact="low" public="20191015">CVE-2019-2964</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2973" impact="low" public="20191015">CVE-2019-2973</cve>
+     <cve cvss3="4.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2975" impact="moderate" public="20191015">CVE-2019-2975</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-125" href="https://access.redhat.com/security/cve/CVE-2019-2977" impact="moderate" public="20191015">CVE-2019-2977</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" href="https://access.redhat.com/security/cve/CVE-2019-2978" impact="moderate" public="20191015">CVE-2019-2978</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2981" impact="low" public="20191015">CVE-2019-2981</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-248" href="https://access.redhat.com/security/cve/CVE-2019-2983" impact="low" public="20191015">CVE-2019-2983</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2019-2987" impact="low" public="20191015">CVE-2019-2987</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-190" href="https://access.redhat.com/security/cve/CVE-2019-2988" impact="low" public="20191015">CVE-2019-2988</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-2989" impact="moderate" public="20191015">CVE-2019-2989</cve>
+     <cve cvss3="3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2019-2992" impact="low" public="20191015">CVE-2019-2992</cve>
+     <cve cvss3="4.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-2999" impact="low" public="20191015">CVE-2019-2999</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1760963" id="1760963">CVE-2019-2964 OpenJDK: Unexpected exception thrown by Pattern processing crafted regular expression (Concurrency, 8222684)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760969" id="1760969">CVE-2019-2975 OpenJDK: Unexpected exception thrown during regular expression processing in Nashorn (Scripting, 8223518)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760978" id="1760978">CVE-2019-2973 OpenJDK: Unexpected exception thrown by XPathParser processing crafted XPath expression (JAXP, 8223505)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760980" id="1760980">CVE-2019-2981 OpenJDK: Unexpected exception thrown by XPath processing crafted XPath expression (JAXP, 8224532)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760992" id="1760992">CVE-2019-2999 OpenJDK: Insufficient filtering of HTML event attributes in Javadoc (Javadoc, 8226765)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1760999" id="1760999">CVE-2019-2988 OpenJDK: Integer overflow in bounds check in SunGraphics2D (2D, 8225292)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761002" id="1761002">CVE-2019-2977 OpenJDK: Out of bounds access in optimized String indexof implementation (Hotspot, 8224062)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761006" id="1761006">CVE-2019-2978 OpenJDK: Incorrect handling of nested jar: URLs in Jar URL handler (Networking, 8223892)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761146" id="1761146">CVE-2019-2992 OpenJDK: Excessive memory allocation in CMap when reading TrueType font (2D, 8225597)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761149" id="1761149">CVE-2019-2987 OpenJDK: Missing glyph bitmap image dimension check in FreetypeFontScaler (2D, 8225286)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761262" id="1761262">CVE-2019-2983 OpenJDK: Unexpected exception thrown during Font object deserialization (Serialization, 8224915)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761266" id="1761266">CVE-2019-2962 OpenJDK: NULL pointer dereference in DrawGlyphList (2D, 8222690)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761594" id="1761594">CVE-2019-2949 OpenJDK: Improper handling of Kerberos proxy credentials (Kerberos, 8220302)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761596" id="1761596">CVE-2019-2945 OpenJDK: Missing restrictions on use of custom SocketImpl (Networking, 8218573)</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1761601" id="1761601">CVE-2019-2989 OpenJDK: Incorrect handling of HTTP proxy responses in HttpURLConnection (Networking, 8225298)</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="AND">
+    <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+    <criteria operator="OR">
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-debugsource is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135001"/>
+      <criterion comment="java-11-openjdk-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518010"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-src is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135003"/>
+      <criterion comment="java-11-openjdk-src is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518018"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-jmods is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135005"/>
+      <criterion comment="java-11-openjdk-jmods is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518002"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-javadoc-zip is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135007"/>
+      <criterion comment="java-11-openjdk-javadoc-zip is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518016"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-javadoc is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135009"/>
+      <criterion comment="java-11-openjdk-javadoc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518004"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-headless is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135011"/>
+      <criterion comment="java-11-openjdk-headless is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518012"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-devel is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135013"/>
+      <criterion comment="java-11-openjdk-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518008"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk-demo is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135015"/>
+      <criterion comment="java-11-openjdk-demo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518014"/>
+     </criteria>
+     <criteria operator="AND">
+      <criterion comment="java-11-openjdk is earlier than 1:11.0.5.10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193135017"/>
+      <criterion comment="java-11-openjdk is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191518006"/>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -15116,6 +15389,78 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20192925007"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134001" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134003" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-debugsource is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134005" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-src is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134007" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-headless is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134009" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-devel is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134011" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-demo is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134013" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-accessibility is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134015" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk is earlier than 1:1.8.0.232.b09-0.el8_0" id="oval:com.redhat.rhsa:tst:20193134017" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193134003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-debugsource is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135001" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-src is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135003" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-jmods is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135005" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc-zip is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135007" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135009" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-headless is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135011" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-devel is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135013" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-demo is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135015" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="java-11-openjdk is earlier than 1:11.0.5.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20193135017" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193135001"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -18041,6 +18386,17 @@ For more details about the security issue(s), including the impact, a CVSS score
   </red-def:rpminfo_state>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20192925006" version="633">
    <red-def:evr datatype="evr_string" operation="less than">1:10.16.3-2.module+el8.0.0+4214+49953fda</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193134001" version="634">
+   <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.232.b09-0.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193134003" version="634">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.232.b09-0.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193135001" version="634">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">1:11.0.5.10-0.el8_0</red-def:evr>
   </red-def:rpminfo_state>
  </states>
 </oval_definitions>
