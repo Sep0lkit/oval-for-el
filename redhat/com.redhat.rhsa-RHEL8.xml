@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2019-10-17T13:13:48</oval:timestamp>
-  <oval:content_version>1571318028</oval:content_version>
+  <oval:timestamp>2019-10-19T08:35:04</oval:timestamp>
+  <oval:content_version>1571474104</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -8125,7 +8125,7 @@ For more details about the security issue(s), including the impact, a CVSS score
      <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9511" public="20190813">CVE-2019-9511</cve>
      <cve cvss3="7.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9513" public="20190813:1700">CVE-2019-9513</cve>
      <cve cvss3="6.5/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2019-9516" public="20190813">CVE-2019-9516</cve>
-     <bugzilla href="https://bugzilla.redhat.com/1735741" id="1735741">CVE-2019-9513 HTTP/2: flood using PRIORITY frames resulting in excessive resource consumption</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1735741" id="1735741">CVE-2019-9513 HTTP/2: flood using PRIORITY frames results in excessive resource consumption</bugzilla>
      <bugzilla href="https://bugzilla.redhat.com/1741860" id="1741860">CVE-2019-9511 HTTP/2: large amount of data requests leads to denial of service</bugzilla>
      <bugzilla href="https://bugzilla.redhat.com/1741864" id="1741864">CVE-2019-9516 HTTP/2: 0-length headers lead to denial of service</bugzilla>
      <affected_cpe_list>
