@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-24T22:03:04</oval:timestamp>
-    <oval:content_version>1571954584</oval:content_version>
+    <oval:timestamp>2019-10-29T18:37:20</oval:timestamp>
+    <oval:content_version>1572374240</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -7090,6 +7090,14 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193196001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:68.2.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20193237001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193237001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:68.2.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20193237003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193237001" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -10030,6 +10038,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193196001" version="633">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:68.2.0-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193237001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.2.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>

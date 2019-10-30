@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-10-24T22:03:04</oval:timestamp>
-    <oval:content_version>1571954584</oval:content_version>
+    <oval:timestamp>2019-10-29T18:37:20</oval:timestamp>
+    <oval:content_version>1572374240</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190968" version="634">
@@ -7429,6 +7429,89 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20193237" version="632">
+      <metadata>
+        <title>RHSA-2019:3237: thunderbird security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2019:3237" ref_url="https://access.redhat.com/errata/RHSA-2019:3237" source="RHSA" />
+        <reference ref_id="CVE-2019-11757" ref_url="https://access.redhat.com/security/cve/CVE-2019-11757" source="CVE" />
+        <reference ref_id="CVE-2019-11758" ref_url="https://access.redhat.com/security/cve/CVE-2019-11758" source="CVE" />
+        <reference ref_id="CVE-2019-11759" ref_url="https://access.redhat.com/security/cve/CVE-2019-11759" source="CVE" />
+        <reference ref_id="CVE-2019-11760" ref_url="https://access.redhat.com/security/cve/CVE-2019-11760" source="CVE" />
+        <reference ref_id="CVE-2019-11761" ref_url="https://access.redhat.com/security/cve/CVE-2019-11761" source="CVE" />
+        <reference ref_id="CVE-2019-11762" ref_url="https://access.redhat.com/security/cve/CVE-2019-11762" source="CVE" />
+        <reference ref_id="CVE-2019-11763" ref_url="https://access.redhat.com/security/cve/CVE-2019-11763" source="CVE" />
+        <reference ref_id="CVE-2019-11764" ref_url="https://access.redhat.com/security/cve/CVE-2019-11764" source="CVE" />
+        <reference ref_id="CVE-2019-15903" ref_url="https://access.redhat.com/security/cve/CVE-2019-15903" source="CVE" />
+        <description>Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+This update upgrades Thunderbird to version 68.2.0.
+
+Security Fix(es):
+
+* Mozilla: Memory safety bugs fixed in Firefox 70 and Firefox ESR 68.2 (CVE-2019-11764)
+
+* Mozilla: Use-after-free when creating index updates in IndexedDB (CVE-2019-11757)
+
+* Mozilla: Potentially exploitable crash due to 360 Total Security (CVE-2019-11758)
+
+* Mozilla: Stack buffer overflow in HKDF output (CVE-2019-11759)
+
+* Mozilla: Stack buffer overflow in WebRTC networking (CVE-2019-11760)
+
+* Mozilla: Unintended access to a privileged JSONView object (CVE-2019-11761)
+
+* Mozilla: document.domain-based origin isolation has same-origin-property violation (CVE-2019-11762)
+
+* Mozilla: Incorrect HTML parsing results in XSS bypass technique (CVE-2019-11763)
+
+* expat: heap-based buffer over-read via crafted XML input (CVE-2019-15903)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2019 Red Hat, Inc.</rights>
+          <issued date="2019-10-29" />
+          <updated date="2019-10-29" />
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-11757" public="20191022">CVE-2019-11757</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-122" href="https://access.redhat.com/security/cve/CVE-2019-11758" public="20191022">CVE-2019-11758</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11759" impact="moderate" public="20191022">CVE-2019-11759</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11760" impact="moderate" public="20191022">CVE-2019-11760</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-749" href="https://access.redhat.com/security/cve/CVE-2019-11761" impact="moderate" public="20191022">CVE-2019-11761</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-829" href="https://access.redhat.com/security/cve/CVE-2019-11762" impact="moderate" public="20191022">CVE-2019-11762</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11763" impact="moderate" public="20191022">CVE-2019-11763</cve>
+          <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-11764" impact="critical" public="20191022">CVE-2019-11764</cve>
+          <cve cvss3="5.5/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H" cwe="CWE-122 CWE-125" href="https://access.redhat.com/security/cve/CVE-2019-15903" impact="low" public="20190904">CVE-2019-15903</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1752592" id="1752592">CVE-2019-15903 expat: heap-based buffer over-read via crafted XML input</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764438" id="1764438">CVE-2019-11757 Mozilla: Use-after-free when creating index updates in IndexedDB</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764439" id="1764439">CVE-2019-11758 Mozilla: Potentially exploitable crash due to 360 Total Security</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764440" id="1764440">CVE-2019-11759 Mozilla: Stack buffer overflow in HKDF output</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764441" id="1764441">CVE-2019-11760 Mozilla: Stack buffer overflow in WebRTC networking</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764442" id="1764442">CVE-2019-11761 Mozilla: Unintended access to a privileged JSONView object</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764443" id="1764443">CVE-2019-11762 Mozilla: document.domain-based origin isolation has same-origin-property violation</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764444" id="1764444">CVE-2019-11763 Mozilla: Incorrect HTML parsing results in XSS bypass technique</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1764446" id="1764446">CVE-2019-11764 Mozilla: Memory safety bugs fixed in Firefox 70 and Firefox ESR 68.2</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="AND">
+        <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+        <criteria operator="OR">
+          <criteria operator="AND">
+            <criterion comment="thunderbird-debugsource is earlier than 0:68.2.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193237001" />
+            <criterion comment="thunderbird-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144002" />
+          </criteria>
+          <criteria operator="AND">
+            <criterion comment="thunderbird is earlier than 0:68.2.0-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193237003" />
+            <criterion comment="thunderbird is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191144004" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -14003,6 +14086,14 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193196001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:68.2.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20193237001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193237001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:68.2.0-1.el8_0" id="oval:com.redhat.rhsa:tst:20193237003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193237001" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -16943,6 +17034,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193196001" version="633">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:68.2.0-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20193237001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.2.0-1.el8_0</red-def:evr>
     </red-def:rpminfo_state>
   </states>
 </oval_definitions>
