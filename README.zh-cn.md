@@ -14,6 +14,23 @@
 | redhat | RHEL5 - RHEL8 | https://www.redhat.com/security/data/oval/ | syncing |
 | centos | EL5 - EL8     | https://www.redhat.com/security/data/oval/ | syncing |
 
+**Scripts** 
+
+​	scripts/rh2el.py 
+
+```bash
+#使用说明
+usage: rh2el.py [-h] oval_file output_file
+
+redhat oval definition adapt to centos
+
+positional arguments:
+  oval_file    redhat oval file path
+  output_file  redhat oval output file path
+```
+
+
+
 ## 文件结构:
 
 ```bash
