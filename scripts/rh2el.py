@@ -2,10 +2,10 @@
 # -*- coding:utf8 -*-
 
 '''
-Descripts: Convert Red Hat OVAL to Enterprise Linux
+Descripts: Convert Redhat OVAL to Enterprise Linux
 Author: Sep0lkit
-Version: 1.1
-Update: 2019/07/05
+Version: 2.0
+Update: 2019/12/01
 Website: https://github.com/Sep0lkit/oval-for-el
 '''
 
@@ -31,35 +31,24 @@ OVAL_RED_NS = "http://oval.mitre.org/XMLSchema/oval-definitions-5#linux"
 '''
 PLATFORMS_RH_EL = {'Red Hat Enterprise Linux 8':'Community Enterprise Operating System 8','Red Hat Enterprise Linux 7':'Community Enterprise Operating System 7','Red Hat Enterprise Linux 6':'Community Enterprise Operating System 6','Red Hat Enterprise Linux 5':'Community Enterprise Operating System 5'}
 
-
 CPES_RH_EL = {'cpe:/o:redhat:enterprise_linux:8':'cpe:/o:centos:centos:8','cpe:/o:redhat:enterprise_linux:7':'cpe:/o:centos:centos:7','cpe:/o:redhat:enterprise_linux:6':'cpe:/o:centos:centos:6','cpe:/o:redhat:enterprise_linux:5':'cpe:/o:centos:centos:5'}
 
 
 ''' 
-    定义自定义规则: CentOS
+    Custom Defines for CentOS
 '''
 
 RULE_VERSION = '101'
 
-DEFINS_OF_EL5 = {'tst_comment':'centos-release 5 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630001', 'obj_id':'oval:com.github.sep0lkit:obj:190630001', 'ste_id':'oval:com.github.sep0lkit:ste:190630001', 'obj_name':'centos-release', 'ste_version':'^5' }
+DEFINS_OF_EL = {'tst_comment':'CentOS is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630000', 'tst_check':'none satisfy', 'obj_id':'oval:com.github.sep0lkit:obj:190630000', 'ste_id':'oval:com.github.sep0lkit:ste:190630000', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release'}
 
-DEFINS_OF_EL6 = {'tst_comment':'centos-release 6 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630002', 'obj_id':'oval:com.github.sep0lkit:obj:190630002', 'ste_id':'oval:com.github.sep0lkit:ste:190630002', 'obj_name':'centos-release', 'ste_version':'^6' }
+DEFINS_OF_EL5 = {'tst_comment':'CentOS 5 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630001', 'tst_check':'at least one', 'obj_id':'oval:com.github.sep0lkit:obj:190630001', 'ste_id':'oval:com.github.sep0lkit:ste:190630001', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release', 'ste_version':'^5' }
 
-DEFINS_OF_EL7 = {'tst_comment':'centos-release 7 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630003', 'obj_id':'oval:com.github.sep0lkit:obj:190630003', 'ste_id':'oval:com.github.sep0lkit:ste:190630003', 'obj_name':'centos-release', 'ste_version':'^7' }
+DEFINS_OF_EL6 = {'tst_comment':'CentOS 6 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630002', 'tst_check':'at least one', 'obj_id':'oval:com.github.sep0lkit:obj:190630002', 'ste_id':'oval:com.github.sep0lkit:ste:190630002', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release', 'ste_version':'^6' }
 
-DEFINS_OF_EL8 = {'tst_comment':'centos-release 8 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630004', 'obj_id':'oval:com.github.sep0lkit:obj:190630004', 'ste_id':'oval:com.github.sep0lkit:ste:190630004', 'obj_name':'centos-release', 'ste_version':'^8' }
+DEFINS_OF_EL7 = {'tst_comment':'CentOS 7 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630003', 'tst_check':'at least one', 'obj_id':'oval:com.github.sep0lkit:obj:190630003', 'ste_id':'oval:com.github.sep0lkit:ste:190630003', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release', 'ste_version':'^7' }
 
-
-''' tst id for redhat os definitions '''
-redhat_8_tests = ['oval:com.redhat.rhsa:tst:20190966005', 'oval:com.redhat.rhsa:tst:20191619022']
-
-'''redhat_7_tests = ['oval:com.redhat.rhba:tst:20150364001','oval:com.redhat.rhba:tst:20150364002','oval:com.redhat.rhba:tst:20150364003','oval:com.redhat.rhba:tst:20150364004','oval:com.redhat.rhsa:tst:20140741010','oval:com.redhat.rhsa:tst:20140741011','oval:com.redhat.rhsa:tst:20140741012','oval:com.redhat.rhsa:tst:20140741013']'''
-
-redhat_7_tests = ['oval:com.redhat.rhba:tst:20150364027', 'oval:com.redhat.rhba:tst:20150364028', 'oval:com.redhat.rhba:tst:20150364029', 'oval:com.redhat.rhba:tst:20150364030', 'oval:com.redhat.rhsa:tst:20140741015', 'oval:com.redhat.rhsa:tst:20140741016', 'oval:com.redhat.rhsa:tst:20140741017', 'oval:com.redhat.rhsa:tst:20140741018']
-
-redhat_6_tests = ['oval:com.redhat.rhsa:tst:20140741006', 'oval:com.redhat.rhsa:tst:20140741007', 'oval:com.redhat.rhsa:tst:20140741008', 'oval:com.redhat.rhsa:tst:20140741009', 'oval:com.redhat.rhba:tst:20111656003', 'oval:com.redhat.rhba:tst:20111656004', 'oval:com.redhat.rhba:tst:20111656005', 'oval:com.redhat.rhba:tst:20111656006', 'oval:com.redhat.rhsa:tst:20100889007', 'oval:com.redhat.rhsa:tst:20100889008', 'oval:com.redhat.rhsa:tst:20100889009', 'oval:com.redhat.rhsa:tst:20100889010']
-
-redhat_5_tests = ['oval:com.redhat.rhsa:tst:20140741003', 'oval:com.redhat.rhsa:tst:20100889026', 'oval:com.redhat.rhba:tst:20070331005']
+DEFINS_OF_EL8 = {'tst_comment':'CentOS 8 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630004', 'tst_check':'at least one', 'obj_id':'oval:com.github.sep0lkit:obj:190630004', 'ste_id':'oval:com.github.sep0lkit:ste:190630004', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release', 'ste_version':'^8' }
 
 
 '''
@@ -117,38 +106,30 @@ def alter_affected_cpes(definition):
             affected.append(cpe_of_el)
 
 def definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, defins):
-    tst = ET.SubElement(tree_of_tests, "red-def:rpminfo_test", {'check':'at least one','comment':defins['tst_comment'],'id':defins['tst_id'], 'version': RULE_VERSION})
+    tst = ET.SubElement(tree_of_tests, "red-def:rpmverifyfile_test", {'check':defins['tst_check'],'comment':defins['tst_comment'],'id':defins['tst_id'], 'version': RULE_VERSION})
     ET.SubElement(tst, "red-def:object", {'object_ref':defins['obj_id']})
     ET.SubElement(tst, "red-def:state", {'state_ref':defins['ste_id']})
     
-    obj = ET.SubElement(tree_of_objects, "red-def:rpminfo_object", {'id':defins['obj_id'], 'version':RULE_VERSION})
-    name = ET.SubElement(obj, "red-def:name")
-    name.text = defins['obj_name']
+    obj = ET.SubElement(tree_of_objects, "red-def:rpmverifyfile_object", {'id':defins['obj_id'], 'version':RULE_VERSION})
+    behaviors = ET.SubElement(obj, "red-def:behaviors noconfigfiles='true' noghostfiles='true' nogroup='true' nolinkto='true' nomd5='true' nomode='true' nomtime='true' nordev='true' nosize='true' nouser='true'")
+    name = ET.SubElement(obj, "red-def:name", {'operation':'pattern match'})
+    epoch = ET.SubElement(obj, "red-def:epoch", {'operation':'pattern match'})
+    version = ET.SubElement(obj, "red-def:version", {'operation':'pattern match'})
+    release = ET.SubElement(obj, "red-def:release", {'operation':'pattern match'})
+    arch = ET.SubElement(obj, "red-def:arch", {'operation':'pattern match'})
+    filepath = ET.SubElement(obj, "red-def:filepath")
+    filepath.text = defins['obj_filepath']
     
-    stat = ET.SubElement(tree_of_states, "red-def:rpminfo_state", {'id':defins['ste_id'], 'version':RULE_VERSION})
-    version = ET.SubElement(stat, "red-def:version", {'operation':'pattern match'})
-    version.text = defins['ste_version']
-
-def alter_definition_criterions(definitions, redhat_os_tests, defins_of_el, parent_map):
-    for criterion in definitions.findall(".//{%s}criterion" % OVAL_NS):
-        test_ref = criterion.attrib['test_ref']    
-        if test_ref in redhat_os_tests:
-            parent=parent_map[criterion]
-            if(parent.attrib['operator'] == "OR"):
-                et = ET.Element('criterion', {'comment':defins_of_el['tst_comment'], 'test_ref':defins_of_el['tst_id']})
-                et.tail = criterion.tail
-                parent.append(et)
-            else:
-                index = list(parent).index(criterion)
-                et = ET.Element('criteria', {'operator':'OR'})
-                et.tail = criterion.tail
-                et.append(criterion)
-                et2 = ET.Element('criterion', {'comment':defins_of_el['tst_comment'], 'test_ref':defins_of_el['tst_id']})
-                et.append(et2)
-                parent.insert(index, et)
-                parent.remove(criterion)
-            break
-    
+    stat = ET.SubElement(tree_of_states, "red-def:rpmverifyfile_state", {'id':defins['ste_id'], 'version':RULE_VERSION})
+    name = ET.SubElement(stat, "red-def:name", {'operation':'pattern match'})
+    name.text = '^centos-release'
+    try:
+        defins['ste_version']
+    except:
+        print("os ste, don't need version for ste")
+    else:
+        version = ET.SubElement(stat, "red-def:version", {'operation':'pattern match'})
+        version.text = defins['ste_version']
 
 def main():
     args = parse_args()
@@ -191,33 +172,46 @@ def main():
     '''
         添加自定义规则: CentOS-Release检测
     '''
+    definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, DEFINS_OF_EL)
+
     definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, DEFINS_OF_EL8)
     definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, DEFINS_OF_EL7)
     definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, DEFINS_OF_EL6)
     definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, DEFINS_OF_EL5)
     
-    parent_map = dict((c, p) for p in oval_root.getiterator() for c in p)
     
     '''
-        修改definitions
+        modify definitions
     '''
     for definition in oval_root.findall(".//{%s}definition" % OVAL_NS):
         defin_id = definition.attrib['id']
 
         '''
-            修改platforms & cpe
+            modify platforms & cpe
         '''
         alter_affected_platforms(definition)
         alter_affected_cpes(definition)
 
         '''
-            修改判断条件criteria
+            modify criterion
         '''
-        alter_definition_criterions(definition, redhat_8_tests, DEFINS_OF_EL8, parent_map)
-        alter_definition_criterions(definition, redhat_7_tests, DEFINS_OF_EL7, parent_map)
-        alter_definition_criterions(definition, redhat_6_tests, DEFINS_OF_EL6, parent_map)
-        alter_definition_criterions(definition, redhat_5_tests, DEFINS_OF_EL5, parent_map)
-
+        for criterion in definition.findall(".//{%s}criterion" % OVAL_NS):
+            tst_comment = criterion.attrib['comment']    
+            if tst_comment == "Red Hat Enterprise Linux must be installed" :
+                criterion.set('comment',  DEFINS_OF_EL['tst_comment'])
+                criterion.set('test_ref', DEFINS_OF_EL['tst_id'])
+            elif tst_comment == "Red Hat Enterprise Linux 8 is installed" :
+                criterion.set('comment',  DEFINS_OF_EL8['tst_comment'])
+                criterion.set('test_ref', DEFINS_OF_EL8['tst_id'])
+            elif tst_comment == "Red Hat Enterprise Linux 7 is installed" :
+                criterion.set('comment',  DEFINS_OF_EL7['tst_comment'])
+                criterion.set('test_ref', DEFINS_OF_EL7['tst_id'])
+            elif tst_comment == "Red Hat Enterprise Linux 6 is installed" :
+                criterion.set('comment',  DEFINS_OF_EL6['tst_comment'])
+                criterion.set('test_ref', DEFINS_OF_EL6['tst_id'])
+            elif tst_comment == "Red Hat Enterprise Linux 5 is installed" :
+                criterion.set('comment',  DEFINS_OF_EL5['tst_comment'])
+                criterion.set('test_ref', DEFINS_OF_EL5['tst_id'])
 
     indent(oval_root)
     oval_tree.write(oval_output_file, encoding="UTF-8", xml_declaration=True)
