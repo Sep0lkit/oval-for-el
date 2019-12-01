@@ -45,12 +45,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="python36-devel is earlier than 0:3.6.8-2.module+el8.0.0+2975+e0f02136" test_ref="oval:com.redhat.rhsa:tst:20190984001" />
@@ -172,12 +169,9 @@ Bug Fix(es):
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="systemd-pam is earlier than 0:239-13.el8_0.3" test_ref="oval:com.redhat.rhsa:tst:20190990001" />
@@ -250,12 +244,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="gvfs-archive is earlier than 0:1.36.2-2.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191517001" />
@@ -344,12 +335,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="java-11-openjdk-jmods is earlier than 1:11.0.3.7-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191518001" />
@@ -421,12 +409,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="golang-race is earlier than 0:1.11.5-2.module+el8.0.0+3175+261ae921" test_ref="oval:com.redhat.rhsa:tst:20191519001" />
@@ -494,12 +479,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criterion comment="WALinuxAgent is earlier than 0:2.2.32-1.el8_0.1" test_ref="oval:com.redhat.rhsa:tst:20191527001" />
           <criterion comment="WALinuxAgent is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20191527002" />
         </criteria>
@@ -560,12 +542,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.222.b10-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191816001" />
@@ -667,12 +646,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="java-11-openjdk-devel is earlier than 1:11.0.4.11-0.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191817001" />
@@ -809,12 +785,9 @@ Enhancement(s):
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="nspr is earlier than 0:4.21.0-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20191951001" />
@@ -962,12 +935,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="poppler-debugsource is earlier than 0:0.66.0-11.el8_0.12" test_ref="oval:com.redhat.rhsa:tst:20192713001" />
@@ -1047,12 +1017,9 @@ For more details about the security issue(s), including the impact, a CVSS score
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="dotnet-debugsource is earlier than 0:2.1.509-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20192731001" />
@@ -1150,12 +1117,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="python-lxml-debugsource is earlier than 0:4.2.3-3.module+el8.1.0+3111+de3f2d8e" test_ref="oval:com.redhat.rhsa:tst:20193335001" />
@@ -1488,12 +1452,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="edk2-ovmf is earlier than 0:20190308git89910a39dcfd-6.el8" test_ref="oval:com.redhat.rhsa:tst:20193338001" />
@@ -1542,12 +1503,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="freeradius-utils is earlier than 0:3.0.17-6.module+el8.1.0+3392+9bd8939b" test_ref="oval:com.redhat.rhsa:tst:20193353001" />
@@ -1652,12 +1610,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="qt5-qtbase-common is earlier than 0:5.11.1-7.el8" test_ref="oval:com.redhat.rhsa:tst:20193390001" />
@@ -1794,12 +1749,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libtiff-devel is earlier than 0:4.0.9-15.el8" test_ref="oval:com.redhat.rhsa:tst:20193419001" />
@@ -1857,12 +1809,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="mod_auth_mellon-debugsource is earlier than 0:0.14.0-9.el8" test_ref="oval:com.redhat.rhsa:tst:20193421001" />
@@ -1917,12 +1866,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="golang-bin is earlier than 0:1.12.8-2.module+el8.1.0+4089+be929cf8" test_ref="oval:com.redhat.rhsa:tst:20193433001" />
@@ -2003,12 +1949,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="mod_ssl is earlier than 1:2.4.37-16.module+el8.1.0+4134+e6bad0ed" test_ref="oval:com.redhat.rhsa:tst:20193436001" />
@@ -2101,12 +2044,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="dovecot-debugsource is earlier than 1:2.2.36-10.el8" test_ref="oval:com.redhat.rhsa:tst:20193467001" />
@@ -2174,12 +2114,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="squid-debugsource is earlier than 7:4.4-8.module+el8.1.0+4044+36416a77" test_ref="oval:com.redhat.rhsa:tst:20193476001" />
@@ -2240,12 +2177,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="http-parser-debugsource is earlier than 0:2.8.0-5.el8" test_ref="oval:com.redhat.rhsa:tst:20193497001" />
@@ -2318,12 +2252,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="glibc-langpack-ms is earlier than 0:2.28-72.el8" test_ref="oval:com.redhat.rhsa:tst:20193513001" />
@@ -3240,12 +3171,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="python3-debugsource is earlier than 0:3.6.8-15.1.el8" test_ref="oval:com.redhat.rhsa:tst:20193520001" />
@@ -3320,12 +3248,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="dhcp-common is earlier than 12:4.3.6-34.el8" test_ref="oval:com.redhat.rhsa:tst:20193525001" />
@@ -3395,12 +3320,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="glib2-debugsource is earlier than 0:2.56.4-7.el8" test_ref="oval:com.redhat.rhsa:tst:20193530001" />
@@ -3476,12 +3398,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="samba-pidl is earlier than 0:4.10.4-1.el8" test_ref="oval:com.redhat.rhsa:tst:20193582001" />
@@ -3701,12 +3620,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libsolv-debugsource is earlier than 0:0.7.4-3.el8" test_ref="oval:com.redhat.rhsa:tst:20193583001" />
@@ -3876,12 +3792,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criterion comment="python3-urllib3 is earlier than 0:1.24.2-2.el8" test_ref="oval:com.redhat.rhsa:tst:20193590001" />
           <criterion comment="python3-urllib3 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193590002" />
         </criteria>
@@ -3940,12 +3853,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="systemd-debugsource is earlier than 0:239-18.el8" test_ref="oval:com.redhat.rhsa:tst:20193592001" />
@@ -4043,12 +3953,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="gnutls-debugsource is earlier than 0:3.6.8-8.el8" test_ref="oval:com.redhat.rhsa:tst:20193600001" />
@@ -4114,12 +4021,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libqb-debugsource is earlier than 0:1.0.3-10.el8" test_ref="oval:com.redhat.rhsa:tst:20193610001" />
@@ -4177,12 +4081,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libseccomp-debugsource is earlier than 0:2.4.1-1.el8" test_ref="oval:com.redhat.rhsa:tst:20193624001" />
@@ -4257,12 +4158,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libarchive-debugsource is earlier than 0:3.3.2-7.el8" test_ref="oval:com.redhat.rhsa:tst:20193698001" />
@@ -4322,12 +4220,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="evolution-ews-debugsource is earlier than 0:3.28.5-5.el8" test_ref="oval:com.redhat.rhsa:tst:20193699001" />
@@ -4456,12 +4351,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libcurl-devel is earlier than 0:7.61.1-11.el8" test_ref="oval:com.redhat.rhsa:tst:20193701001" />
@@ -4546,12 +4438,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="openssh-keycat is earlier than 0:8.0p1-3.el8" test_ref="oval:com.redhat.rhsa:tst:20193702001" />
@@ -4628,12 +4517,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="python3-numpy is earlier than 1:1.14.3-9.el8" test_ref="oval:com.redhat.rhsa:tst:20193704001" />
@@ -4687,12 +4573,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="libjpeg-turbo-devel is earlier than 0:1.5.3-10.el8" test_ref="oval:com.redhat.rhsa:tst:20193705001" />
@@ -4760,12 +4643,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="lua-libs is earlier than 0:5.3.4-11.el8" test_ref="oval:com.redhat.rhsa:tst:20193706001" />
@@ -4824,12 +4704,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="dbus is earlier than 1:1.12.8-9.el8" test_ref="oval:com.redhat.rhsa:tst:20193707001" />
@@ -4956,12 +4833,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
         </advisory>
       </metadata>
       <criteria operator="OR">
-        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
         <criteria operator="AND">
-          <criteria operator="OR">
-            <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
-            <criterion comment="centos-release 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
-          </criteria>
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
           <criteria operator="OR">
             <criteria operator="AND">
               <criterion comment="mariadb-test is earlier than 3:10.3.17-1.module+el8.1.0+3974+90eded84" test_ref="oval:com.redhat.rhsa:tst:20193708001" />
@@ -18349,22 +18223,26 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193708018" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193708009" />
     </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="centos-release 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
+    <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
+      <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
+      <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
+    </red-def:rpmverifyfile_test>
+    <red-def:rpmverifyfile_test check="at least one" comment="CentOS 8 is installed" id="oval:com.github.sep0lkit:tst:190630004" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630004" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630004" />
-    </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="centos-release 7 is installed" id="oval:com.github.sep0lkit:tst:190630003" version="101">
+    </red-def:rpmverifyfile_test>
+    <red-def:rpmverifyfile_test check="at least one" comment="CentOS 7 is installed" id="oval:com.github.sep0lkit:tst:190630003" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630003" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630003" />
-    </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="centos-release 6 is installed" id="oval:com.github.sep0lkit:tst:190630002" version="101">
+    </red-def:rpmverifyfile_test>
+    <red-def:rpmverifyfile_test check="at least one" comment="CentOS 6 is installed" id="oval:com.github.sep0lkit:tst:190630002" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630002" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630002" />
-    </red-def:rpminfo_test>
-    <red-def:rpminfo_test check="at least one" comment="centos-release 5 is installed" id="oval:com.github.sep0lkit:tst:190630001" version="101">
+    </red-def:rpmverifyfile_test>
+    <red-def:rpmverifyfile_test check="at least one" comment="CentOS 5 is installed" id="oval:com.github.sep0lkit:tst:190630001" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630001" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630001" />
-    </red-def:rpminfo_test>
+    </red-def:rpmverifyfile_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -22000,18 +21878,51 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20193708020" version="633">
       <red-def:name>Judy-devel</red-def:name>
     </red-def:rpminfo_object>
-    <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630004" version="101">
-      <red-def:name>centos-release</red-def:name>
-    </red-def:rpminfo_object>
-    <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630003" version="101">
-      <red-def:name>centos-release</red-def:name>
-    </red-def:rpminfo_object>
-    <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630002" version="101">
-      <red-def:name>centos-release</red-def:name>
-    </red-def:rpminfo_object>
-    <red-def:rpminfo_object id="oval:com.github.sep0lkit:obj:190630001" version="101">
-      <red-def:name>centos-release</red-def:name>
-    </red-def:rpminfo_object>
+    <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630000" version="101">
+      <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
+      <red-def:name operation="pattern match" />
+      <red-def:epoch operation="pattern match" />
+      <red-def:version operation="pattern match" />
+      <red-def:release operation="pattern match" />
+      <red-def:arch operation="pattern match" />
+      <red-def:filepath>/etc/redhat-release</red-def:filepath>
+    </red-def:rpmverifyfile_object>
+    <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630004" version="101">
+      <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
+      <red-def:name operation="pattern match" />
+      <red-def:epoch operation="pattern match" />
+      <red-def:version operation="pattern match" />
+      <red-def:release operation="pattern match" />
+      <red-def:arch operation="pattern match" />
+      <red-def:filepath>/etc/redhat-release</red-def:filepath>
+    </red-def:rpmverifyfile_object>
+    <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630003" version="101">
+      <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
+      <red-def:name operation="pattern match" />
+      <red-def:epoch operation="pattern match" />
+      <red-def:version operation="pattern match" />
+      <red-def:release operation="pattern match" />
+      <red-def:arch operation="pattern match" />
+      <red-def:filepath>/etc/redhat-release</red-def:filepath>
+    </red-def:rpmverifyfile_object>
+    <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630002" version="101">
+      <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
+      <red-def:name operation="pattern match" />
+      <red-def:epoch operation="pattern match" />
+      <red-def:version operation="pattern match" />
+      <red-def:release operation="pattern match" />
+      <red-def:arch operation="pattern match" />
+      <red-def:filepath>/etc/redhat-release</red-def:filepath>
+    </red-def:rpmverifyfile_object>
+    <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630001" version="101">
+      <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
+      <red-def:name operation="pattern match" />
+      <red-def:epoch operation="pattern match" />
+      <red-def:version operation="pattern match" />
+      <red-def:release operation="pattern match" />
+      <red-def:arch operation="pattern match" />
+      <red-def:filepath>/etc/redhat-release</red-def:filepath>
+    </red-def:rpmverifyfile_object>
   </objects>
   <states>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -24228,18 +24139,25 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:arch datatype="string" operation="equals">i686</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.0.5-18.module+el8+2765+cfa4f87b</red-def:evr>
     </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
+    <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
+      <red-def:name operation="pattern match">^centos-release</red-def:name>
+    </red-def:rpmverifyfile_state>
+    <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630004" version="101">
+      <red-def:name operation="pattern match">^centos-release</red-def:name>
       <red-def:version operation="pattern match">^8</red-def:version>
-    </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630003" version="101">
+    </red-def:rpmverifyfile_state>
+    <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630003" version="101">
+      <red-def:name operation="pattern match">^centos-release</red-def:name>
       <red-def:version operation="pattern match">^7</red-def:version>
-    </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630002" version="101">
+    </red-def:rpmverifyfile_state>
+    <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630002" version="101">
+      <red-def:name operation="pattern match">^centos-release</red-def:name>
       <red-def:version operation="pattern match">^6</red-def:version>
-    </red-def:rpminfo_state>
-    <red-def:rpminfo_state id="oval:com.github.sep0lkit:ste:190630001" version="101">
+    </red-def:rpmverifyfile_state>
+    <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630001" version="101">
+      <red-def:name operation="pattern match">^centos-release</red-def:name>
       <red-def:version operation="pattern match">^5</red-def:version>
-    </red-def:rpminfo_state>
+    </red-def:rpmverifyfile_state>
   </states>
   <variables>
     <local_variable comment="Get saved_entry in /boot/grub2/grubenv" datatype="int" id="oval:com.redhat.rhsa:var:20191167001" version="640">
