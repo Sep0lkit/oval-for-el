@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-11-13T15:57:02</oval:timestamp>
-    <oval:content_version>1573660622</oval:content_version>
+    <oval:timestamp>2019-12-05T22:17:36</oval:timestamp>
+    <oval:content_version>1575584256</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -11774,7 +11774,6 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
           <cve cvss3="7.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N" cwe="CWE-20 CWE-285" href="https://access.redhat.com/security/cve/CVE-2019-14809" public="20190813">CVE-2019-14809</cve>
           <bugzilla href="https://bugzilla.redhat.com/1700109" id="1700109">golang and go-compilers-golang-compiler provide the same macros</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1709603" id="1709603">Implement FIPS lab feedback for Go 1.12</bugzilla>
-          <bugzilla href="https://bugzilla.redhat.com/1731550" id="1731550">Failure trying to conntect to image registry using TLS when buildah is compiled with FIPS mode</bugzilla>
           <bugzilla href="https://bugzilla.redhat.com/1743129" id="1743129">CVE-2019-14809 golang: malformed hosts in URLs leads to authorization bypass</bugzilla>
           <affected_cpe_list>
             <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
