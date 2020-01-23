@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2019-12-05T22:17:36</oval:timestamp>
-    <oval:content_version>1575584256</oval:content_version>
+    <oval:timestamp>2020-01-23T00:36:59</oval:timestamp>
+    <oval:content_version>1579739819</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20192722" version="634">
@@ -15624,6 +15624,110 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193708018" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20193708009" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-headers is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204001" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167016" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-devel is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204003" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-debug-modules-extra is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204005" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-debug-modules is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204007" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-debug-devel is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204009" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167021" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-debug-core is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204011" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-debug is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204013" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167011" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-cross-headers is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204015" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167023" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-core is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204017" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167018" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204019" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167020" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="bpftool is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204021" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167014" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python3-perf is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204023" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167012" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="perf is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204025" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167017" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-tools-libs is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204027" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167024" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-tools is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204029" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167015" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-modules-extra is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204031" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-modules is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204033" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167022" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-doc is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204035" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-abi-whitelists is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204037" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-modules-extra is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204039" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-modules is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204041" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-devel is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204043" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167019" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump-core is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204045" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="kernel-zfcpdump is earlier than 0:4.18.0-80.15.1.el8_0" id="oval:com.redhat.rhsa:tst:20200204047" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191167004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200204005" />
+    </red-def:rpminfo_test>
+    <ns4:uname_test check="at least one" comment="kernel earlier than 0:4.18.0-80.15.1.el8_0 is currently running" id="oval:com.redhat.rhsa:tst:20200204049" version="637">
+      <ns4:object object_ref="oval:com.redhat.rhsa:obj:20191167026" />
+      <ns4:state state_ref="oval:com.redhat.rhsa:ste:20200204006" />
+    </ns4:uname_test>
+    <ns5:textfilecontent54_test check="all" comment="kernel earlier than 0:4.18.0-80.15.1.el8_0 is set to boot up on next boot" id="oval:com.redhat.rhsa:tst:20200204050" version="637">
+      <ns5:object object_ref="oval:com.redhat.rhsa:obj:20200204027" />
+      <ns5:state state_ref="oval:com.redhat.rhsa:ste:20200204007" />
+    </ns5:textfilecontent54_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -19259,6 +19363,11 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20193708020" version="633">
       <red-def:name>Judy-devel</red-def:name>
     </red-def:rpminfo_object>
+    <ns5:textfilecontent54_object id="oval:com.redhat.rhsa:obj:20200204027" version="637">
+      <ns5:filepath datatype="string">/boot/grub2/grub.cfg</ns5:filepath>
+      <ns5:pattern operation="pattern match">^menuentry.*</ns5:pattern>
+      <ns5:instance datatype="int" var_ref="oval:com.redhat.rhsa:var:20191167001" />
+    </ns5:textfilecontent54_object>
   </objects>
   <states>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -21475,6 +21584,27 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:arch datatype="string" operation="equals">i686</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.0.5-18.module+el8+2765+cfa4f87b</red-def:evr>
     </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200204001" version="637">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.15.1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200204003" version="637">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.15.1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200204004" version="637">
+      <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.15.1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200204005" version="637">
+      <red-def:arch datatype="string" operation="equals">s390x</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:4.18.0-80.15.1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <ns4:uname_state id="oval:com.redhat.rhsa:ste:20200204006" version="637">
+      <ns4:os_release operation="pattern match">([0-3]\.\d+\.\d+-)|(4\.([0-9]|1[0-7])\.\d+-)|(4\.18\.0-([0-9]|[1-6][0-9]|7[0-9])\.)|(4\.18\.0-80\.([0-9]|1[0-4])\.)|(4\.18\.0-80\.15\.0\.)</ns4:os_release>
+    </ns4:uname_state>
+    <ns5:textfilecontent54_state id="oval:com.redhat.rhsa:ste:20200204007" version="637">
+      <ns5:text operation="pattern match">([0-3]\.\d+\.\d+-)|(4\.([0-9]|1[0-7])\.\d+-)|(4\.18\.0-([0-9]|[1-6][0-9]|7[0-9])\.)|(4\.18\.0-80\.([0-9]|1[0-4])\.)|(4\.18\.0-80\.15\.0\.)</ns5:text>
+    </ns5:textfilecontent54_state>
   </states>
   <variables>
     <local_variable comment="Get saved_entry in /boot/grub2/grubenv" datatype="int" id="oval:com.redhat.rhsa:var:20191167001" version="640">
