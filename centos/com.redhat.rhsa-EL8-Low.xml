@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-01-23T00:36:59</oval:timestamp>
-    <oval:content_version>1579739819</oval:content_version>
+    <oval:timestamp>2020-01-24T01:16:21</oval:timestamp>
+    <oval:content_version>1579828581</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20192722" version="634">
@@ -15749,6 +15749,18 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <ns5:object object_ref="oval:com.redhat.rhsa:obj:20200204027" />
       <ns5:state state_ref="oval:com.redhat.rhsa:ste:20200204007" />
     </ns5:textfilecontent54_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libgs is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ghostscript is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222003" />
+    </red-def:rpminfo_test>
     <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
@@ -21691,6 +21703,14 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <ns5:textfilecontent54_state id="oval:com.redhat.rhsa:ste:20200204007" version="637">
       <ns5:text operation="pattern match">([0-3]\.\d+\.\d+-)|(4\.([0-9]|1[0-7])\.\d+-)|(4\.18\.0-([0-9]|[1-6][0-9]|7[0-9])\.)|(4\.18\.0-80\.([0-9]|1[0-4])\.)|(4\.18\.0-80\.15\.0\.)</ns5:text>
     </ns5:textfilecontent54_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200222001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.4</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200222003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.4</red-def:evr>
+    </red-def:rpminfo_state>
     <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
       <red-def:name operation="pattern match">^centos-release</red-def:name>
     </red-def:rpmverifyfile_state>

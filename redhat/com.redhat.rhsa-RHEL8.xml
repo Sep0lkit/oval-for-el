@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2020-01-23T00:36:59</oval:timestamp>
-  <oval:content_version>1579739819</oval:content_version>
+  <oval:timestamp>2020-01-24T01:16:21</oval:timestamp>
+  <oval:content_version>1579828581</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -16741,6 +16741,55 @@ Bug Fix(es):
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20200222" version="632">
+   <metadata>
+    <title>RHSA-2020:0222: ghostscript security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8.0 Update Services for SAP Solutions</platform>
+    </affected>
+    <reference ref_id="RHSA-2020:0222" ref_url="https://access.redhat.com/errata/RHSA-2020:0222" source="RHSA"/>
+    <reference ref_id="CVE-2019-14869" ref_url="https://access.redhat.com/security/cve/CVE-2019-14869" source="CVE"/>
+    <description>The Ghostscript suite contains utilities for rendering PostScript and PDF documents. Ghostscript translates PostScript code to common bitmap formats so that the code can be displayed or printed.
+
+Security Fix(es):
+
+* ghostscript: -dSAFER escape in .charkeys (701841) (CVE-2019-14869)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2020 Red Hat, Inc.</rights>
+     <issued date="2020-01-23"/>
+     <updated date="2020-01-23"/>
+     <cve cvss3="7.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-648" href="https://access.redhat.com/security/cve/CVE-2019-14869" public="20191114:1300">CVE-2019-14869</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1768911" id="1768911">CVE-2019-14869 ghostscript: -dSAFER escape in .charkeys (701841)</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:rhel_e4s:8.0</cpe>
+      <cpe>cpe:/a:redhat:rhel_e4s:8.0::appstream</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="OR">
+    <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006"/>
+    <criteria operator="AND">
+     <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+     <criteria operator="OR">
+      <criteria operator="AND">
+       <criterion comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.4" test_ref="oval:com.redhat.rhsa:tst:20200222001"/>
+       <criterion comment="ghostscript-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971004"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="libgs is earlier than 0:9.25-2.el8_0.4" test_ref="oval:com.redhat.rhsa:tst:20200222003"/>
+       <criterion comment="libgs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971006"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="ghostscript is earlier than 0:9.25-2.el8_0.4" test_ref="oval:com.redhat.rhsa:tst:20200222005"/>
+       <criterion comment="ghostscript is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190971002"/>
+      </criteria>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -30075,6 +30124,18 @@ Bug Fix(es):
    <ind-def:object object_ref="oval:com.redhat.rhsa:obj:20200204027"/>
    <ind-def:state state_ref="oval:com.redhat.rhsa:ste:20200204007"/>
   </ind-def:textfilecontent54_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript-debugsource is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222001" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libgs is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222003" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="ghostscript is earlier than 0:9.25-2.el8_0.4" id="oval:com.redhat.rhsa:tst:20200222005" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222003"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -35952,6 +36013,14 @@ Bug Fix(es):
   <ind-def:textfilecontent54_state id="oval:com.redhat.rhsa:ste:20200204007" version="637">
    <ind-def:text operation="pattern match">([0-3]\.\d+\.\d+-)|(4\.([0-9]|1[0-7])\.\d+-)|(4\.18\.0-([0-9]|[1-6][0-9]|7[0-9])\.)|(4\.18\.0-80\.([0-9]|1[0-4])\.)|(4\.18\.0-80\.15\.0\.)</ind-def:text>
   </ind-def:textfilecontent54_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200222001" version="632">
+   <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.4</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200222003" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.4</red-def:evr>
+  </red-def:rpminfo_state>
  </states>
  <variables>
   <local_variable comment="Get saved_entry in /boot/grub2/grubenv" datatype="int" id="oval:com.redhat.rhsa:var:20191167001" version="640">
