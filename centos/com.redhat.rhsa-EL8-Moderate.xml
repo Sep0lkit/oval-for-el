@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-01-24T01:16:21</oval:timestamp>
-    <oval:content_version>1579828581</oval:content_version>
+    <oval:timestamp>2020-01-27T21:22:38</oval:timestamp>
+    <oval:content_version>1580160158</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190984" version="633">
@@ -18338,6 +18338,318 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190971001" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200222003" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="perl-Git-SVN is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="perl-Git-SVN is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228002" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="perl-Git is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="perl-Git is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228004" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="gitweb is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="gitweb is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228006" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="gitk is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="gitk is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228008" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-gui is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-gui is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228010" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-email is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-email is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228012" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-core-doc is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-core-doc is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228014" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-all is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-all is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228016" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-debugsource is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228018" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-svn is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228019" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-svn is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228020" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-subtree is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228021" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228011" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-subtree is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228022" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228011" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-instaweb is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228023" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228012" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-instaweb is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228024" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228012" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-daemon is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228025" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-daemon is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228026" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-core is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228027" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228014" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git-core is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228028" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228014" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git is earlier than 0:2.18.2-1.el8_0" id="oval:com.redhat.rhsa:tst:20200228029" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228015" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200228003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="git is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200228030" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200228015" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-doc is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-doc is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-debugsource is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-libs is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-libs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-devel is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229008" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229009" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sqlite is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229010" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="lemon is earlier than 0:3.26.0-4.el8_0" id="oval:com.redhat.rhsa:tst:20200229011" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200229004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="lemon is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200229012" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200229006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python-reportlab-debugsource is earlier than 0:3.4.0-6.el8_0.2" id="oval:com.redhat.rhsa:tst:20200230001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200230001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200230001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python-reportlab-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200230002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200230001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python3-reportlab is earlier than 0:3.4.0-6.el8_0.2" id="oval:com.redhat.rhsa:tst:20200230003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200230002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200230001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python3-reportlab is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200230004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200230002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc-zip is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-javadoc is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-debugsource is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-src is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-headless is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-devel is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-demo is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk-accessibility is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-1.8.0-openjdk is earlier than 1:1.8.0.242.b08-0.el8_0" id="oval:com.redhat.rhsa:tst:20200231017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191146006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200231003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-debugsource is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-src is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-jmods is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc-zip is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232007" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-javadoc is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232009" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-headless is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232011" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-devel is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232013" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk-demo is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232015" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="java-11-openjdk is earlier than 1:11.0.6.10-0.el8_0" id="oval:com.redhat.rhsa:tst:20200232017" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191518003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200232001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-debugsource is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951011" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-util-devel is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-util is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-tools is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-sysinit is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243009" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-softokn-freebl-devel is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243011" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-softokn-freebl is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243013" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-softokn-devel is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243015" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951014" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-softokn is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243017" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss-devel is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243019" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="nss is earlier than 0:3.44.0-8.el8_0" id="oval:com.redhat.rhsa:tst:20200243021" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191951012" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200243001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libarchive-debugsource is earlier than 0:3.3.2-4.el8_0" id="oval:com.redhat.rhsa:tst:20200246001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193698001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200246001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="libarchive is earlier than 0:3.3.2-4.el8_0" id="oval:com.redhat.rhsa:tst:20200246003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193698002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200246001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="bsdtar is earlier than 0:3.3.2-4.el8_0" id="oval:com.redhat.rhsa:tst:20200246005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193698003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200246003" />
+    </red-def:rpminfo_test>
     <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
@@ -21998,6 +22310,75 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <ns5:pattern operation="pattern match">^menuentry.*</ns5:pattern>
       <ns5:instance datatype="int" var_ref="oval:com.redhat.rhsa:var:20191167001" />
     </ns5:textfilecontent54_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228001" version="633">
+      <red-def:name>perl-Git-SVN</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228002" version="633">
+      <red-def:name>perl-Git</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228003" version="633">
+      <red-def:name>gitweb</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228004" version="633">
+      <red-def:name>gitk</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228005" version="633">
+      <red-def:name>git-gui</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228006" version="633">
+      <red-def:name>git-email</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228007" version="633">
+      <red-def:name>git-core-doc</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228008" version="633">
+      <red-def:name>git-all</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228009" version="633">
+      <red-def:name>git-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228010" version="633">
+      <red-def:name>git-svn</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228011" version="633">
+      <red-def:name>git-subtree</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228012" version="633">
+      <red-def:name>git-instaweb</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228013" version="633">
+      <red-def:name>git-daemon</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228014" version="633">
+      <red-def:name>git-core</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200228015" version="633">
+      <red-def:name>git</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229001" version="632">
+      <red-def:name>sqlite-doc</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229002" version="632">
+      <red-def:name>sqlite-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229003" version="632">
+      <red-def:name>sqlite-libs</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229004" version="632">
+      <red-def:name>sqlite-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229005" version="632">
+      <red-def:name>sqlite</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200229006" version="632">
+      <red-def:name>lemon</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200230001" version="632">
+      <red-def:name>python-reportlab-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200230002" version="632">
+      <red-def:name>python3-reportlab</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630000" version="101">
       <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
       <red-def:name operation="pattern match" />
@@ -24287,6 +24668,55 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200222003" version="632">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:9.25-2.el8_0.4</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200228001" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">0:2.18.2-1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200228003" version="633">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.18.2-1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200229001" version="632">
+      <red-def:evr datatype="evr_string" operation="less than">0:3.26.0-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200229003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.26.0-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200229004" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.26.0-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200230001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.4.0-6.el8_0.2</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200231001" version="633">
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.242.b08-0.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200231003" version="633">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:1.8.0.242.b08-0.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200232001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:11.0.6.10-0.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200243001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.44.0-8.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200243003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.44.0-8.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200246001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.3.2-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200246003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:3.3.2-4.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
       <red-def:name operation="pattern match">^centos-release</red-def:name>
