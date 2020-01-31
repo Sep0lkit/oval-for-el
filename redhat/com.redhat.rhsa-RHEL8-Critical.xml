@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-01-27T21:22:38</oval:timestamp>
-    <oval:content_version>1580160158</oval:content_version>
+    <oval:timestamp>2020-01-30T10:42:22</oval:timestamp>
+    <oval:content_version>1580380942</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -534,6 +534,98 @@ For more details about the security issue(s), including the impact, a CVSS score
             </criteria>
             <criteria operator="AND">
               <criterion comment="firefox is earlier than 0:68.2.0-2.el8_0" test_ref="oval:com.redhat.rhsa:tst:20193196003" />
+              <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966004" />
+            </criteria>
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20200295" version="637">
+      <metadata>
+        <title>RHSA-2020:0295: firefox security update (Critical)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8.0 Update Services for SAP Solutions</platform>
+        </affected>
+        <reference ref_id="RHSA-2020:0295" ref_url="https://access.redhat.com/errata/RHSA-2020:0295" source="RHSA" />
+        <reference ref_id="CVE-2019-17005" ref_url="https://access.redhat.com/security/cve/CVE-2019-17005" source="CVE" />
+        <reference ref_id="CVE-2019-17008" ref_url="https://access.redhat.com/security/cve/CVE-2019-17008" source="CVE" />
+        <reference ref_id="CVE-2019-17010" ref_url="https://access.redhat.com/security/cve/CVE-2019-17010" source="CVE" />
+        <reference ref_id="CVE-2019-17011" ref_url="https://access.redhat.com/security/cve/CVE-2019-17011" source="CVE" />
+        <reference ref_id="CVE-2019-17012" ref_url="https://access.redhat.com/security/cve/CVE-2019-17012" source="CVE" />
+        <reference ref_id="CVE-2019-17016" ref_url="https://access.redhat.com/security/cve/CVE-2019-17016" source="CVE" />
+        <reference ref_id="CVE-2019-17017" ref_url="https://access.redhat.com/security/cve/CVE-2019-17017" source="CVE" />
+        <reference ref_id="CVE-2019-17022" ref_url="https://access.redhat.com/security/cve/CVE-2019-17022" source="CVE" />
+        <reference ref_id="CVE-2019-17024" ref_url="https://access.redhat.com/security/cve/CVE-2019-17024" source="CVE" />
+        <reference ref_id="CVE-2019-17026" ref_url="https://access.redhat.com/security/cve/CVE-2019-17026" source="CVE" />
+        <description>Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.
+
+This update upgrades Firefox to version 68.4.1 ESR.
+
+Security Fix(es):
+
+* Mozilla: IonMonkey type confusion with StoreElementHole and FallibleStoreElement (CVE-2019-17026)
+
+* Mozilla: Use-after-free in worker destruction (CVE-2019-17008)
+
+* Mozilla: Memory safety bugs fixed in Firefox 71 and Firefox ESR 68.3 (CVE-2019-17012)
+
+* Mozilla: Bypass of @namespace CSS sanitization during pasting (CVE-2019-17016)
+
+* Mozilla: Type Confusion in XPCVariant.cpp (CVE-2019-17017)
+
+* Mozilla: Memory safety bugs fixed in Firefox 72 and Firefox ESR 68.4 (CVE-2019-17024)
+
+* Mozilla: Buffer overflow in plain text serializer (CVE-2019-17005)
+
+* Mozilla: Use-after-free when performing device orientation checks (CVE-2019-17010)
+
+* Mozilla: Use-after-free when retrieving a document in antitracking (CVE-2019-17011)
+
+* Mozilla: CSS sanitization does not escape HTML tags (CVE-2019-17022)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Critical</severity>
+          <rights>Copyright 2020 Red Hat, Inc.</rights>
+          <issued date="2020-01-30" />
+          <updated date="2020-01-30" />
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-17005" impact="moderate" public="20191203">CVE-2019-17005</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-17008" impact="important" public="20191203">CVE-2019-17008</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-17010" impact="moderate" public="20191203">CVE-2019-17010</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-416" href="https://access.redhat.com/security/cve/CVE-2019-17011" impact="moderate" public="20191203">CVE-2019-17011</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-17012" impact="important" public="20191203">CVE-2019-17012</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-17016" impact="important" public="20200107">CVE-2019-17016</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-843" href="https://access.redhat.com/security/cve/CVE-2019-17017" impact="important" public="20200107">CVE-2019-17017</cve>
+          <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-17022" impact="moderate" public="20200107">CVE-2019-17022</cve>
+          <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2019-17024" impact="important" public="20200107">CVE-2019-17024</cve>
+          <cve cvss3="8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-843" href="https://access.redhat.com/security/cve/CVE-2019-17026" public="20200108">CVE-2019-17026</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1779431" id="1779431">CVE-2019-17008 Mozilla: Use-after-free in worker destruction</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779434" id="1779434">CVE-2019-17010 Mozilla: Use-after-free when performing device orientation checks</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779435" id="1779435">CVE-2019-17005 Mozilla: Buffer overflow in plain text serializer</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779436" id="1779436">CVE-2019-17011 Mozilla: Use-after-free when retrieving a document in antitracking</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779437" id="1779437">CVE-2019-17012 Mozilla: Memory safety bugs fixed in Firefox 71 and Firefox ESR 68.3</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1788723" id="1788723">CVE-2019-17016 Mozilla: Bypass of @namespace CSS sanitization during pasting</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1788724" id="1788724">CVE-2019-17017 Mozilla: Type Confusion in XPCVariant.cpp</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1788726" id="1788726">CVE-2019-17022 Mozilla: CSS sanitization does not escape HTML tags</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1788727" id="1788727">CVE-2019-17024 Mozilla: Memory safety bugs fixed in Firefox 72 and Firefox ESR 68.4</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1789214" id="1789214">CVE-2019-17026 Mozilla: IonMonkey type confusion with StoreElementHole and FallibleStoreElement</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:rhel_e4s:8.0</cpe>
+            <cpe>cpe:/a:redhat:rhel_e4s:8.0::appstream</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="OR">
+        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criteria operator="AND">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criteria operator="OR">
+            <criteria operator="AND">
+              <criterion comment="firefox-debugsource is earlier than 0:68.4.1-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200295001" />
+              <criterion comment="firefox-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966002" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="firefox is earlier than 0:68.4.1-1.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200295003" />
               <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966004" />
             </criteria>
           </criteria>
@@ -14198,6 +14290,90 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193698003" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200246003" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-debugsource is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-devel is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:68.4.1-2.el8_0" id="oval:com.redhat.rhsa:tst:20200292001" version="635">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200292001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:68.4.1-2.el8_0" id="oval:com.redhat.rhsa:tst:20200292003" version="635">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200292001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL-debugsource is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL-devel is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.4.1-1.el8_0" id="oval:com.redhat.rhsa:tst:20200295001" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200295001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.4.1-1.el8_0" id="oval:com.redhat.rhsa:tst:20200295003" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200295001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-devel-docs is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-devel-docs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-debugsource is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-tools is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-tools is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2 is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2 is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296008" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -17907,6 +18083,27 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200230002" version="632">
       <red-def:name>python3-reportlab</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291001" version="632">
+      <red-def:name>fribidi-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291002" version="632">
+      <red-def:name>fribidi-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291003" version="632">
+      <red-def:name>fribidi</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296001" version="632">
+      <red-def:name>openjpeg2-devel-docs</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296002" version="632">
+      <red-def:name>openjpeg2-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296003" version="632">
+      <red-def:name>openjpeg2-tools</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296004" version="632">
+      <red-def:name>openjpeg2</red-def:name>
+    </red-def:rpminfo_object>
   </objects>
   <states>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -20200,6 +20397,33 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200246003" version="632">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:3.3.2-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200291001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.0.4-6.el8_0.1</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200292001" version="635">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.4.1-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200293001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.2.15-33.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200295001" version="637">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.4.1-1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296001" version="632">
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296004" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
     </red-def:rpminfo_state>
   </states>
   <variables>

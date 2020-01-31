@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-01-27T21:22:38</oval:timestamp>
-    <oval:content_version>1580160158</oval:content_version>
+    <oval:timestamp>2020-01-30T10:42:22</oval:timestamp>
+    <oval:content_version>1580380942</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190984" version="633">
@@ -18650,6 +18650,90 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193698003" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200246003" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-debugsource is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-devel is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi is earlier than 0:1.0.4-6.el8_0.1" id="oval:com.redhat.rhsa:tst:20200291005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200291001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fribidi is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200291006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200291003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird-debugsource is earlier than 0:68.4.1-2.el8_0" id="oval:com.redhat.rhsa:tst:20200292001" version="635">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200292001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="thunderbird is earlier than 0:68.4.1-2.el8_0" id="oval:com.redhat.rhsa:tst:20200292003" version="635">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20191144002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200292001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL-debugsource is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293001" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL-devel is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293003" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="SDL is earlier than 0:1.2.15-33.el8_0" id="oval:com.redhat.rhsa:tst:20200293005" version="633">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193553003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200293001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.4.1-1.el8_0" id="oval:com.redhat.rhsa:tst:20200295001" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200295001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.4.1-1.el8_0" id="oval:com.redhat.rhsa:tst:20200295003" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200295001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-devel-docs is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-devel-docs is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-debugsource is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-tools is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296005" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2-tools is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296006" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2 is earlier than 0:2.3.0-9.el8_0" id="oval:com.redhat.rhsa:tst:20200296007" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200296003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="openjpeg2 is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200296008" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
@@ -22379,6 +22463,27 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200230002" version="632">
       <red-def:name>python3-reportlab</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291001" version="632">
+      <red-def:name>fribidi-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291002" version="632">
+      <red-def:name>fribidi-devel</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200291003" version="632">
+      <red-def:name>fribidi</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296001" version="632">
+      <red-def:name>openjpeg2-devel-docs</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296002" version="632">
+      <red-def:name>openjpeg2-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296003" version="632">
+      <red-def:name>openjpeg2-tools</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296004" version="632">
+      <red-def:name>openjpeg2</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630000" version="101">
       <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
       <red-def:name operation="pattern match" />
@@ -24717,6 +24822,33 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200246003" version="632">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:3.3.2-4.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200291001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.0.4-6.el8_0.1</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200292001" version="635">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.4.1-2.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200293001" version="633">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.2.15-33.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200295001" version="637">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:68.4.1-1.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296001" version="632">
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296003" version="632">
+      <red-def:arch datatype="string" operation="pattern match">i686|ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296004" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
       <red-def:name operation="pattern match">^centos-release</red-def:name>
