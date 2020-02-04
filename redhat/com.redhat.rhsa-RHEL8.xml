@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2020-01-30T10:42:22</oval:timestamp>
-  <oval:content_version>1580380942</oval:content_version>
+  <oval:timestamp>2020-02-04T01:23:15</oval:timestamp>
+  <oval:content_version>1580779395</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -12255,9 +12255,9 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
      <affected_cpe_list>
       <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
       <cpe>cpe:/o:redhat:enterprise_linux:8</cpe>
+      <cpe>cpe:/a:redhat:enterprise_linux:8::appstream</cpe>
       <cpe>cpe:/a:redhat:enterprise_linux:8::crb</cpe>
       <cpe>cpe:/o:redhat:enterprise_linux:8::baseos</cpe>
-      <cpe>cpe:/a:redhat:enterprise_linux:8::appstream</cpe>
      </affected_cpe_list>
     </advisory>
    </metadata>
@@ -17678,6 +17678,199 @@ For more details about the security issue(s), including the impact, a CVSS score
       <criteria operator="AND">
        <criterion comment="openjpeg2 is earlier than 0:2.3.0-9.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200296007"/>
        <criterion comment="openjpeg2 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200296008"/>
+      </criteria>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20200322" version="632">
+   <metadata>
+    <title>RHSA-2020:0322: php:7.2 security update (Critical)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8.0 Update Services for SAP Solutions</platform>
+    </affected>
+    <reference ref_id="RHSA-2020:0322" ref_url="https://access.redhat.com/errata/RHSA-2020:0322" source="RHSA"/>
+    <reference ref_id="CVE-2019-11043" ref_url="https://access.redhat.com/security/cve/CVE-2019-11043" source="CVE"/>
+    <description>PHP is an HTML-embedded scripting language commonly used with the Apache HTTP Server.
+
+Security Fix(es):
+
+* php: underflow in env_path_info in fpm_main.c (CVE-2019-11043)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Critical</severity>
+     <rights>Copyright 2020 Red Hat, Inc.</rights>
+     <issued date="2020-02-03"/>
+     <updated date="2020-02-03"/>
+     <cve cvss3="8.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-20 CWE-787" href="https://access.redhat.com/security/cve/CVE-2019-11043" public="20191024">CVE-2019-11043</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1766378" id="1766378">CVE-2019-11043 php: underflow in env_path_info in fpm_main.c</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:rhel_e4s:8.0</cpe>
+      <cpe>cpe:/a:redhat:rhel_e4s:8.0::appstream</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="OR">
+    <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006"/>
+    <criteria operator="AND">
+     <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+     <criteria operator="OR">
+      <criteria operator="AND">
+       <criterion comment="php-enchant is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322001"/>
+       <criterion comment="php-enchant is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322002"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-embedded is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322003"/>
+       <criterion comment="php-embedded is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322004"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-devel is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322005"/>
+       <criterion comment="php-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322006"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-debugsource is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322007"/>
+       <criterion comment="php-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322008"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-dbg is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322009"/>
+       <criterion comment="php-dbg is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322010"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-dba is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322011"/>
+       <criterion comment="php-dba is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322012"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-common is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322013"/>
+       <criterion comment="php-common is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322014"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-cli is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322015"/>
+       <criterion comment="php-cli is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322016"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-bcmath is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322017"/>
+       <criterion comment="php-bcmath is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322018"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322019"/>
+       <criterion comment="php is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322020"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="libzip-tools is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322021"/>
+       <criterion comment="libzip-tools is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322022"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="libzip-devel is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322023"/>
+       <criterion comment="libzip-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322024"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="libzip-debugsource is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322025"/>
+       <criterion comment="libzip-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322026"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="libzip is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322027"/>
+       <criterion comment="libzip is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322028"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-xmlrpc is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322029"/>
+       <criterion comment="php-xmlrpc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322030"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-xml is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322031"/>
+       <criterion comment="php-xml is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322032"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-soap is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322033"/>
+       <criterion comment="php-soap is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322034"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-snmp is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322035"/>
+       <criterion comment="php-snmp is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322036"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-recode is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322037"/>
+       <criterion comment="php-recode is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322038"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-process is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322039"/>
+       <criterion comment="php-process is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322040"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pgsql is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322041"/>
+       <criterion comment="php-pgsql is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322042"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pecl-zip-debugsource is earlier than 0:1.15.3-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322043"/>
+       <criterion comment="php-pecl-zip-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322044"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pecl-zip is earlier than 0:1.15.3-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322045"/>
+       <criterion comment="php-pecl-zip is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322046"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pecl-apcu-devel is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322047"/>
+       <criterion comment="php-pecl-apcu-devel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322048"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pecl-apcu-debugsource is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322049"/>
+       <criterion comment="php-pecl-apcu-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322050"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pecl-apcu is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322051"/>
+       <criterion comment="php-pecl-apcu is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322052"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pdo is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322053"/>
+       <criterion comment="php-pdo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322054"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-opcache is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322055"/>
+       <criterion comment="php-opcache is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322056"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-odbc is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322057"/>
+       <criterion comment="php-odbc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322058"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-mysqlnd is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322059"/>
+       <criterion comment="php-mysqlnd is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322060"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-mbstring is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322061"/>
+       <criterion comment="php-mbstring is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322062"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-ldap is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322063"/>
+       <criterion comment="php-ldap is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322064"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-json is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322065"/>
+       <criterion comment="php-json is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322066"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-intl is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322067"/>
+       <criterion comment="php-intl is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322068"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-gmp is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322069"/>
+       <criterion comment="php-gmp is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322070"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-gd is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322071"/>
+       <criterion comment="php-gd is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322072"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-fpm is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" test_ref="oval:com.redhat.rhsa:tst:20200322073"/>
+       <criterion comment="php-fpm is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322074"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="php-pear is earlier than 1:1.10.5-8.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322075"/>
+       <criterion comment="php-pear is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322076"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="apcu-panel is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" test_ref="oval:com.redhat.rhsa:tst:20200322077"/>
+       <criterion comment="apcu-panel is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200322078"/>
       </criteria>
      </criteria>
     </criteria>
@@ -31425,6 +31618,318 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200296004"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-enchant is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322001" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-enchant is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322002" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-embedded is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322003" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-embedded is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322004" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-devel is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322005" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322006" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322003"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-debugsource is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322007" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322008" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322004"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-dbg is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322009" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-dbg is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322010" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322005"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-dba is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322011" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-dba is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322012" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322006"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-common is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322013" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-common is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322014" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322007"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-cli is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322015" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-cli is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322016" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322008"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-bcmath is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322017" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-bcmath is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322018" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322009"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322019" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322020" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322010"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-tools is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322021" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-tools is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322022" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322011"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-devel is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322023" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322024" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322012"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-debugsource is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322025" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322026" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322013"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip is earlier than 0:1.5.1-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322027" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322014"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322003"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="libzip is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322028" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322014"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-xmlrpc is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322029" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322015"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-xmlrpc is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322030" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322015"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-xml is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322031" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322016"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-xml is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322032" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322016"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-soap is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322033" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322017"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-soap is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322034" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322017"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-snmp is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322035" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322018"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-snmp is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322036" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322018"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-recode is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322037" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322019"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-recode is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322038" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322019"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-process is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322039" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322020"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-process is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322040" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322020"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pgsql is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322041" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322021"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pgsql is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322042" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322021"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-zip-debugsource is earlier than 0:1.15.3-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322043" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322022"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-zip-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322044" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322022"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-zip is earlier than 0:1.15.3-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322045" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322023"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322004"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-zip is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322046" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322023"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu-devel is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322047" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322024"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu-devel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322048" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322024"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu-debugsource is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322049" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322025"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322050" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322025"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322051" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322026"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322005"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pecl-apcu is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322052" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322026"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pdo is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322053" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322027"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pdo is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322054" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322027"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-opcache is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322055" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322028"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-opcache is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322056" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322028"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-odbc is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322057" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322029"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-odbc is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322058" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322029"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-mysqlnd is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322059" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322030"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-mysqlnd is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322060" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322030"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-mbstring is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322061" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322031"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-mbstring is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322062" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322031"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-ldap is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322063" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322032"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-ldap is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322064" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322032"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-json is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322065" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322033"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-json is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322066" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322033"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-intl is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322067" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322034"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-intl is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322068" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322034"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-gmp is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322069" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322035"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-gmp is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322070" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322035"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-gd is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322071" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322036"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-gd is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322072" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322036"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-fpm is earlier than 0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65" id="oval:com.redhat.rhsa:tst:20200322073" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322037"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-fpm is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322074" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322037"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pear is earlier than 1:1.10.5-8.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322075" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322038"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322006"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="php-pear is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322076" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322038"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="apcu-panel is earlier than 0:5.1.12-1.module+el8+2561+1aca3413" id="oval:com.redhat.rhsa:tst:20200322077" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322039"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200322007"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="apcu-panel is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200322078" version="632">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322039"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -35155,6 +35660,123 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200296004" version="632">
    <red-def:name>openjpeg2</red-def:name>
   </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322001" version="632">
+   <red-def:name>php-enchant</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322002" version="632">
+   <red-def:name>php-embedded</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322003" version="632">
+   <red-def:name>php-devel</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322004" version="632">
+   <red-def:name>php-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322005" version="632">
+   <red-def:name>php-dbg</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322006" version="632">
+   <red-def:name>php-dba</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322007" version="632">
+   <red-def:name>php-common</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322008" version="632">
+   <red-def:name>php-cli</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322009" version="632">
+   <red-def:name>php-bcmath</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322010" version="632">
+   <red-def:name>php</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322011" version="632">
+   <red-def:name>libzip-tools</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322012" version="632">
+   <red-def:name>libzip-devel</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322013" version="632">
+   <red-def:name>libzip-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322014" version="632">
+   <red-def:name>libzip</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322015" version="632">
+   <red-def:name>php-xmlrpc</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322016" version="632">
+   <red-def:name>php-xml</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322017" version="632">
+   <red-def:name>php-soap</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322018" version="632">
+   <red-def:name>php-snmp</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322019" version="632">
+   <red-def:name>php-recode</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322020" version="632">
+   <red-def:name>php-process</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322021" version="632">
+   <red-def:name>php-pgsql</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322022" version="632">
+   <red-def:name>php-pecl-zip-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322023" version="632">
+   <red-def:name>php-pecl-zip</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322024" version="632">
+   <red-def:name>php-pecl-apcu-devel</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322025" version="632">
+   <red-def:name>php-pecl-apcu-debugsource</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322026" version="632">
+   <red-def:name>php-pecl-apcu</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322027" version="632">
+   <red-def:name>php-pdo</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322028" version="632">
+   <red-def:name>php-opcache</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322029" version="632">
+   <red-def:name>php-odbc</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322030" version="632">
+   <red-def:name>php-mysqlnd</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322031" version="632">
+   <red-def:name>php-mbstring</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322032" version="632">
+   <red-def:name>php-ldap</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322033" version="632">
+   <red-def:name>php-json</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322034" version="632">
+   <red-def:name>php-intl</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322035" version="632">
+   <red-def:name>php-gmp</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322036" version="632">
+   <red-def:name>php-gd</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322037" version="632">
+   <red-def:name>php-fpm</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322038" version="632">
+   <red-def:name>php-pear</red-def:name>
+  </red-def:rpminfo_object>
+  <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322039" version="632">
+   <red-def:name>apcu-panel</red-def:name>
+  </red-def:rpminfo_object>
  </objects>
  <states>
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -37475,6 +38097,28 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200296004" version="632">
    <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:2.3.0-9.el8_0</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322001" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:7.2.11-1.1.module+el8.0.0+4664+17bd8d65</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322003" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:1.5.1-1.module+el8+2561+1aca3413</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322004" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:1.15.3-1.module+el8+2561+1aca3413</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322005" version="632">
+   <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:5.1.12-1.module+el8+2561+1aca3413</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322006" version="632">
+   <red-def:evr datatype="evr_string" operation="less than">1:1.10.5-8.module+el8+2561+1aca3413</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322007" version="632">
+   <red-def:evr datatype="evr_string" operation="less than">0:5.1.12-1.module+el8+2561+1aca3413</red-def:evr>
   </red-def:rpminfo_state>
  </states>
  <variables>
