@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-02-04T01:23:15</oval:timestamp>
-    <oval:content_version>1580779395</oval:content_version>
+    <oval:timestamp>2020-02-04T13:43:20</oval:timestamp>
+    <oval:content_version>1580823800</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190968" version="634">
@@ -9743,6 +9743,213 @@ For more details about the security issue(s), including the impact, a CVSS score
             <criteria operator="AND">
               <criterion comment="openjpeg2 is earlier than 0:2.3.0-9.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200296007" />
               <criterion comment="openjpeg2 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200296008" />
+            </criteria>
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20200348" version="634">
+      <metadata>
+        <title>RHSA-2020:0348: container-tools:rhel8 security, bug fix, and enhancement update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8</platform>
+        </affected>
+        <reference ref_id="RHSA-2020:0348" ref_url="https://access.redhat.com/errata/RHSA-2020:0348" source="RHSA" />
+        <reference ref_id="CVE-2020-7039" ref_url="https://access.redhat.com/security/cve/CVE-2020-7039" source="CVE" />
+        <description>The container-tools module contains tools for working with containers, notably podman, buildah, skopeo, and runc.
+
+Security Fix(es):
+
+* QEMU: slirp: OOB buffer access while emulating tcp protocols in tcp_emu() (CVE-2020-7039)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+
+Additional Changes:
+
+For detailed information on changes in this release, see the Red Hat Enterprise Linux 8.1 Release Notes linked from the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2020 Red Hat, Inc.</rights>
+          <issued date="2020-02-04" />
+          <updated date="2020-02-04" />
+          <cve cvss3="7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H" cwe="CWE-122" href="https://access.redhat.com/security/cve/CVE-2020-7039" public="20200107">CVE-2020-7039</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1731747" id="1731747">Backport Podman's --env-host support to 8.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1732280" id="1732280">Podman search shows limited numbers of images</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1732811" id="1732811">podman does not create console if -t is present in noninteractive shell</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1752599" id="1752599">Deadlock when pulling an image is interrupted</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779787" id="1779787">avc: podman run --security-opt label=type:svirt_qemu_net_t [rhel-8.1.1.z]</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1779789" id="1779789">backport json-file logging support to 1.4.2 [rhel-8.1.1.z]</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1783277" id="1783277">Podman is not compiled with FIPS mode - container-tools-rhel8-8.1.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1783278" id="1783278">Skopeo is not compiled with FIPS mode - container-tools-rhel8-8.1.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1783279" id="1783279">Buildah  is not compiled with FIPS mode - container-tools-rhel8-8.1.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1783280" id="1783280">runc  is not compiled with FIPS mode - container-tools-rhel8-8.1.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1783281" id="1783281">containernetworking-plugins is not compiled with FIPS mode - container-tools-rhel8-8.1.1</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1787523" id="1787523">Concurrent 'podman pull/run' sometimes fails with "Error processing tar file(io: read/write on closed pipe)"  [rhel-8.1.1]</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1787524" id="1787524">You have to remove that container to be able to reuse that name.: that name is already in use (due to exec user process caused "no such file or directory")[rhel-8.1.1]</bugzilla>
+          <bugzilla href="https://bugzilla.redhat.com/1791551" id="1791551">CVE-2020-7039 QEMU: slirp: OOB buffer access while emulating tcp protocols in tcp_emu()</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+            <cpe>cpe:/a:redhat:enterprise_linux:8::appstream</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="OR">
+        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criteria operator="AND">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criteria operator="OR">
+            <criteria operator="AND">
+              <criterion comment="toolbox is earlier than 0:0.0.4-1.module+el8.1.1+4407+ac444e5d" test_ref="oval:com.redhat.rhsa:tst:20200348001" />
+              <criterion comment="toolbox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403002" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="slirp4netns-debugsource is earlier than 0:0.4.2-2.git21fdece.module+el8.1.1+5460+3ac089c3" test_ref="oval:com.redhat.rhsa:tst:20200348003" />
+              <criterion comment="slirp4netns-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975002" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="slirp4netns is earlier than 0:0.4.2-2.git21fdece.module+el8.1.1+5460+3ac089c3" test_ref="oval:com.redhat.rhsa:tst:20200348005" />
+              <criterion comment="slirp4netns is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975004" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="skopeo-tests is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" test_ref="oval:com.redhat.rhsa:tst:20200348007" />
+              <criterion comment="skopeo-tests is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403008" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="skopeo-debugsource is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" test_ref="oval:com.redhat.rhsa:tst:20200348009" />
+              <criterion comment="skopeo-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975006" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="skopeo is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" test_ref="oval:com.redhat.rhsa:tst:20200348011" />
+              <criterion comment="skopeo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975008" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="runc-debugsource is earlier than 0:1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348013" />
+              <criterion comment="runc-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975010" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="runc is earlier than 0:1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348015" />
+              <criterion comment="runc is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975012" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman-tests is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348017" />
+              <criterion comment="podman-tests is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403018" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman-remote is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348019" />
+              <criterion comment="podman-remote is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403020" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman-debugsource is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348021" />
+              <criterion comment="podman-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975014" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348023" />
+              <criterion comment="podman is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975016" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="fuse-overlayfs-debugsource is earlier than 0:0.7.2-1.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348025" />
+              <criterion comment="fuse-overlayfs-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975026" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="fuse-overlayfs is earlier than 0:0.7.2-1.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348027" />
+              <criterion comment="fuse-overlayfs is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975028" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="containers-common is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" test_ref="oval:com.redhat.rhsa:tst:20200348029" />
+              <criterion comment="containers-common is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975030" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="containernetworking-plugins-debugsource is earlier than 0:0.8.3-4.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348031" />
+              <criterion comment="containernetworking-plugins-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975032" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="containernetworking-plugins is earlier than 0:0.8.3-4.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348033" />
+              <criterion comment="containernetworking-plugins is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975034" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="conmon is earlier than 2:2.0.6-1.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348035" />
+              <criterion comment="conmon is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200348036" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="buildah-tests is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348037" />
+              <criterion comment="buildah-tests is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403044" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="buildah-debugsource is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348039" />
+              <criterion comment="buildah-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975036" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="buildah is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348041" />
+              <criterion comment="buildah is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975038" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="udica is earlier than 0:0.2.1-2.module+el8.1.1+4975+482d6f5d" test_ref="oval:com.redhat.rhsa:tst:20200348043" />
+              <criterion comment="udica is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200348044" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="python-podman-api is earlier than 0:1.2.0-0.2.gitd0a45fe.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348045" />
+              <criterion comment="python-podman-api is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403050" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman-manpages is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348047" />
+              <criterion comment="podman-manpages is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403052" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="podman-docker is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" test_ref="oval:com.redhat.rhsa:tst:20200348049" />
+              <criterion comment="podman-docker is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975040" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="container-selinux is earlier than 2:2.124.0-1.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348051" />
+              <criterion comment="container-selinux is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190975042" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="cockpit-podman is earlier than 0:11-1.module+el8.1.1+5259+bcdd613a" test_ref="oval:com.redhat.rhsa:tst:20200348053" />
+              <criterion comment="cockpit-podman is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20193403058" />
+            </criteria>
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20200388" version="632">
+      <metadata>
+        <title>RHSA-2020:0388: sudo security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8.0 Update Services for SAP Solutions</platform>
+        </affected>
+        <reference ref_id="RHSA-2020:0388" ref_url="https://access.redhat.com/errata/RHSA-2020:0388" source="RHSA" />
+        <reference ref_id="CVE-2019-14287" ref_url="https://access.redhat.com/security/cve/CVE-2019-14287" source="CVE" />
+        <description>The sudo packages contain the sudo utility which allows system administrators to provide certain users with the permission to execute privileged commands, which are used for system management purposes, without having to log in as root.
+
+Security Fix(es):
+
+* sudo: Privilege escalation via 'Runas' specification with 'ALL' keyword (CVE-2019-14287)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2020 Red Hat, Inc.</rights>
+          <issued date="2020-02-04" />
+          <updated date="2020-02-04" />
+          <cve cvss3="7/CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-267" href="https://access.redhat.com/security/cve/CVE-2019-14287" public="20191014:1500">CVE-2019-14287</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1760531" id="1760531">CVE-2019-14287 sudo: Privilege escalation via 'Runas' specification with 'ALL' keyword</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/o:redhat:rhel_e4s:8.0</cpe>
+            <cpe>cpe:/o:redhat:rhel_e4s:8.0::baseos</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="OR">
+        <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006" />
+        <criteria operator="AND">
+          <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005" />
+          <criteria operator="OR">
+            <criteria operator="AND">
+              <criterion comment="sudo-debugsource is earlier than 0:1.8.25p1-4.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20200388001" />
+              <criterion comment="sudo-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200388002" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="sudo is earlier than 0:1.8.25p1-4.el8_0.2" test_ref="oval:com.redhat.rhsa:tst:20200388003" />
+              <criterion comment="sudo is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200388004" />
             </criteria>
           </criteria>
         </criteria>
@@ -23802,6 +24009,138 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200322039" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="toolbox is earlier than 0:0.0.4-1.module+el8.1.1+4407+ac444e5d" id="oval:com.redhat.rhsa:tst:20200348001" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="slirp4netns-debugsource is earlier than 0:0.4.2-2.git21fdece.module+el8.1.1+5460+3ac089c3" id="oval:com.redhat.rhsa:tst:20200348003" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="slirp4netns is earlier than 0:0.4.2-2.git21fdece.module+el8.1.1+5460+3ac089c3" id="oval:com.redhat.rhsa:tst:20200348005" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348003" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="skopeo-tests is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" id="oval:com.redhat.rhsa:tst:20200348007" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="skopeo-debugsource is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" id="oval:com.redhat.rhsa:tst:20200348009" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975003" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="skopeo is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" id="oval:com.redhat.rhsa:tst:20200348011" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975004" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="runc-debugsource is earlier than 0:1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348013" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975005" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="runc is earlier than 0:1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348015" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975006" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348005" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman-tests is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348017" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403009" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348006" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman-remote is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348019" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403010" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348006" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman-debugsource is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348021" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975007" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348006" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348023" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975008" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348006" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fuse-overlayfs-debugsource is earlier than 0:0.7.2-1.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348025" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975013" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348007" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="fuse-overlayfs is earlier than 0:0.7.2-1.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348027" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975014" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348007" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="containers-common is earlier than 1:0.1.40-8.module+el8.1.1+5351+506397b0" id="oval:com.redhat.rhsa:tst:20200348029" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975015" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348004" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="containernetworking-plugins-debugsource is earlier than 0:0.8.3-4.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348031" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975016" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348008" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="containernetworking-plugins is earlier than 0:0.8.3-4.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348033" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975017" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348008" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="conmon is earlier than 2:2.0.6-1.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348035" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200348018" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348009" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="conmon is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200348036" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200348018" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="buildah-tests is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348037" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403022" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348010" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="buildah-debugsource is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348039" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975018" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348010" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="buildah is earlier than 0:1.11.6-4.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348041" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975019" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348010" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="udica is earlier than 0:0.2.1-2.module+el8.1.1+4975+482d6f5d" id="oval:com.redhat.rhsa:tst:20200348043" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200348022" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348011" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="udica is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200348044" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200348022" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="python-podman-api is earlier than 0:1.2.0-0.2.gitd0a45fe.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348045" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403025" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348012" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman-manpages is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348047" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403026" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348013" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="podman-docker is earlier than 0:1.6.4-2.module+el8.1.1+5363+bf8ff1af" id="oval:com.redhat.rhsa:tst:20200348049" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975020" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348013" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="container-selinux is earlier than 2:2.124.0-1.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348051" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190975021" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348014" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="cockpit-podman is earlier than 0:11-1.module+el8.1.1+5259+bcdd613a" id="oval:com.redhat.rhsa:tst:20200348053" version="634">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193403029" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200348015" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sudo-debugsource is earlier than 0:1.8.25p1-4.el8_0.2" id="oval:com.redhat.rhsa:tst:20200388001" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200388001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200388001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sudo-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200388002" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200388001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sudo is earlier than 0:1.8.25p1-4.el8_0.2" id="oval:com.redhat.rhsa:tst:20200388003" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200388002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200388001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="sudo is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200388004" version="632">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200388002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
   </tests>
   <objects>
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -27649,6 +27988,18 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200322039" version="632">
       <red-def:name>apcu-panel</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200348018" version="634">
+      <red-def:name>conmon</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200348022" version="634">
+      <red-def:name>udica</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200388001" version="632">
+      <red-def:name>sudo-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200388002" version="632">
+      <red-def:name>sudo</red-def:name>
+    </red-def:rpminfo_object>
   </objects>
   <states>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20190966001" version="635">
@@ -29991,6 +30342,61 @@ For more details about the security issue(s), including the impact, a CVSS score
     </red-def:rpminfo_state>
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200322007" version="632">
       <red-def:evr datatype="evr_string" operation="less than">0:5.1.12-1.module+el8+2561+1aca3413</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348001" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:0.0.4-1.module+el8.1.1+4407+ac444e5d</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348003" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:0.4.2-2.git21fdece.module+el8.1.1+5460+3ac089c3</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348004" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">1:0.1.40-8.module+el8.1.1+5351+506397b0</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348005" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348006" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.6.4-2.module+el8.1.1+5363+bf8ff1af</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348007" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:0.7.2-1.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348008" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:0.8.3-4.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348009" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">2:2.0.6-1.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348010" version="634">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.11.6-4.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348011" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">0:0.2.1-2.module+el8.1.1+4975+482d6f5d</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348012" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">0:1.2.0-0.2.gitd0a45fe.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348013" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">0:1.6.4-2.module+el8.1.1+5363+bf8ff1af</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348014" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">2:2.124.0-1.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200348015" version="634">
+      <red-def:evr datatype="evr_string" operation="less than">0:11-1.module+el8.1.1+5259+bcdd613a</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200388001" version="632">
+      <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:1.8.25p1-4.el8_0.2</red-def:evr>
     </red-def:rpminfo_state>
   </states>
   <variables>
