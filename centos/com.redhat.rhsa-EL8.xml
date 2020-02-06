@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-02-04T13:43:20</oval:timestamp>
-    <oval:content_version>1580823800</oval:content_version>
+    <oval:timestamp>2020-02-05T14:23:32</oval:timestamp>
+    <oval:content_version>1580912612</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -18252,6 +18252,51 @@ For more details about the security issue(s), including the impact, a CVSS score
         </criteria>
       </criteria>
     </definition>
+    <definition class="patch" id="oval:com.redhat.rhsa:def:20200431" version="637">
+      <metadata>
+        <title>RHSA-2020:0431: ksh security update (Important)</title>
+        <affected family="unix">
+          <platform>Red Hat Enterprise Linux 8.0 Update Services for SAP Solutions</platform>
+        </affected>
+        <reference ref_id="RHSA-2020:0431" ref_url="https://access.redhat.com/errata/RHSA-2020:0431" source="RHSA" />
+        <reference ref_id="CVE-2019-14868" ref_url="https://access.redhat.com/security/cve/CVE-2019-14868" source="CVE" />
+        <description>KornShell (ksh) is a Unix shell developed by AT&amp;T Bell Laboratories, which is backward-compatible with the Bourne shell (sh) and includes many features of the C shell. The most recent version is KSH-93. KornShell complies with the POSIX.2 standard (IEEE Std 1003.2-1992).
+
+Security Fix(es):
+
+* ksh: certain environment variables interpreted as arithmetic expressions on startup, leading to code injection (CVE-2019-14868)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+        <advisory from="secalert@redhat.com">
+          <severity>Important</severity>
+          <rights>Copyright 2020 Red Hat, Inc.</rights>
+          <issued date="2020-02-05" />
+          <updated date="2020-02-05" />
+          <cve cvss3="7.4/CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-77" href="https://access.redhat.com/security/cve/CVE-2019-14868" public="20191213">CVE-2019-14868</cve>
+          <bugzilla href="https://bugzilla.redhat.com/1757324" id="1757324">CVE-2019-14868 ksh: certain environment variables interpreted as arithmetic expressions on startup, leading to code injection</bugzilla>
+          <affected_cpe_list>
+            <cpe>cpe:/a:redhat:rhel_e4s:8.0</cpe>
+            <cpe>cpe:/a:redhat:rhel_e4s:8.0::appstream</cpe>
+          </affected_cpe_list>
+        </advisory>
+      </metadata>
+      <criteria operator="OR">
+        <criterion comment="CentOS is installed" test_ref="oval:com.github.sep0lkit:tst:190630000" />
+        <criteria operator="AND">
+          <criterion comment="CentOS 8 is installed" test_ref="oval:com.github.sep0lkit:tst:190630004" />
+          <criteria operator="OR">
+            <criteria operator="AND">
+              <criterion comment="ksh-debugsource is earlier than 0:20120801-253.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200431001" />
+              <criterion comment="ksh-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200431002" />
+            </criteria>
+            <criteria operator="AND">
+              <criterion comment="ksh is earlier than 0:20120801-253.el8_0" test_ref="oval:com.redhat.rhsa:tst:20200431003" />
+              <criterion comment="ksh is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20200431004" />
+            </criteria>
+          </criteria>
+        </criteria>
+      </criteria>
+    </definition>
   </definitions>
   <tests>
     <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -32438,6 +32483,22 @@ For more details about the security issue(s), including the impact, a CVSS score
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200388002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh-debugsource is earlier than 0:20120801-253.el8_0" id="oval:com.redhat.rhsa:tst:20200431001" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200431001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200431001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200431002" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200431001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh is earlier than 0:20120801-253.el8_0" id="oval:com.redhat.rhsa:tst:20200431003" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200431002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200431001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200431004" version="637">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200431002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
@@ -36317,6 +36378,12 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200388002" version="632">
       <red-def:name>sudo</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200431001" version="637">
+      <red-def:name>ksh-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200431002" version="637">
+      <red-def:name>ksh</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630000" version="101">
       <red-def:behaviors noconfigfiles='true' noghostfiles='true' nogroup='true' nolinkto='true' nomd5='true' nomode='true' nomtime='true' nordev='true' nosize='true' nouser='true' />
       <red-def:name operation="pattern match" />
@@ -38759,6 +38826,10 @@ For more details about the security issue(s), including the impact, a CVSS score
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200388001" version="632">
       <red-def:arch datatype="string" operation="pattern match">ppc64le|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:1.8.25p1-4.el8_0.2</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200431001" version="637">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:20120801-253.el8_0</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
       <red-def:name operation="pattern match">^centos-release</red-def:name>
