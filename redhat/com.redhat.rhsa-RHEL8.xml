@@ -4,8 +4,8 @@
   <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
   <oval:product_version>3</oval:product_version>
   <oval:schema_version>5.10</oval:schema_version>
-  <oval:timestamp>2020-02-14T16:05:21</oval:timestamp>
-  <oval:content_version>1581696321</oval:content_version>
+  <oval:timestamp>2020-02-17T11:46:50</oval:timestamp>
+  <oval:content_version>1581940010</oval:content_version>
  </generator>
  <definitions>
   <definition class="patch" id="oval:com.redhat.rhsa:def:20190966" version="635">
@@ -20725,6 +20725,63 @@ For more details about the security issue(s), including the impact, a CVSS score
     </criteria>
    </criteria>
   </definition>
+  <definition class="patch" id="oval:com.redhat.rhsa:def:20200512" version="634">
+   <metadata>
+    <title>RHSA-2020:0512: firefox security update (Important)</title>
+    <affected family="unix">
+     <platform>Red Hat Enterprise Linux 8</platform>
+    </affected>
+    <reference ref_id="RHSA-2020:0512" ref_url="https://access.redhat.com/errata/RHSA-2020:0512" source="RHSA"/>
+    <reference ref_id="CVE-2020-6796" ref_url="https://access.redhat.com/security/cve/CVE-2020-6796" source="CVE"/>
+    <reference ref_id="CVE-2020-6798" ref_url="https://access.redhat.com/security/cve/CVE-2020-6798" source="CVE"/>
+    <reference ref_id="CVE-2020-6800" ref_url="https://access.redhat.com/security/cve/CVE-2020-6800" source="CVE"/>
+    <description>Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.
+
+This update upgrades Firefox to version 68.5.0 ESR.
+
+Security Fix(es):
+
+* Mozilla: Missing bounds check on shared memory read in the parent process (CVE-2020-6796)
+
+* Mozilla: Memory safety bugs fixed in Firefox 73 and Firefox ESR 68.5 (CVE-2020-6800)
+
+* Mozilla: Incorrect parsing of template tag could result in JavaScript injection (CVE-2020-6798)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+    <advisory from="secalert@redhat.com">
+     <severity>Important</severity>
+     <rights>Copyright 2020 Red Hat, Inc.</rights>
+     <issued date="2020-02-17"/>
+     <updated date="2020-02-17"/>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2020-6796" public="20200211">CVE-2020-6796</cve>
+     <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2020-6798" impact="moderate" public="20200211">CVE-2020-6798</cve>
+     <cve cvss3="7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-120" href="https://access.redhat.com/security/cve/CVE-2020-6800" public="20200211">CVE-2020-6800</cve>
+     <bugzilla href="https://bugzilla.redhat.com/1801916" id="1801916">CVE-2020-6796 Mozilla: Missing bounds check on shared memory read in the parent process</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1801918" id="1801918">CVE-2020-6798 Mozilla: Incorrect parsing of template tag could result in JavaScript injection</bugzilla>
+     <bugzilla href="https://bugzilla.redhat.com/1801920" id="1801920">CVE-2020-6800 Mozilla: Memory safety bugs fixed in Firefox 73 and Firefox ESR 68.5</bugzilla>
+     <affected_cpe_list>
+      <cpe>cpe:/a:redhat:enterprise_linux:8</cpe>
+      <cpe>cpe:/a:redhat:enterprise_linux:8::appstream</cpe>
+     </affected_cpe_list>
+    </advisory>
+   </metadata>
+   <criteria operator="OR">
+    <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20190966006"/>
+    <criteria operator="AND">
+     <criterion comment="Red Hat Enterprise Linux 8 is installed" test_ref="oval:com.redhat.rhsa:tst:20190966005"/>
+     <criteria operator="OR">
+      <criteria operator="AND">
+       <criterion comment="firefox-debugsource is earlier than 0:68.5.0-2.el8_1" test_ref="oval:com.redhat.rhsa:tst:20200512001"/>
+       <criterion comment="firefox-debugsource is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966002"/>
+      </criteria>
+      <criteria operator="AND">
+       <criterion comment="firefox is earlier than 0:68.5.0-2.el8_1" test_ref="oval:com.redhat.rhsa:tst:20200512003"/>
+       <criterion comment="firefox is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20190966004"/>
+      </criteria>
+     </criteria>
+    </criteria>
+   </criteria>
+  </definition>
  </definitions>
  <tests>
   <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:60.6.1-1.el8" id="oval:com.redhat.rhsa:tst:20190966001" version="635">
@@ -36327,6 +36384,14 @@ For more details about the security issue(s), including the impact, a CVSS score
    <red-def:object object_ref="oval:com.redhat.rhsa:obj:20193694002"/>
    <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200487001"/>
   </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="firefox-debugsource is earlier than 0:68.5.0-2.el8_1" id="oval:com.redhat.rhsa:tst:20200512001" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966001"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200512001"/>
+  </red-def:rpminfo_test>
+  <red-def:rpminfo_test check="at least one" comment="firefox is earlier than 0:68.5.0-2.el8_1" id="oval:com.redhat.rhsa:tst:20200512003" version="634">
+   <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002"/>
+   <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200512001"/>
+  </red-def:rpminfo_test>
  </tests>
  <objects>
   <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20190966001" version="635">
@@ -43070,6 +43135,10 @@ For more details about the security issue(s), including the impact, a CVSS score
   <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200487001" version="634">
    <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
    <red-def:evr datatype="evr_string" operation="less than">0:1.8.25p1-8.el8_1.1</red-def:evr>
+  </red-def:rpminfo_state>
+  <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200512001" version="634">
+   <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+   <red-def:evr datatype="evr_string" operation="less than">0:68.5.0-2.el8_1</red-def:evr>
   </red-def:rpminfo_state>
  </states>
  <variables>
