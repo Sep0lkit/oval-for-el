@@ -4,8 +4,8 @@
     <oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
     <oval:product_version>3</oval:product_version>
     <oval:schema_version>5.10</oval:schema_version>
-    <oval:timestamp>2020-02-17T11:46:50</oval:timestamp>
-    <oval:content_version>1581940010</oval:content_version>
+    <oval:timestamp>2020-02-20T13:51:47</oval:timestamp>
+    <oval:content_version>1582206707</oval:content_version>
   </generator>
   <definitions>
     <definition class="patch" id="oval:com.redhat.rhsa:def:20192722" version="634">
@@ -18035,6 +18035,22 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
       <red-def:object object_ref="oval:com.redhat.rhsa:obj:20190966002" />
       <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200512001" />
     </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh-debugsource is earlier than 0:20120801-253.el8_1" id="oval:com.redhat.rhsa:tst:20200559001" version="636">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200559001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200559001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh-debugsource is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200559002" version="636">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200559001" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh is earlier than 0:20120801-253.el8_1" id="oval:com.redhat.rhsa:tst:20200559003" version="636">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200559002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20200559001" />
+    </red-def:rpminfo_test>
+    <red-def:rpminfo_test check="at least one" comment="ksh is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20200559004" version="636">
+      <red-def:object object_ref="oval:com.redhat.rhsa:obj:20200559002" />
+      <red-def:state state_ref="oval:com.redhat.rhsa:ste:20190966002" />
+    </red-def:rpminfo_test>
     <red-def:rpmverifyfile_test check="none satisfy" comment="CentOS is installed" id="oval:com.github.sep0lkit:tst:190630000" version="101">
       <red-def:object object_ref="oval:com.github.sep0lkit:obj:190630000" />
       <red-def:state state_ref="oval:com.github.sep0lkit:ste:190630000" />
@@ -22126,6 +22142,12 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200348022" version="634">
       <red-def:name>udica</red-def:name>
     </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200559001" version="636">
+      <red-def:name>ksh-debugsource</red-def:name>
+    </red-def:rpminfo_object>
+    <red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20200559002" version="636">
+      <red-def:name>ksh</red-def:name>
+    </red-def:rpminfo_object>
     <red-def:rpmverifyfile_object id="oval:com.github.sep0lkit:obj:190630000" version="101">
       <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true" />
       <red-def:name operation="pattern match" />
@@ -24847,6 +24869,10 @@ For detailed information on changes in this release, see the Red Hat Enterprise 
     <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200512001" version="634">
       <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
       <red-def:evr datatype="evr_string" operation="less than">0:68.5.0-2.el8_1</red-def:evr>
+    </red-def:rpminfo_state>
+    <red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20200559001" version="636">
+      <red-def:arch datatype="string" operation="pattern match">aarch64|ppc64le|s390x|x86_64</red-def:arch>
+      <red-def:evr datatype="evr_string" operation="less than">0:20120801-253.el8_1</red-def:evr>
     </red-def:rpminfo_state>
     <red-def:rpmverifyfile_state id="oval:com.github.sep0lkit:ste:190630000" version="101">
       <red-def:name operation="pattern match">^centos-release</red-def:name>
