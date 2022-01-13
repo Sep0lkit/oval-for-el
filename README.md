@@ -1,25 +1,24 @@
 # OVAL-For-EL
-[中文 (Chinese version)](README.zh-cn.md)    [English (English  version)](README.md)
+
+> This is a fork of @sep0lkit [GitHub Pages](https://github.com/Sep0lkit/oval-for-el).
 
 ## Features
 
 - CentOS OVAL
-- Split oval by severity
-- Automatic update and revise with official security 
 
 **Supports**
 
-| OS     | Release       | Upstream                                   | Status  |
-| ------ | ------------- | ------------------------------------------ | ------- |
-| redhat | RHEL5 - RHEL8 | https://www.redhat.com/security/data/oval/ | syncing |
-| centos | EL5 - EL8     | https://www.redhat.com/security/data/oval/ | syncing |
+| OS     | Release       | Upstream                                   |
+| ------ | ------------- | ------------------------------------------ |
+| redhat | RHEL5 - RHEL8 | https://www.redhat.com/security/data/oval/ |
+| centos | EL5 - EL8     | https://www.redhat.com/security/data/oval/ |
 
 **Scripts** 
 
-​	scripts/rh2el.py 
+scripts/rh2el.py 
 
 ```
-#usage:
+# usage:
 usage: rh2el.py [-h] oval_file output_file
 
 redhat oval definition adapt to centos
@@ -30,28 +29,6 @@ positional arguments:
 ```
 
 
-
-## Files Tree:
-
-```bash
-├── centos										
-│   ├── com.redhat.rhsa-EL7-Critical.xml        #oval severity is critical
-│   ├── com.redhat.rhsa-EL7-Important.xml       #oval severity is important
-│   ├── com.redhat.rhsa-EL7-Low.xml             #oval severity is low
-│   ├── com.redhat.rhsa-EL7-Moderate.xml        #oval severity is moderate
-│   ├── com.redhat.rhsa-EL7.xml                 #all severity oval on centos7
-│   ├── ...
-└── redhat										
-    ├── com.redhat.rhsa-RHEL7-Critical.xml		
-    ├── com.redhat.rhsa-RHEL7-Important.xml		
-    ├── com.redhat.rhsa-RHEL7-Low.xml			
-    ├── com.redhat.rhsa-RHEL7-Moderate.xml		
-    ├── com.redhat.rhsa-RHEL7.xml				
-    ├── ...
-```
-
-
-
 ## Quick Start
 
 Identify software vulnerabilities on centos 7 with oscap which is a best scap scanner provided by openscap.
@@ -59,24 +36,39 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 - **Download oval-for-el**
 
   ```
-  git clone https://github.com/Sep0lkit/oval-for-el.git
+  git clone https://github.com/joseigbv/oval-for-el.git
   ```
 
 - **Install oscap**
 
   ```bash
-  sudo yum install openscap openscap-scnner
+  sudo yum install openscap openscap-scanner
   ```
+
+- **Download OVAL content**
+
+  ```bash
+  wget https://access.redhat.com/security/data/oval/com.redhat.rhsa-RHEL7.xml.bz2
+  bunzip2 com.redhat.rhsa-RHEL7.xml.bz2
+  ```
+
+- **Convert from RedHat oval**
+
+  ```bash
+  rh2el.py com.redhat.rhsa-RHEL7.xml com.redhat.rhsa-EL7.xml
+  ```
+
+  > WARNING: you may have to add a new rpm signature key 
 
 - **Run oscap oval**
 
-  - check all vulnerabilities defined for centos7
+  - Check all vulnerabilities defined for centos7
 
     ```bash
     oscap oval eval com.redhat.rhsa-EL7.xml
     ```
 
-  - only check one vulnerabilitiy
+  - Only check one vulnerabilitiy
 
     Ex: shellchock(CVE-2014-6271). this vulnerabilitiy defined with id oval:com.redhat.rhsa:def:20141293 in com.redhat.rhsa-EL7.xml
 
@@ -84,15 +76,15 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
     oscap oval eval --id oval:com.redhat.rhsa:def:20141293 com.redhat.rhsa-EL7.xml
     ```
 
-  - export html report with options --report
+  - Export html report with options --report
 
     ```bash
-    oscap oval eval --report centos7.html  com.redhat.rhsa-EL7.xml
+    oscap oval eval --report centos7.html com.redhat.rhsa-EL7.xml
     ```
 
   ------
 
-  **Consle output:**![oval console ouput](_static/imgs/1567436786275.png)
+  **Console output:**![oval console ouput](_static/imgs/1567436786275.png)
   
   **HTML report:**
   
@@ -101,10 +93,6 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
   > Result: true means the vulnerability exists, and the true results always before false in html report
 
 ## Details on ovals above
-
-### Redhat:
-
-- split by severity
 
 ### CentOS:
 
@@ -118,7 +106,6 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 
    ![signature_key](_static/imgs/1567438175262.png)
 
-- split by severity
 
 ## Resource
 
@@ -130,6 +117,3 @@ Identify software vulnerabilities on centos 7 with oscap which is a best scap sc
 - [Oracle Linux](https://linux.oracle.com/security/oval/)
 - [SUSE](http://ftp.suse.com/pub/projects/security/oval/)
 
-## Getting Help
-
-Twitter: [@sep0lkit](https://twitter.com/sep0lkit)

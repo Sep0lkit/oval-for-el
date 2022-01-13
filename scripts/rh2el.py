@@ -4,8 +4,8 @@
 '''
 Descripts: Convert Redhat OVAL to Enterprise Linux
 Author: Sep0lkit
-Version: 2.0
-Update: 2019/12/01
+Version: 2.1
+Update: 2022/01/13
 Website: https://github.com/Sep0lkit/oval-for-el
 '''
 
@@ -31,7 +31,7 @@ OVAL_RED_NS = "http://oval.mitre.org/XMLSchema/oval-definitions-5#linux"
 '''
 PLATFORMS_RH_EL = {'Red Hat Enterprise Linux 8':'Community Enterprise Operating System 8','Red Hat Enterprise Linux 7':'Community Enterprise Operating System 7','Red Hat Enterprise Linux 6':'Community Enterprise Operating System 6','Red Hat Enterprise Linux 5':'Community Enterprise Operating System 5'}
 
-CPES_RH_EL = {'cpe:/o:redhat:enterprise_linux:8':'cpe:/o:centos:centos:8','cpe:/o:redhat:enterprise_linux:7':'cpe:/o:centos:centos:7','cpe:/o:redhat:enterprise_linux:6':'cpe:/o:centos:centos:6','cpe:/o:redhat:enterprise_linux:5':'cpe:/o:centos:centos:5'}
+CPES_RH_EL = {'cpe:/o:redhat:enterprise_linux:8':'cpe:/o:centos:centos:8','cpe:/o:redhat:enterprise_linux:7':'cpe:/o:centos:centos:7','cpe:/o:redhat:enterprise_linux:6':'cpe:/o:centos:centos:6','cpe:/o:redhat:enterprise_linux:5':'cpe:/o:centos:centos:5','cpe:/a:redhat:enterprise_linux:8':'cpe:/a:centos:centos:8'}
 
 
 ''' 
@@ -122,11 +122,11 @@ def definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, defins):
     
     stat = ET.SubElement(tree_of_states, "red-def:rpmverifyfile_state", {'id':defins['ste_id'], 'version':RULE_VERSION})
     name = ET.SubElement(stat, "red-def:name", {'operation':'pattern match'})
-    name.text = '^centos-release'
+    name.text = '^centos(-linux)?-release'
     try:
         defins['ste_version']
     except:
-        print("os ste, don't need version for ste")
+        print("os ste, don't need version for ste " + defins['ste_id'])
     else:
         version = ET.SubElement(stat, "red-def:version", {'operation':'pattern match'})
         version.text = defins['ste_version']
@@ -156,7 +156,8 @@ def main():
         'oval:com.redhat.rhsa:ste:20190966002':'199e2f91fd431d51|24c6a8a7f4a80eb5|0946fca2c105b9de', \
         'oval:com.redhat.rhba:ste:20070331002':'5326810137017186|a8a447dce8562897', \
         'oval:com.redhat.rhsa:ste:20100889010':'5326810137017186|a8a447dce8562897', \
-        'oval:com.redhat.rhsa:ste:20140741002':'5326810137017186|a8a447dce8562897' \
+        'oval:com.redhat.rhsa:ste:20140741002':'5326810137017186|a8a447dce8562897', \
+	'oval:com.redhat.rhba:ste:20191992002':'199e2f91fd431d51|05b555b38483c65d' \
     }
 
     for ste_id, new_sign_keys in SIGN_KEY_STES.items():
