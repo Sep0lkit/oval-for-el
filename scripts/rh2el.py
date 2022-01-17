@@ -20,8 +20,9 @@ import xml.etree.ElementTree as ET
 '''
 ET.register_namespace('', "http://oval.mitre.org/XMLSchema/oval-definitions-5")
 ET.register_namespace('oval', "http://oval.mitre.org/XMLSchema/oval-common-5")
+ET.register_namespace('ind-def', "http://oval.mitre.org/XMLSchema/oval-definitions-5#independent")
+ET.register_namespace('unix-def', "http://oval.mitre.org/XMLSchema/oval-definitions-5#unix")
 ET.register_namespace('red-def', "http://oval.mitre.org/XMLSchema/oval-definitions-5#linux")
-
 
 OVAL_NS = "http://oval.mitre.org/XMLSchema/oval-definitions-5"
 OVAL_RED_NS = "http://oval.mitre.org/XMLSchema/oval-definitions-5#linux"
@@ -126,7 +127,7 @@ def definitions_for_el(tree_of_tests, tree_of_objects, tree_of_states, defins):
     try:
         defins['ste_version']
     except:
-        print("os ste, don't need version for ste " + defins['ste_id'])
+        print("WARN: os ste, don't need version for ste " + defins['ste_id'])
     else:
         version = ET.SubElement(stat, "red-def:version", {'operation':'pattern match'})
         version.text = defins['ste_version']
@@ -166,7 +167,7 @@ def main():
             signkey.set('operation', 'pattern match')
             signkey.text = new_sign_keys
         except:     
-            print('red hat sign key: %s not found .\n', ste_id)
+            print('WARN: red hat sign key: %s not found' % ste_id)
             continue
 
 
