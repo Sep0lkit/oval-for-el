@@ -41,7 +41,7 @@ CPES_RH_EL = {'cpe:/o:redhat:enterprise_linux:8':'cpe:/o:centos:centos:8','cpe:/
 
 RULE_VERSION = '101'
 
-DEFINS_OF_EL = {'tst_comment':'CentOS is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630000', 'tst_check':'none satisfy', 'obj_id':'oval:com.github.sep0lkit:obj:190630000', 'ste_id':'oval:com.github.sep0lkit:ste:190630000', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release'}
+DEFINS_OF_EL = {'tst_comment':'CentOS must be installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630000', 'tst_check':'none satisfy', 'obj_id':'oval:com.github.sep0lkit:obj:190630000', 'ste_id':'oval:com.github.sep0lkit:ste:190630000', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release'}
 
 DEFINS_OF_EL5 = {'tst_comment':'CentOS 5 is installed', 'tst_id':'oval:com.github.sep0lkit:tst:190630001', 'tst_check':'at least one', 'obj_id':'oval:com.github.sep0lkit:obj:190630001', 'ste_id':'oval:com.github.sep0lkit:ste:190630001', 'obj_name':'centos-release', 'obj_filepath':'/etc/redhat-release', 'ste_version':'^5' }
 
