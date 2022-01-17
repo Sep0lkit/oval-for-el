@@ -25,7 +25,7 @@ redhat oval definition adapt to centos
 
 positional arguments:
   oval_file    redhat oval file path
-  output_file  redhat oval output file path
+  output_file  centos oval output file path
 ```
 
 
