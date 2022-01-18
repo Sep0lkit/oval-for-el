@@ -1,6 +1,3 @@
-# OVAL-For-EL
-
-> This is a fork of @sep0lkit [Work](https://github.com/Sep0lkit/oval-for-el).
 
 ## Features
 
